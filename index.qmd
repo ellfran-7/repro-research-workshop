@@ -20,10 +20,4 @@ footer: "CS WORKSHOP - 2025/02/06"
 smaller: false
 ---
 
-## Quarto
-
-Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
-
-```{r}
-1 + 1
-```
+## To come soon...
