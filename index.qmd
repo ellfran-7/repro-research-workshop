@@ -18,6 +18,7 @@ slide-number: true
 self-contained: false
 footer: "CS WORKSHOP - 2025/02/06"
 smaller: false
+from: markdown+emoji
 ---
 
 ## To come soon...
