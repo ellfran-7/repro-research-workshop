@@ -1,5 +1,27 @@
 project:
-  title: "repro-research-project"
+  type: website
+  output-dir: docs
+
+website: 
+  title: "Reproducible Research Workshop"
+  navbar: 
+    left: 
+      - text: Pre-work
+        href: prework.qmd
+    # right: 
+    #   - text: Slides
+    #     menu: 
+    #       - text: 01 - Reproducible research
+    #         href: ...
+    #       - text: 02 - Quarto
+    #         href: ...
+
+format:
+  html:
+    toc: true
+    theme:
+      - minty
+    
 
 
 
