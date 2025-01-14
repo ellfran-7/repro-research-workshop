@@ -102,7 +102,7 @@ R comes preinstalled on many Linux systems, but you’ll want the newest version
 
 [^1]: Integrated Development Environment
 
-RStudio is an application like Microsoft Word—except that instead of helping you write in English, RStudio helps you write in R.
+RStudio is an application like Microsoft Word—except that instead of helping you write in English or French, RStudio helps you write in R.
 
 You can [download RStudio](https://posit.co/download/rstudio-desktop/) for free. Just click the “**Download RStudio Desktop For [Your OS]**” button and follow the  installation steps. Once installed, open RStudio like any other application—usually by clicking its desktop icon.
 
