@@ -1,10 +1,10 @@
 <table style="width: 100%; border: none;">
   <tr>
-    <td style="width: 80%; vertical-align: middle;">
+    <td style="width: 70%; vertical-align: middle;">
       <h1>A step towards Reproducible Research: Literate Programming</h1>
     </td>
-    <td style="width: 20%; text-align: right;">
-      <img src="images/liec-logo.png" alt="LIEC logo" width="100">
+    <td style="width: 30%; text-align: right;">
+      <img src="images/liec-logo.png" alt="LIEC logo" width="120">
     </td>
   </tr>
 </table>
