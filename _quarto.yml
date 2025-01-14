@@ -15,12 +15,18 @@ website:
     #         href: ...
     #       - text: 02 - Quarto
     #         href: ...
+    tools:
+      - icon: github
+        text: Source Code
+        href: https://github.com/ellfran-7/repro-research-workshop
+  page-footer: "LIEC - CS WORKSHOP, Ellis Franklin"
 
 format:
   html:
     toc: true
-    theme:
-      - minty
+    theme: [minty, web-styles.scss]
+    grid: 
+      body-width: 900px
     
 
 
