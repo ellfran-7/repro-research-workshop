@@ -1,6 +1,9 @@
 project:
   type: website
 
+execute:
+  freeze: auto # computational documents re-render only when source changes
+  
 website: 
   title: "Reproducible Research Workshop"
   navbar: 
