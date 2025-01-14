@@ -1,18 +1,13 @@
-::: {.grid}
-
-::: {.g-col-10}
-
-# A step towards Reproducible Research: Literate programming 
-
-:::
-
-::: {.g-col-2}
-
-![](images/liec-logo.png){fig-alt="LIEC logo" fig-align="right"}
-
-:::
-
-:::
+<table style="width: 100%; border: none;">
+  <tr>
+    <td style="width: 80%; vertical-align: middle;">
+      <h1>A step towards Reproducible Research: Literate Programming</h1>
+    </td>
+    <td style="width: 20%; text-align: right;">
+      <img src="images/liec-logo.png" alt="LIEC logo" width="100">
+    </td>
+  </tr>
+</table>
 
 [![License](https://img.shields.io/badge/licence-CC_BY_4.0-blue)](https://github.com/ellfran-7/cluefish/blob/main/LICENSE)
 
