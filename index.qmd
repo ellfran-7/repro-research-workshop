@@ -35,7 +35,7 @@ To ensure everything runs smoothly on the day of the workshop, we’ll need to s
 
 Please bring the following:
 
-- :computer: a portable computer 
+- :computer: a laptop/computer 
 - :pencil2: a pencil/pen
 - :page_facing_up: paper 
 - :coffee: a mug (for coffee of course)
