@@ -40,7 +40,7 @@ The workshop will be divided into two parts:
 
 **Part 1** will be discussion-based, focusing on the concept of reproducibility, its importance, and the factors contributing to non-reproducibility. There will be practical work also. No prior coding or bioinformatics knowledge is needed here.
 
-**Part 2** is hands-on and involves practical work using specific informatic tools. To participate fully, you’ll need to download or update these tools in advance. Don’t worry—they’re free and easy to set up! Let's go !
+**Part 2** is hands-on and involves practical work using specific informatic tools. To participate fully, you’ll need to download or update these tools in advance. Don’t worry—they’re free and easy to set up! Let's go!
 
 
 ## General requirements
@@ -52,7 +52,7 @@ Please bring the following:
 - :page_facing_up: paper 
 - :coffee: a mug (for coffee of course)
 
-If needed, we can provide pencils, paper and even mugs !
+If needed, we can provide pencils, paper and even mugs!
 
 ::: {.callout-note appearance="default"}
 
@@ -65,7 +65,7 @@ If you are unable to bring your own computer, feel free to do the practical work
 
 ## Software requirements
 
-The majority of the practical aspect of the workshop involves a computer, and therefor using specific tools. If you intend on participating fully, you'll need to download (or update) these tools in advance. Don't worry, they're free and easy to set up ! Let's go !
+The majority of the practical aspect of the workshop involves a computer, and therefor using specific tools. If you intend on participating fully, you'll need to download (or update) these tools in advance. Don't worry, they're free and easy to set up! Let's go!
 
 <br>
 
@@ -83,7 +83,7 @@ To use Quarto, you’ll need to install the Quarto CLI, which handles rendering 
 
 R is a powerful programming language for data science. You can download it for free from [The Comprehensive R Archive Network (CRAN)](http://cran.r-project.org/). At the top of the CRAN homepage, you’ll find links for different operating systems: Windows, Mac, or Linux.
 
-If you're having trouble in orientating the sites, don't worry ! Below I provide detailed instructions for each operating system:
+If you're having trouble in orientating the sites, don't worry! Below I provide detailed instructions for each operating system:
 
 <details>
   <summary>Download for Windows</summary>
