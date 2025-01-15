@@ -35,7 +35,7 @@ To ensure everything runs smoothly on the day of the workshop, we’ll need to s
 
 The workshop will be divided into two parts:
 
-1.  Reproducible Research: What do we know?
+1.  Reproducible Research: An Open Discussion
 2.  Literate Programming with Quarto: A Small but Impactful Step
 
 **Part 1** will be discussion-based, focusing on the concept of reproducibility, its importance, and the factors contributing to non-reproducibility. There will be practical work also. No prior coding or bioinformatics knowledge is needed here.
@@ -58,7 +58,7 @@ If needed, we can provide pencils, paper and even mugs !
 
 ## No computer? Not a problem
 
-If you are unable to bring your own computer, feel free to do the practical work with or following another participant :dancers:
+If you are unable to bring your own computer, feel free to do the practical work with or following another participant :dancers:. In this case, please send me an email saying so!
 
 :::
 
