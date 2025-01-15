@@ -1,7 +1,7 @@
 ---
 title: "Pre-workshop Instructions"
 subtitle: "LIEC - CS WORKSHOP"
-date: 2024-02-06
+date: last-modified
 date-format: long
 number-sections: true
 number-depth: 3
