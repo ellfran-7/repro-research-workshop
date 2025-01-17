@@ -1,0 +1,22 @@
+---
+title: "Reproducible Research"
+subtitle: "A step closer with Literate Programming"
+author:
+  - name: "Ellis Franklin"
+    affiliations: "LIEC"
+date: "2025-02-06"
+date-format: long
+format:
+  revealjs:
+    code-block-height: 700px
+    theme: moon
+    transition: slide
+    background-transition: fade
+    scrollable: false
+    chalkboard: true
+slide-number: true
+self-contained: false
+footer: "CS WORKSHOP - 2025/02/06"
+smaller: false
+from: markdown+emoji
+---

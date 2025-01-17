@@ -1,0 +1,41 @@
+---
+title: "Reproducible Research"
+subtitle: "On Open-Discussion"
+author:
+  - name: "Ellis Franklin"
+    affiliations: "LIEC"
+  - name: "Elise Billoir"
+    affiliations: "LIEC"
+date: "2025-02-06"
+date-format: long
+format:
+  revealjs:
+    theme: [default, slide-styles.scss]
+    code-block-height: 700px
+    # width: 1280
+    # height: 720
+    footer: "CS-WORKSHOP Feb2025 | Materials: [ellfrank7/repro-research-workshop](https://github.com/ellfran-7/repro-research-workshop)"
+    transition: slide
+    background-transition: fade
+    scrollable: false
+    chalkboard: true
+execute: 
+  cache: true
+echo: false
+slide-number: true
+code-line-numbers: false
+from: markdown+emoji
+
+---
+
+# Intro to Reproducible Research
+
+
+
+# Sources of non-reproducibility
+
+
+
+# Every little helps: Literate Programming with Quarto
+
+
