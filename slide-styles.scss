@@ -53,3 +53,22 @@ $link-color:                $green !default;
 // Fonts
 $font-family-sans-serif: "Nunito", sans-serif;
 $font-size-root: 20px;
+
+// Text size
+$presentation-h1-font-size: 2em;
+$presentation-h2-font-size: 1.3em;
+$presentation-h3-font-size: 1em;
+
+/*-- scss rules --*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Nunito", serif;
+}
+
+
+
