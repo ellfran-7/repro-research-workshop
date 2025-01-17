@@ -1,41 +1,56 @@
 ---
 title: "Reproducible Research"
-subtitle: "On Open-Discussion"
+subtitle: "Open-Discussion"
 author:
   - name: "Ellis Franklin"
-    affiliations: "LIEC"
   - name: "Elise Billoir"
-    affiliations: "LIEC"
 date: "2025-02-06"
 date-format: long
 format:
   revealjs:
     theme: [default, slide-styles.scss]
     code-block-height: 700px
-    # width: 1280
-    # height: 720
-    footer: "CS-WORKSHOP Feb2025 | Materials: [ellfrank7/repro-research-workshop](https://github.com/ellfran-7/repro-research-workshop)"
+    width: 1280
+    height: 720
+    footer: "CS-WORKSHOP Feb 2025 | Materials: [ellfrank7/repro-research-workshop](https://github.com/ellfran-7/repro-research-workshop)"
     transition: slide
     background-transition: fade
-    scrollable: false
-    chalkboard: true
-execute: 
-  cache: true
+    # scrollable: false
+    # chalkboard: true
 echo: false
 slide-number: true
 code-line-numbers: false
 from: markdown+emoji
-
+bibliography: references.bib
 ---
 
-# Intro to Reproducible Research
+# Table of Contents
 
+- [Introduction to RR](#intro-to-rr)
+- [Sources of non-reproducibility](#sources-of-nr)
+- [Every little helps: Literate Programming with Quarto](#lp-quarto)
+- [References](#refs)
 
+# Introduction to RR {#intro-to-rr}
 
-# Sources of non-reproducibility
+> Pour un chercheur, il n’y a rien de plus frustrant que l’impossibilité de reproduire des résultats majeurs obtenus quelques mois auparavant. Les causes de ce type de déconvenues sont multiples et parfois pernicieuses. Ce phénomène participe à ce que certains identifient comme une “crise de la reproductibilité de la recherche” [@desquilbet2019].
 
+## What does reproducibility mean to you? {.center}
 
+wooclap
 
-# Every little helps: Literate Programming with Quarto
+## Story behind the concept of reproducibility
 
+The proper definition is still debated, but a sensible definition would be:
 
+> Reproducibility is the ability of independent investigators to draw the same conclusions from an experiment by following the documentation shared by the original investigators [@gundersen2021].
+
+# Sources of non-reproducibility {#sources-of-nr}
+
+To draw attention to a specific part of the text, you might want to make it [red]{style="color: red;"} with a [yellow background]{style="background-color: yellow;"}; [like this]{style="color: red; background-color: yellow;"}.
+
+# Every little helps: Literate Programming with Quarto {#lp-quarto}
+
+![](images/liec-logo.png) {.r-stretch}
+
+# References {#refs}
