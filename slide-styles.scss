@@ -52,12 +52,13 @@ $link-color:                $green !default;
 
 // Fonts
 $font-family-sans-serif: "Nunito", sans-serif;
-$font-size-root: 20px;
+$font-size-root: 18px;
 
 // Text size
-$presentation-h1-font-size: 2em;
-$presentation-h2-font-size: 1.3em;
-$presentation-h3-font-size: 1em;
+$presentation-h1-font-size: 2.3em;
+$presentation-h2-font-size: 1.6em;
+$presentation-h3-font-size: 1.2em;
+
 
 /*-- scss rules --*/
 
@@ -70,5 +71,16 @@ h6 {
   font-family: "Nunito", serif;
 }
 
+/*-- .reveal {
+    font-size: 1.5em !important;
+}
+--*/
 
+/*-- .reveal .slides .slide {
+    font-size: 1.5em !important;
+}
+--*/
 
+.reveal .slide figure>figcaption, .reveal .slide img.stretch+p.caption, .reveal .slide img.r-stretch+p.caption {
+    font-size: 0.5em !important;
+}
