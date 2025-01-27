@@ -10,13 +10,13 @@ format:
   revealjs:
     theme: [default, slide-styles.scss]
     code-block-height: 700px
-    width: 1280
-    height: 720
+    width: 1600
+    height: 900
     footer: "CS-WORKSHOP Feb 2025 | Materials: [ellfrank7/repro-research-workshop](https://github.com/ellfran-7/repro-research-workshop)"
     transition: slide
     background-transition: fade
-    # scrollable: false
-    # chalkboard: true
+execute:
+  cache: true
 echo: false
 slide-number: true
 code-line-numbers: false
@@ -24,26 +24,118 @@ from: markdown+emoji
 bibliography: references.bib
 ---
 
+```{r}
+#| include: false
+
+knitr::opts_chunk$set(
+    out.width = "70%", # enough room to breath
+    fig.width = 6,     # reasonable size
+    fig.asp = 0.618,   # golden ratio
+    fig.align = "center" 
+)
+
+```
+
 # Table of Contents
 
-- [Introduction to RR](#intro-to-rr)
-- [Sources of non-reproducibility](#sources-of-nr)
-- [Every little helps: Literate Programming with Quarto](#lp-quarto)
-- [References](#refs)
+-   [Introduction to RR](#intro-to-rr)
+-   [Sources of non-reproducibility](#sources-of-nr)
+-   [Every little helps: Literate Programming with Quarto](#lp-quarto)
+-   [References](#refs)
 
 # Introduction to RR {#intro-to-rr}
 
+## Have you ever encountered challenges when trying to reproduce data analyses? {style="text-align: center;"}
+
+::: fragment
+```{r, dev="png", dev.args=list(bg="transparent"), fig.width="120%"}
+#| fig-align: 'center'
+#| echo: false
+#| warning: false
+#| error: false
+ 
+library(ggplot2)
+library(dplyr)
+library(showtext)
+
+# add Google Fonts (Nunito and Roboto)
+font_add_google("Nunito", "nunito")
+font_add_google("Roboto", "roboto")
+
+# automatically use showtext for plotting
+showtext_auto()
+
+surv_data <- read.csv2(file = here::here("data", "evento-survey-data.csv"))
+
+tidy_surv_data <- surv_data |> 
+  dplyr::select(8) |> # select the eight col
+  dplyr::slice(-n()) |> # remove the last col
+  dplyr::rename(answer = 1) |> # rename the selected col
+  dplyr::mutate(answer = factor(answer, levels = c(0, 1), labels = c("no", "yes"))) # associate binary to yes and no
+
+total_count <- nrow(tidy_surv_data)
+
+# Create the barplot
+ggplot(tidy_surv_data, aes(x = answer, fill = answer)) +
+  geom_bar() +
+  scale_fill_manual(values = c("yes" = "lightgreen", "no" = "lightcoral")) +
+  labs(
+    x = "Answer",
+    y = "Count"
+  ) +
+  theme_bw() +
+  coord_flip() +
+  theme(
+    text = element_text(size = 40),
+    plot.title = element_text(hjust = 0.5, family = "roboto"),
+    plot.subtitle = element_text(hjust = 0.5, family = "nunito"),
+    axis.title = element_text(family = "roboto"), 
+    plot.background = element_rect(fill = "transparent", color = NA), # Make plot background transparent
+    panel.background = element_rect(fill = "transparent", color = NA), # Make panel background transparent
+    legend.background = element_rect(fill = "transparent", color = NA), # Make legend background transparent
+  )
+
+```
+:::
+
+## What does reproducibility mean to you? :thinking: {style="text-align: center;"}
+
+[Create WOOCLAP then add QR code and code for session !!!]{style="color: red"}
+
+## What does reproducibility mean actually?
+
+:::::::: columns
+:::::: {.column width="50%"}
+::::: columns
+::: {.column width="100%"}
+-   Difficult question to answer...
+-   "Lack of reproducibility" :arrow_right: understood but broad expression
+-   No clear definition :arrow_right: varies between the disciplines
+:::
+
+::: {.column width="70%"}
+![SOURCE: The Turing Way project illustration by Scriberia. Used under a CC-BY 4.0 licence. DOI: [10.5281/zenodo.3332807](https://doi.org/10.5281/zenodo.3332807).](images/rr-map-illustration.png)
+:::
+:::::
+::::::
+
+::: {.column width="50%" data-fragment="fade-in"}
+![SOURCE: Gundersen Odd Erik 2021 The fundamental principles of reproducibility Phil. Trans. R. Soc. A.37920200210 DOI: [10.1098/rsta.2020.0210](http://doi.org/10.1098/rsta.2020.0210).](images/gundersen-2021-survey-def-repro.jpg)
+:::
+::::::::
+
+## Similar but different concepts
+
+| Methods               | Same data       | Different data   |
+|-----------------------|-----------------|------------------|
+| **Same methods**      | Reproducibility | Replicability    |
+| **Different methods** | Robustness      | Generalisability |
+
+: SOURCE: Schloss, 2018. DOI: [10.1128/mbio.00525-18](https://doi.org/10.1128/mbio.00525-18).
+
+## The "Reproducibility Crisis"
+
 > Pour un chercheur, il n’y a rien de plus frustrant que l’impossibilité de reproduire des résultats majeurs obtenus quelques mois auparavant. Les causes de ce type de déconvenues sont multiples et parfois pernicieuses. Ce phénomène participe à ce que certains identifient comme une “crise de la reproductibilité de la recherche” [@desquilbet2019].
-
-## What does reproducibility mean to you? {.center}
-
-wooclap
-
-## Story behind the concept of reproducibility
-
-The proper definition is still debated, but a sensible definition would be:
-
-> Reproducibility is the ability of independent investigators to draw the same conclusions from an experiment by following the documentation shared by the original investigators [@gundersen2021].
 
 # Sources of non-reproducibility {#sources-of-nr}
 
