@@ -71,16 +71,15 @@ h6 {
   font-family: "Nunito", serif;
 }
 
-/*-- .reveal {
-    font-size: 1.5em !important;
-}
---*/
-
-/*-- .reveal .slides .slide {
-    font-size: 1.5em !important;
-}
---*/
 
 .reveal .slide figure>figcaption, .reveal .slide img.stretch+p.caption, .reveal .slide img.r-stretch+p.caption {
     font-size: 0.5em !important;
+}
+
+.reveal .slides section .fragment.highlight-moss.visible {
+  color: #588157;
+}
+
+.nice-green {
+  color: #5a9f68;
 }
