@@ -13,8 +13,11 @@ format:
     width: 1600
     height: 900
     footer: "CS-WORKSHOP Feb 2025 | Materials: [ellfrank7/repro-research-workshop](https://github.com/ellfran-7/repro-research-workshop)"
-    transition: slide
+    transition: fade
     background-transition: fade
+    auto-animate-easing: ease-in-out
+    auto-animate-unmatched: false
+    auto-animate-duration: 0.8
 execute:
   cache: true
 echo: false
@@ -39,7 +42,7 @@ knitr::opts_chunk$set(
 # Table of Contents
 
 -   [Introduction to RR](#intro-to-rr)
--   [Sources of non-reproducibility](#sources-of-nr)
+-   [Sources of irreproducibility](#sources-of-nr)
 -   [Every little helps: Literate Programming with Quarto](#lp-quarto)
 -   [References](#refs)
 
@@ -47,8 +50,10 @@ knitr::opts_chunk$set(
 
 ## Have you ever encountered challenges when trying to reproduce data analyses? {style="text-align: center;"}
 
+<br/>
+
 ::: fragment
-```{r, dev="png", dev.args=list(bg="transparent"), fig.width="120%"}
+```{r, dev="png", dev.args=list(bg="transparent")}
 #| fig-align: 'center'
 #| echo: false
 #| warning: false
@@ -104,45 +109,215 @@ ggplot(tidy_surv_data, aes(x = answer, fill = answer)) +
 
 ## What does reproducibility mean actually?
 
-:::::::: columns
-:::::: {.column width="50%"}
-::::: columns
-::: {.column width="100%"}
+:::: columns
+::: {.column width="50%"}
+
+<br/> <br/>
+
 -   Difficult question to answer...
--   "Lack of reproducibility" :arrow_right: understood but broad expression
--   No clear definition :arrow_right: varies between the disciplines
+-   "Lack of reproducibility"<br /> :arrow_right: understood but broad expression
+-   No clear definition<br /> :arrow_right: varies between the disciplines
 :::
 
-::: {.column width="70%"}
-![SOURCE: The Turing Way project illustration by Scriberia. Used under a CC-BY 4.0 licence. DOI: [10.5281/zenodo.3332807](https://doi.org/10.5281/zenodo.3332807).](images/rr-map-illustration.png)
+::: {.column width="50%"}
+
 :::
-:::::
+::::
+
+
+## What does reproducibility mean actually?
+
+
+:::: columns
+::: {.column width="50%"}
+
+<br/> <br/>
+
+-   Difficult question to answer...
+-   "Lack of reproducibility"<br /> :arrow_right: understood but broad expression
+-   No clear definition<br /> :arrow_right: varies between the disciplines
+:::
+
+::: {.column width="50%"}
+![Gundersen Odd Erik 2021 The fundamental principles of reproducibility Phil. Trans. R. Soc. A.37920200210 DOI: [10.1098/rsta.2020.0210](http://doi.org/10.1098/rsta.2020.0210).](images/gundersen-2021-survey-def-repro.jpg)
+:::
+::::
+
+
+## What does reproducibility mean actually?
+
+<br/>
+
+::: fragment
+-   **Direct reproducibility** [(commonly '*replication*' or '*experimental reproducibility*')]{.smaller}
+:::
+
+::: fragment
+-   **Analytical reproducibility** [(commonly '*computational reproducibility*')]{.smaller}
+:::
+
+::: fragment
+-   **Systemic reproducibility** [(commonly '*robustness*')]{.smaller}
+:::
+
+::: fragment
+-   **Conceptual reproducibility** [(commonly '*generalisation*')]{.smaller}
+:::
+
+::: aside
+<ul style="list-style: none;">
+
+<li>Schloss, 2018. DOI: [10.1128/mbio.00525-18](https://doi.org/10.1128/mbio.00525-18)</li>
+
+<li>National Academies of Sciences, Engineering, and Medicine. 2019. Reproducibility and Replicability in Science. Washington, DC: The National Academies Press. DOI: [10.17226/25303](https://doi.org/10.17226/25303)</li>
+
+</ul>
+:::
+
+## What does reproducibility mean actually? 
+
+<br/>
+
+::: {style="color: #588157;" auto-animate-delay="0.2"}
+-   **Direct reproducibility** [(commonly '*replication*' or '*experimental reproducibility*')]{.smaller}
+:::
+
+::: {style="color: #588157;" auto-animate-delay="0.2"}
+-   **Analytical reproducibility** [(commonly '*computational reproducibility*')]{.smaller}
+:::
+
+::: {style="opacity: .5;" auto-animate-delay="0.2"}
+-   **Systemic reproducibility** [(commonly '*robustness*')]{.smaller}
+:::
+
+::: {style="opacity: .5;" auto-animate-delay="0.2"}
+-   **Conceptual reproducibility** [(commonly '*generalisation*')]{.smaller}
+:::
+
+
+
+
+::: aside
+<ul style="list-style: none;">
+
+<li>Schloss, 2018. DOI: [10.1128/mbio.00525-18](https://doi.org/10.1128/mbio.00525-18)</li>
+
+<li>National Academies of Sciences, Engineering, and Medicine. 2019. Reproducibility and Replicability in Science. Washington, DC: The National Academies Press. DOI: [10.17226/25303](https://doi.org/10.17226/25303)</li>
+
+</ul>
+:::
+
+## In other words... 
+
+<br/> <br/>
+
+:::::: r-hstack
+::: {.fragment data-id="box1" auto-animate-delay="0" style="background: #A8DADC; width: 300px; height: 200px; margin: 10px; display: flex; justify-content: center; align-items: center;"}
+Data
+:::
+
+::: {.fragment data-id="box2" auto-animate-delay="0.1" style="background: #AECBFA; width: 300px; height: 200px; margin: 10px; display: flex; justify-content: center; align-items: center;"}
+Code
+:::
+
+::: {.fragment data-id="box3" auto-animate-delay="0.2" style="background: #D4A5E6; width: 300px; height: 200px; margin: 10px; display: flex; justify-content: center; align-items: center;"}
+Documentation
+:::
 ::::::
 
-::: {.column width="50%" data-fragment="fade-in"}
-![SOURCE: Gundersen Odd Erik 2021 The fundamental principles of reproducibility Phil. Trans. R. Soc. A.37920200210 DOI: [10.1098/rsta.2020.0210](http://doi.org/10.1098/rsta.2020.0210).](images/gundersen-2021-survey-def-repro.jpg)
+## In other words... 
+
+<br/> <br/>
+
+:::::: r-stack
+::: {data-id="box1" style="background: #A8DADC; width: 700px; height: 400px; border-radius: 50px;"}
 :::
-::::::::
 
-## Similar but different concepts
+::: {data-id="box2" style="background: #AECBFA; width: 600px; height: 300px; border-radius: 50px;"}
+:::
 
-| Methods               | Same data       | Different data   |
-|-----------------------|-----------------|------------------|
-| **Same methods**      | Reproducibility | Replicability    |
-| **Different methods** | Robustness      | Generalisability |
+::: {data-id="box3" style="background: #D4A5E6; width: 500px; height: 200px; border-radius: 50px; display: flex; justify-content: center; align-items: center;"}
+Reproducible Research
+:::
+::::::
 
-: SOURCE: Schloss, 2018. DOI: [10.1128/mbio.00525-18](https://doi.org/10.1128/mbio.00525-18).
+## The "Reproducibility Crisis" 
 
-## The "Reproducibility Crisis"
+<br/>
 
-> Pour un chercheur, il n’y a rien de plus frustrant que l’impossibilité de reproduire des résultats majeurs obtenus quelques mois auparavant. Les causes de ce type de déconvenues sont multiples et parfois pernicieuses. Ce phénomène participe à ce que certains identifient comme une “crise de la reproductibilité de la recherche” [@desquilbet2019].
+::::: columns
+::: {.column width="50%"}
+![Baker, M. 1,500 scientists lift the lid on reproducibility. Nature 533, 452–454 (2016). DOI:  [10.1038/533452a](https://doi.org/10.1038/533452a).](images/nature-reproducibility-crisis.png){width="700" fig-align="center"}
+:::
 
-# Sources of non-reproducibility {#sources-of-nr}
+::: {.column width="50%"}
+<br/> <br/>
 
-To draw attention to a specific part of the text, you might want to make it [red]{style="color: red;"} with a [yellow background]{style="background-color: yellow;"}; [like this]{style="color: red; background-color: yellow;"}.
+-   70% of researchers can't reproduce others' findings
+-   60% can't reproduce **their own findings**
+-   Non-reproducible biomedical research costs $28 billion/year [@freedman2015]
+:::
+:::::
 
-# Every little helps: Literate Programming with Quarto {#lp-quarto}
+## How important is it? 
 
-![](images/liec-logo.png) {.r-stretch}
+## How important is it? Well, quite important 
+
+</br> </br>
+
+::: incremental
+-   Funders (e.g., ANR) and journals now require data and code accessibility, which aligns with the growing open-science movement
+-   ~~If I keep my data and code, I have a competitive advantage~~
+-   If I share my data and code, my work will gain more visibility (and citations :sunglasses:)
+:::
+
+## Advantages
+
+</br> </br>
+
+::: incremental
+-   It obliges you to verify your work (by sharing both docs, data and code)
+-   [Your future self]{.nice-green} will thank you (you'll be much more productive)
+-   Your collaborators too
+-   By ensuring reproducibility, you reinforce your credibility and reputation
+-   Reproducibility fosters [trust]{.nice-green} in scientific progress and [accelerates]{.nice-green} it
+:::
+
+# Sources of irreproducibility {#sources-of-nr}
+
+## What sources of irreproducibility<br />can you think of? :thinking: {style="text-align: center;"}
+
+Let's chat!
+
+## Factors decreasing reproducibility
+
+::::: columns
+::: {.column width="50%"}
+
+<br/> <br/> <br/>
+
+-   Failures of reproducibility cannot be traced to a single cause
+-   Nearly every aspect of a study needs to be considered
+
+:::
+
+::: {.column width="50%"}
+![Baker, M. 1,500 scientists lift the lid on reproducibility. Nature 533, 452–454 (2016). DOI:  [10.1038/533452a](https://doi.org/10.1038/533452a).](images/nature-factors-irrepro.png){fig-align="center"}
+:::
+:::::
+
+## Protocol drawing exercise
+
+I really want to 
+
+
+
+# Every little helps:<br />Literate Programming with Quarto {#lp-quarto}
+
+<!-- ![](images/blabla.png) {.r-stretch} -->
+
+<!-- To draw attention to a specific part of the text, you might want to make it [red]{style="color: red;"} with a [yellow background]{style="background-color: yellow;"}; [like this]{style="color: red; background-color: yellow;"}. -->
+
+<!-- ![The Turing Way project illustration by Scriberia. Used under a CC-BY 4.0 licence. DOI: [10.5281/zenodo.3332807](https://doi.org/10.5281/zenodo.3332807).](images/rr-map-illustration.png) -->
 
 # References {#refs}
