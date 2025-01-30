@@ -13,7 +13,7 @@ format:
     width: 1600
     height: 900
     footer: "CS-WORKSHOP Feb 2025 | Materials: [ellfrank7/repro-research-workshop](https://github.com/ellfran-7/repro-research-workshop)"
-    transition: fade
+    transition: slide
     background-transition: fade
     auto-animate-easing: ease-in-out
     auto-animate-unmatched: false
@@ -107,30 +107,27 @@ ggplot(tidy_surv_data, aes(x = answer, fill = answer)) +
 
 [Create WOOCLAP then add QR code and code for session !!!]{style="color: red"}
 
-## What does reproducibility mean actually?
+## What does reproducibility mean actually? {auto-animate="true"}
 
-:::: columns
-::: {.column width="50%"}
-
+:::::: columns
+:::: {.column width="50%"}
 <br/> <br/>
 
+::: incremental
 -   Difficult question to answer...
 -   "Lack of reproducibility"<br /> :arrow_right: understood but broad expression
 -   No clear definition<br /> :arrow_right: varies between the disciplines
 :::
-
-::: {.column width="50%"}
-
-:::
 ::::
 
-
-## What does reproducibility mean actually?
-
-
-:::: columns
 ::: {.column width="50%"}
+:::
+::::::
 
+## What does reproducibility mean actually? {auto-animate="true"}
+
+::::: columns
+::: {.column width="50%"}
 <br/> <br/>
 
 -   Difficult question to answer...
@@ -141,10 +138,9 @@ ggplot(tidy_surv_data, aes(x = answer, fill = answer)) +
 ::: {.column width="50%"}
 ![Gundersen Odd Erik 2021 The fundamental principles of reproducibility Phil. Trans. R. Soc. A.37920200210 DOI: [10.1098/rsta.2020.0210](http://doi.org/10.1098/rsta.2020.0210).](images/gundersen-2021-survey-def-repro.jpg)
 :::
-::::
+:::::
 
-
-## What does reproducibility mean actually?
+## What does reproducibility mean actually? {auto-animate="true"}
 
 <br/>
 
@@ -174,28 +170,25 @@ ggplot(tidy_surv_data, aes(x = answer, fill = answer)) +
 </ul>
 :::
 
-## What does reproducibility mean actually? 
+## What does reproducibility mean actually? {auto-animate="true"}
 
 <br/>
 
 ::: {style="color: #588157;" auto-animate-delay="0.2"}
--   **Direct reproducibility** [(commonly '*replication*' or '*experimental reproducibility*')]{.smaller}
+-   **Direct reproducibility** (commonly '*replication*' or '*experimental reproducibility*')
 :::
 
 ::: {style="color: #588157;" auto-animate-delay="0.2"}
--   **Analytical reproducibility** [(commonly '*computational reproducibility*')]{.smaller}
+-   **Analytical reproducibility** (commonly '*computational reproducibility*')
 :::
 
 ::: {style="opacity: .5;" auto-animate-delay="0.2"}
--   **Systemic reproducibility** [(commonly '*robustness*')]{.smaller}
+-   **Systemic reproducibility** (commonly '*robustness*')
 :::
 
 ::: {style="opacity: .5;" auto-animate-delay="0.2"}
--   **Conceptual reproducibility** [(commonly '*generalisation*')]{.smaller}
+-   **Conceptual reproducibility** (commonly '*generalisation*')
 :::
-
-
-
 
 ::: aside
 <ul style="list-style: none;">
@@ -207,7 +200,7 @@ ggplot(tidy_surv_data, aes(x = answer, fill = answer)) +
 </ul>
 :::
 
-## In other words... 
+## In other words... {auto-animate="true"}
 
 <br/> <br/>
 
@@ -225,7 +218,7 @@ Documentation
 :::
 ::::::
 
-## In other words... 
+## In other words... {auto-animate="true"}
 
 <br/> <br/>
 
@@ -241,27 +234,29 @@ Reproducible Research
 :::
 ::::::
 
-## The "Reproducibility Crisis" 
+## A "Reproducibility Crisis"
 
 <br/>
 
-::::: columns
+:::::: columns
 ::: {.column width="50%"}
-![Baker, M. 1,500 scientists lift the lid on reproducibility. Nature 533, 452–454 (2016). DOI:  [10.1038/533452a](https://doi.org/10.1038/533452a).](images/nature-reproducibility-crisis.png){width="700" fig-align="center"}
+![Baker, M. 1,500 scientists lift the lid on reproducibility. Nature 533, 452–454 (2016). DOI: [10.1038/533452a](https://doi.org/10.1038/533452a).](images/nature-reproducibility-crisis.png){.lightbox width="700" fig-align="center"}
 :::
 
-::: {.column width="50%"}
+:::: {.column width="50%"}
 <br/> <br/>
 
+::: incremental
 -   70% of researchers can't reproduce others' findings
+
 -   60% can't reproduce **their own findings**
--   Non-reproducible biomedical research costs $28 billion/year [@freedman2015]
+
+-   Non-reproducible biomedical research costs \$28 billion/year [@freedman2015]
 :::
-:::::
+::::
+::::::
 
-## How important is it? 
-
-## How important is it? Well, quite important 
+## How important is it? [Well, quite important]{.fragment}
 
 </br> </br>
 
@@ -287,37 +282,171 @@ Reproducible Research
 
 ## What sources of irreproducibility<br />can you think of? :thinking: {style="text-align: center;"}
 
-Let's chat!
-
-## Factors decreasing reproducibility
+## Factors decreasing reproducibility {auto-animate="\"true"}
 
 ::::: columns
 ::: {.column width="50%"}
-
 <br/> <br/> <br/>
 
 -   Failures of reproducibility cannot be traced to a single cause
 -   Nearly every aspect of a study needs to be considered
-
 :::
 
 ::: {.column width="50%"}
-![Baker, M. 1,500 scientists lift the lid on reproducibility. Nature 533, 452–454 (2016). DOI:  [10.1038/533452a](https://doi.org/10.1038/533452a).](images/nature-factors-irrepro.png){fig-align="center"}
+![Baker, M. 1,500 scientists lift the lid on reproducibility. Nature 533, 452–454 (2016). DOI:  [10.1038/533452a](https://doi.org/10.1038/533452a).](images/nature-factors-irrepro.png){.lightbox fig-align="center"}
 :::
 :::::
 
-## Protocol drawing exercise
+## Example: a drawing protocol {auto-animate="true"}
 
-I really want to 
+::: fragment
+**You really want to draw something but don't know how. You've found this protocol in a very prestigious journal and want to reproduce it. Grab your pens and papers :pencil: !**
+:::
 
+:::::: fragment
+<div>
 
+<button class="switch-btn" onclick="toggleLanguage()">
+
+Switch Language
+
+</button>
+
+::: {#english .language .no-margin-top .green-border}
+1.  Draw a large circle in the center of your page.
+2.  Inside the circle, slightly above the middle, draw two medium-sized ovals next to each other. Inside each oval, draw a smaller filled-in oval.
+3.  Below the ovals, in the center of the circle, draw a small upside-down triangle.
+4.  On top of the circle, draw two small triangles with the base of each triangle touching the edge of the circle and the points facing outward.
+5.  From the bottom point of the triangle, draw two curved lines that extend outward, one curving to the left and one to the right, forming a “W” shape.
+6.  On each side of the curved lines, draw three short straight lines extending outward.
+:::
+
+::: {#french .language .no-margin-top .green-border style="display:none;"}
+1.  Dessinez un grand cercle au centre de votre page.
+2.  À l'intérieur du cercle, légèrement au-dessus du milieu, dessinez deux ovales de taille moyenne côte à côte. À l'intérieur de chaque ovale, dessinez un petit ovale rempli.
+3.  Sous les ovales, au centre du cercle, dessinez un petit triangle inversé.
+4.  Au-dessus du cercle, dessinez deux petits triangles avec la base de chaque triangle touchant le bord du cercle et les pointes dirigées vers l'extérieur.
+5.  À partir de la pointe inférieure du triangle, dessinez deux lignes courbées qui s'étendent vers l'extérieur, l'une courbant vers la gauche et l'autre vers la droite, formant une forme en "W".
+6.  De chaque côté des lignes courbées, dessinez trois petites lignes droites qui s'étendent vers l'extérieur.
+:::
+
+</div>
+
+```{=html}
+<script>
+function toggleLanguage() {
+  var english = document.getElementById("english");
+  var french = document.getElementById("french");
+  if (english.style.display === "none") {
+    english.style.display = "block";
+    french.style.display = "none";
+  } else {
+    english.style.display = "none";
+    french.style.display = "block";
+  }
+}
+</script>
+```
+::::::
+
+::: aside
+Inspired by [Repro4Everyone. (n.d.). Introduction to Reproducibility. Repro4Everyone. Retrieved January 30, 2025.](https://www.repro4everyone.org/resources/intro-reproducibility)
+:::
+
+## Example: a drawing protocol {auto-animate="true"}
+
+::::: {layout="[10, -2, 10]" layout-valign="bottom"}
+::: fragment
+![My attempt](images/cat-ellis-drawing.jpg){width="90%"}
+:::
+
+::: fragment
+![The result in the study](images/cat-good-drawing.png){width="90%"}
+:::
+:::::
+
+[How did you do?]{style="text-align: center; display: block;"}
+
+## Example: a drawing protocol {auto-animate="true"}
+
+:::::: {layout="[10,-1,10,-1,10]" layout-valign="center"}
+<br/>
+
+::: fragment
+![Timothée Poisot (Sep 8 2015) ‘Step 2 — do the rest of the fucking analysis’ \[Medium\], Page 1, accessed 10 Jan 2025.](images/tpoisot-protocol-ambiguous-drawing.png){.lightbox width="85%"}
+:::
+
+::: fragment
+!["Unavailable protocol"](images/protocol-unavailability-post.png){.lightbox width="90%"}
+:::
+
+::: fragment
+!["Ambiguous protocol"](images/protocol-ambiguous-post.png){.lightbox width="90%"}
+:::
+::::::
 
 # Every little helps:<br />Literate Programming with Quarto {#lp-quarto}
 
-<!-- ![](images/blabla.png) {.r-stretch} -->
+## What is Literate programming?
 
-<!-- To draw attention to a specific part of the text, you might want to make it [red]{style="color: red;"} with a [yellow background]{style="background-color: yellow;"}; [like this]{style="color: red; background-color: yellow;"}. -->
+:::: columns
+::: {.column width="60%"}
+-   Introduced by *Donald Knuth* in 1984
 
-<!-- ![The Turing Way project illustration by Scriberia. Used under a CC-BY 4.0 licence. DOI: [10.5281/zenodo.3332807](https://doi.org/10.5281/zenodo.3332807).](images/rr-map-illustration.png) -->
+-   Idea of combining **source code** and **text**
+
+-   Method for writing computer programs as **literary essays**
+
+-   Many tools exist for various languages:
+
+    -   `RMarkdown` (R)
+
+    -   `Jupyter` (Python)
+
+    -    `Quarto` (multi-language)
+:::
+::::
+
+::: {.column width="40%"}
+![Knuth, Donald Ervin. “Literate Programming.” Computer/law journal (1984).](images/dknuth-lp.jpg){width="45%"}
+:::
+
+> "The best way to communicate from one human being to another is through story" - *Donald Knuth*
+
+## What is `Quarto`?
+
+<br/>
+
+`Quarto` implements the concept of literate programming.
+
+It provides a unified authoring framework for data science, combining your code, its results, and your prose (text).
+
+![Illustration by Alison Hill and Allison Horst, for RStudio](images/ahill-ahorst-hedgehog-text-code.png){fig-align="center" width="30%"}
+
+## Multiple outputs
+
+<br/>
+
+::: incremental
+-   `Quarto` documents are fully **reproducible**
+-   They automate the inclusion of the last versions of the results of an analysis
+-   Literally dozens of output formats are available: [Web pages]{.fragment .greenish}[, PDFs]{.fragment .mossygreenish}[, Word files]{.fragment .blueish}[, websites]{.fragment .tealish}[, books]{.fragment .purplish}[, and more.]{.fragment .pinkish}
+:::
+
+![Illustration by Alison Hill and Allison Horst, for RStudio](images/ahill-ahorst-hedgehog-outputs.png){fig-align="center" width="30%"}
+
+## Main use cases
+
+<br/>
+
+There can be three relevant use cases:
+
+::: incremental
+-   For **communicating** to decision-makers or to a more general audience, who want to focus on the conclusions, not the code behind the analysis
+-   For **collaborating** with other data scientists (including **future you!**), who are interested in both your conclusions, and how you reached them (i.e. the code)
+-   As an environment in which to *do* data science, as a modern-day lab notebook where you can capture not only what you did, but also what you were thinking
+:::
+
+## 
 
 # References {#refs}

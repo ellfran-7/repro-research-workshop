@@ -74,12 +74,110 @@ h6 {
 
 .reveal .slide figure>figcaption, .reveal .slide img.stretch+p.caption, .reveal .slide img.r-stretch+p.caption {
     font-size: 0.5em !important;
+    text-align: center !important;
 }
 
+
+
 .reveal .slides section .fragment.highlight-moss.visible {
-  color: #588157;
+  color: $mossgreen;
+}
+
+.reveal .slide ul li, .reveal .slide ol li {
+    margin-top: 0.5em !important;
+    margin-bottom: 0.5em !important;
+}
+
+// Counter margin class
+
+.no-margin-top ul li, .no-margin-top ol li {
+    margin-top: 0em !important; /* Remove top margin */
+    margin-bottom: 0em !important; /* Remove top margin */
 }
 
 .nice-green {
-  color: #5a9f68;
+  color: $green;
 }
+
+.nice-blue {
+  color: #00817c;
+}
+
+
+// Button and text
+
+.language {
+  font-size: 75%;
+  margin: 20px;
+}
+
+.switch-btn {
+  background-color: $green; // Green color
+  color: $light;
+  border: none;
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background 0.3s ease, transform 0.2s ease;
+  margin-bottom: 10px; /* Added margin-bottom to control space */
+
+  &:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+  }
+
+  &:active {
+    background-color: #3e8e41;
+    transform: scale(0.98);
+  }
+}
+
+
+.green-border {
+  border: 4px solid #90ee90; /* Light green border */
+  padding: 15px; /* Increased padding for better spacing */
+  border-radius: 8px; /* Slightly more rounded corners */
+  display: inline-block; /* Ensure the border wraps around the content */
+  background-color: #f0fff0; /* Light green background for a softer look */
+}
+
+// Colors for text
+
+.greenish {
+  color: $green;
+}
+
+.mossygreenish {
+  color: $mossgreen;
+}
+
+.blueish {
+  color: $blue;
+}
+
+.tealish {
+  color: $teal;
+}
+
+.purplish {
+  color: $purple;
+}
+
+.pinkish {
+  color: $pink;
+}
+
+$red: #bf2642 !default;
+$orange: #f2a03d !default;
+$green: #5a9f68 !default;
+$mossgreen: #588157 !default;
+$purple: #73245e !default;
+$beige: #f8f5f0 !default;
+$blue: #00817c !default;
+$indigo:  #6610f2 !default;
+$pink:    #e83e8c !default;
+$yellow:  #ffc107 !default;
+$teal:    #20c997 !default;
+$cyan:    #29abe0 !default;
