@@ -10,6 +10,7 @@ format:
   revealjs:
     theme: [default, slide-styles.scss]
     code-block-height: 700px
+    code-copy: true
     width: 1600
     height: 900
     footer: "CS-WORKSHOP Feb 2025 | Materials: [ellfrank7/repro-research-workshop](https://github.com/ellfran-7/repro-research-workshop)"
@@ -24,7 +25,6 @@ echo: false
 slide-number: true
 code-line-numbers: false
 from: markdown+emoji
-bibliography: references.bib
 ---
 
 ```{r}
@@ -103,7 +103,7 @@ ggplot(tidy_surv_data, aes(x = answer, fill = answer)) +
 ```
 :::
 
-## What does reproducibility mean to you? :thinking: {style="text-align: center;"}
+## What should be kept the same when reproducing a study? :thinking: {style="text-align: center;"}
 
 [Create WOOCLAP then add QR code and code for session !!!]{style="color: red"}
 
@@ -200,6 +200,12 @@ ggplot(tidy_surv_data, aes(x = answer, fill = answer)) +
 </ul>
 :::
 
+## What does reproducibility mean actually? {auto-animate="true"}
+
+<br/>
+
+![The Turing Way project illustration by Scriberia. Used under a CC-BY 4.0 licence. DOI: [10.5281/zenodo.3332807](https://doi.org/10.5281/zenodo.3332807)](images/turingway-definition.svg){.lightbox fig-align="center"}
+
 ## In other words... {auto-animate="true"}
 
 <br/> <br/>
@@ -234,9 +240,9 @@ Reproducible Research
 :::
 ::::::
 
-## A "Reproducibility Crisis"
+## Why are we talking about this now?
 
-<br/>
+<!-- We need to have confidence that our research is good quality and we are doing good science. -->
 
 :::::: columns
 ::: {.column width="50%"}
@@ -244,14 +250,14 @@ Reproducible Research
 :::
 
 :::: {.column width="50%"}
-<br/> <br/>
+<br/>
 
 ::: incremental
 -   70% of researchers can't reproduce others' findings
 
 -   60% can't reproduce **their own findings**
 
--   Non-reproducible biomedical research costs \$28 billion/year [@freedman2015]
+-   Non-reproducible biomedical research costs \$28 billion/year ([Freedman et al. 2015](https://doi.org/10.1371/journal.pbio.1002165))
 :::
 ::::
 ::::::
@@ -261,6 +267,7 @@ Reproducible Research
 </br> </br>
 
 ::: incremental
+-   Anyone (with a similar level of skills) should be able to do reproduce your research and benefit from it
 -   Funders (e.g., ANR) and journals now require data and code accessibility, which aligns with the growing open-science movement
 -   ~~If I keep my data and code, I have a competitive advantage~~
 -   If I share my data and code, my work will gain more visibility (and citations :sunglasses:)
@@ -272,10 +279,10 @@ Reproducible Research
 
 ::: incremental
 -   It obliges you to verify your work (by sharing both docs, data and code)
--   [Your future self]{.nice-green} will thank you (you'll be much more productive)
+-   [**Your future self**]{.nice-green} will thank you (you'll be much more productive)
 -   Your collaborators too
 -   By ensuring reproducibility, you reinforce your credibility and reputation
--   Reproducibility fosters [trust]{.nice-green} in scientific progress and [accelerates]{.nice-green} it
+-   Reproducibility fosters [**trust**]{.nice-green} in scientific progress and [**accelerates**]{.nice-green} it
 :::
 
 # Sources of irreproducibility {#sources-of-nr}
@@ -332,7 +339,6 @@ Switch Language
 
 </div>
 
-```{=html}
 <script>
 function toggleLanguage() {
   var english = document.getElementById("english");
@@ -346,7 +352,6 @@ function toggleLanguage() {
   }
 }
 </script>
-```
 ::::::
 
 ::: aside
@@ -357,11 +362,11 @@ Inspired by [Repro4Everyone. (n.d.). Introduction to Reproducibility. Repro4Ever
 
 ::::: {layout="[10, -2, 10]" layout-valign="bottom"}
 ::: fragment
-![My attempt](images/cat-ellis-drawing.jpg){width="90%"}
+![My attempt](images/cat-ellis-drawing.jpg){width="75%"}
 :::
 
 ::: fragment
-![The result in the study](images/cat-good-drawing.png){width="90%"}
+![The result in the study](images/cat-good-drawing.png){width="70%"}
 :::
 :::::
 
@@ -369,9 +374,9 @@ Inspired by [Repro4Everyone. (n.d.). Introduction to Reproducibility. Repro4Ever
 
 ## Example: a drawing protocol {auto-animate="true"}
 
-:::::: {layout="[10,-1,10,-1,10]" layout-valign="center"}
 <br/>
 
+:::::: {layout="[10,-1,10,-1,10]" layout-valign="center"}
 ::: fragment
 ![Timothée Poisot (Sep 8 2015) ‘Step 2 — do the rest of the fucking analysis’ \[Medium\], Page 1, accessed 10 Jan 2025.](images/tpoisot-protocol-ambiguous-drawing.png){.lightbox width="85%"}
 :::
@@ -385,12 +390,76 @@ Inspired by [Repro4Everyone. (n.d.). Introduction to Reproducibility. Repro4Ever
 :::
 ::::::
 
+## How can we be bit more reproducible? {auto-animate="true"}
+
+<br/>
+
+-   Document practices (e.g., lab notebooks, ELNs with [eLabFTW](https://scienceouverte.univ-lorraine.fr/en/research-data-ul/electronic-laboratory-notebook-elabftw-solution/))
+
+## How can we be bit more reproducible? {auto-animate="true"}
+
+<br/>
+
+-   Document practices (e.g., lab notebooks, ELNs with [eLabFTW](https://scienceouverte.univ-lorraine.fr/en/research-data-ul/electronic-laboratory-notebook-elabftw-solution/))
+-   Organise code, data and files (e.g., separate folders for different data, clear filenames, tidy principles)
+
+::: {layout="[6,-2,6]"}
+![](images/phdcomic-finaldoc.png){.lightbox fig-align="center"}
+
+![](images/jlowndes-ahorst-tidydata.jpg){fig-align="center"}
+:::
+
+## How can we be bit more reproducible? {auto-animate="true"}
+
+<br/>
+
+-   Document practices (e.g., lab notebooks, ELNs with [eLabFTW](https://scienceouverte.univ-lorraine.fr/en/research-data-ul/electronic-laboratory-notebook-elabftw-solution/))
+-   Organise code, data and files (e.g., separate folders for different data, clear filenames, tidy principles)
+-   Share data and outputs
+
+::: {layout="[10,-4,10,-4,10]" layout-valign="center"}
+![](images/logo-zenodo.png){fig-align="center" width="30%"}
+
+![](images/logo-figshare.png){fig-align="center" width="30%"}
+
+![](images/logo-dorel.png){fig-align="center" width="30%"}
+:::
+
+## How can we be bit more reproducible? {auto-animate="true"}
+
+<br/>
+
+-   Document practices (e.g., lab notebooks, ELNs with [eLabFTW](https://scienceouverte.univ-lorraine.fr/en/research-data-ul/electronic-laboratory-notebook-elabftw-solution/))
+-   Organise code, data and files (e.g., separate folders for different data, clear filenames, tidy principles)
+-   Share data and outputs
+-   Track changes (= versionning)
+
+::: {layout="[10,-4,10,-4,10]" layout-valign="center"}
+![](images/logo-git.png){fig-align="center" width="35%"}
+
+![](images/logo-github.png){fig-align="center" width="35%"}
+
+![](images/logo-gitlab.png){fig-align="center" width="35%"}
+:::
+
+## How can we be bit more reproducible? {auto-animate="true"}
+
+<br/>
+
+-   Document practices (e.g., lab notebooks, ELNs with [eLabFTW](https://scienceouverte.univ-lorraine.fr/en/research-data-ul/electronic-laboratory-notebook-elabftw-solution/))
+-   Organise code, data and files (e.g., separate folders for different data, clear filenames, tidy principles)
+-   Share data and outputs
+-   Track changes (= versionning)
+-   Learn to code (even a little)
+
+![Artwork by Allison Horst](images/ahorst-rabbit-mouse-comp.jpg){fig-align="center" width="100%".a bsolute bottom=10 right=10}}
+
 # Every little helps:<br />Literate Programming with Quarto {#lp-quarto}
 
 ## What is Literate programming?
 
-:::: columns
-::: {.column width="60%"}
+::::: columns
+::: {.column .incremental width="60%"}
 -   Introduced by *Donald Knuth* in 1984
 
 -   Idea of combining **source code** and **text**
@@ -403,34 +472,40 @@ Inspired by [Repro4Everyone. (n.d.). Introduction to Reproducibility. Repro4Ever
 
     -   `Jupyter` (Python)
 
-    -    `Quarto` (multi-language)
+    -   `Quarto` (multi-language)
 :::
-::::
 
 ::: {.column width="40%"}
-![Knuth, Donald Ervin. “Literate Programming.” Computer/law journal (1984).](images/dknuth-lp.jpg){width="45%"}
+![Knuth, Donald Ervin. “Literate Programming.” Computer/law journal (1984).](images/dknuth-lp.jpg){width="50%"}
 :::
+:::::
 
-> "The best way to communicate from one human being to another is through story" - *Donald Knuth*
+::: fragment
+> "The best way to communicate from one human being to another is through story"<br />*Donald Knuth*
+:::
 
 ## What is `Quarto`?
 
 <br/>
 
-`Quarto` implements the concept of literate programming.
+-   `Quarto` is an open-source, scientific and technical publishing system
+-   It implements the concept of literate programming
+-   It provides a unified authoring framework for data science, combining your code, its results, and your prose (text)
 
-It provides a unified authoring framework for data science, combining your code, its results, and your prose (text).
+<br/>
 
-![Illustration by Alison Hill and Allison Horst, for RStudio](images/ahill-ahorst-hedgehog-text-code.png){fig-align="center" width="30%"}
+![Illustration by Alison Hill and Allison Horst, for RStudio](images/ahill-ahorst-hedgehog-text-code.png){fig-align="center" width="15%"}
 
-## Multiple outputs
+## Advantages of Quarto
 
 <br/>
 
 ::: incremental
--   `Quarto` documents are fully **reproducible**
+-   `Quarto` documents are fully **reproducible** and **dynamic**
 -   They automate the inclusion of the last versions of the results of an analysis
+-   Allows you to avoid `copy + paste`, avoid accidental errors and save time
 -   Literally dozens of output formats are available: [Web pages]{.fragment .greenish}[, PDFs]{.fragment .mossygreenish}[, Word files]{.fragment .blueish}[, websites]{.fragment .tealish}[, books]{.fragment .purplish}[, and more.]{.fragment .pinkish}
+-   Open source so anyone can use it
 :::
 
 ![Illustration by Alison Hill and Allison Horst, for RStudio](images/ahill-ahorst-hedgehog-outputs.png){fig-align="center" width="30%"}
@@ -441,12 +516,19 @@ It provides a unified authoring framework for data science, combining your code,
 
 There can be three relevant use cases:
 
+
+<br/>
+
 ::: incremental
--   For **communicating** to decision-makers or to a more general audience, who want to focus on the conclusions, not the code behind the analysis
--   For **collaborating** with other data scientists (including **future you!**), who are interested in both your conclusions, and how you reached them (i.e. the code)
--   As an environment in which to *do* data science, as a modern-day lab notebook where you can capture not only what you did, but also what you were thinking
+1.  For [**communicating**]{.nicegreen} to decision-makers or to a more general audience, who want to focus on the conclusions, not the code behind the analysis
+2.  For [**collaborating**]{.nicegreen} with other data scientists (including [**future you!**]{.nicegreen}), who are interested in both your conclusions, and how you reached them (i.e. the code)
+3.  As an environment in which to [*do*]{.nicegreen} data science, as a modern-day lab notebook where you can capture not only what you did, but also what you were thinking
 :::
 
-## 
+## To advance, we must code a little... {style="text-align: center;"}
 
-# References {#refs}
+::: fragment
+![Artwork by Allison Horst](images/ahorst-rsadtohappy.png){fig-align="center" width="40%"}
+:::
+
+<!-- # References {#refs} -->

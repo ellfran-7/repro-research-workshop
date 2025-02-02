@@ -1,22 +1,403 @@
 ---
-title: "Reproducible Research"
-subtitle: "A step closer with Literate Programming"
+title: "Enter `Quarto`"
+subtitle: "Hands on"
 author:
   - name: "Ellis Franklin"
-    affiliations: "LIEC"
+  - name: "Elise Billoir"
 date: "2025-02-06"
 date-format: long
 format:
   revealjs:
+    theme: [default, slide-styles.scss]
     code-block-height: 700px
-    theme: moon
+    code-copy: true
+    width: 1600
+    height: 900
+    footer: "CS-WORKSHOP Feb 2025 | Materials: [ellfrank7/repro-research-workshop](https://github.com/ellfran-7/repro-research-workshop)"
     transition: slide
     background-transition: fade
-    scrollable: false
-    chalkboard: true
+    auto-animate-easing: ease-in-out
+    auto-animate-unmatched: false
+    auto-animate-duration: 0.8
+execute:
+  cache: true
+echo: false
 slide-number: true
-self-contained: false
-footer: "CS WORKSHOP - 2025/02/06"
-smaller: false
+code-line-numbers: false
 from: markdown+emoji
 ---
+
+# Table of contents
+
+-   [Your first Quarto document](#first-qmd)
+-   [Including content](#txt-format)
+-   [Code chunks and plots](#code-plots)
+
+# Your first Quarto document {#first-qmd}
+
+## Live demo :movie_camera:
+
+1.  Creating a `.qmd` file
+2.  Two editors
+3.  Rendering a doc
+4.  What makes a Quarto document?
+    -   YAML header
+    -   Text
+    -   Chunks of R code
+
+## Your turn! {auto-animate="true"}
+
+## Exercise 1 {auto-animate="true"}
+
+<br/> <br/>
+
+::: r-stack
+Go to the [Exercise section](03-exercises.qmd) :pencil2:
+:::
+
+# Including content {#txt-format}
+
+## Markdown syntax
+
+<br/>
+
+-   You don’t need special software to read it
+-   Separates out the content and structure from the document styling
+-   Focus on the content not the way it looks
+
+<br/>
+
+> Markdown-formatted document should be publishable as-is, as plain text, without looking like it’s been marked up with tags or formatting instructions. - [John Gruber](https://daringfireball.net/projects/markdown/syntax#philosophy)
+
+## Text formats
+
+<br/>
+
+Formatting text is easy, and follows a common structure by surrounding the text with special characters
+
+<br/>
+
+``` markdown
+*This* **workshop** ~~will be~~ is `so` [cool!]{.underline} [Yay!]{.smallcaps}
+```
+
+gives:
+
+*This* **workshop** ~~will be~~ is `so` [cool!]{.underline} [Yay!]{.smallcaps}
+
+## Sections
+
+<br/>
+
+Sections are added to a document using different numbers of `#`:
+
+<br/>
+
+-   `#` creates a Level 1 heading (section)
+-   `##` creates a level 2 heading (subsection)
+-   `###` creates a Level 3 heading (sub-subsection)
+-   And so on...
+
+## Lists
+
+<br/>
+
+:::: fragment
+Unordered lists can be created using - (or \*):
+
+::: {layout="[1,1,1]" layout-valign="center"}
+``` markdown
+- Item 1
+- Item 2
+- Item 3
+```
+
+gives
+
+-   Item 1
+-   Item 2
+-   Item 3
+:::
+::::
+
+:::: fragment
+Ordered lists can be created with progressive numbers or letters:
+
+::: {layout="[1,1,1]" layout-valign="center"}
+``` markdown
+1. Item 1
+2. Item 2
+3. Item 3
+```
+
+gives
+
+1.  Item 1
+2.  Item 2
+3.  Item 3
+:::
+::::
+
+## Links
+
+<br/>
+
+Add a link using square brackets and round brackets:
+
+-   the text to appear in square brackets
+-   followed by the URL in round brackets
+
+<br/>
+
+``` markdown
+A link to the [Quarto documentation](https://quarto.org/).
+```
+
+which gives:
+
+A link to the [Quarto documentation](https://quarto.org/).
+
+## Images
+
+<br/>
+
+Add an image using `![](path/image.png)`.
+
+<br/>
+
+You can add a caption easily within the brackets as such `![Cool image](path/image.png)`
+
+::: callout-tip
+-   Use relative file paths rather than absolute file paths - other people won’t share the same absolute file path as you!
+
+-   File paths are relative to where the Quarto document is!
+:::
+
+## There is much more...
+
+<br/> <br/> <br/>
+
+For further reading on this part, visit the [Quarto documentation on Markdown Basics](https://quarto.org/docs/authoring/markdown-basics.html).
+
+For quick help in the syntax, click in the top navigation bar in Rstudio *`Help > Markdown Quick Reference`* for a guide.
+
+## Exercise 2
+
+<br/> <br/>
+
+::: r-stack
+Go to the [Exercise section](03-exercises.qmd) :pencil2:
+:::
+
+# Code chunks and plots {#code-plots}
+
+## Code chunks
+
+<br/>
+
+-   Code blocks are the main way of including executable R code in a document.
+-   Code blocks always start with three backticks, followed by the an r in curly brackets.
+
+<br/>
+
+```{r}
+#| echo: fenced
+2 + 2
+```
+
+## Code chunk options {auto-animate="true"}
+
+Code chunk options can control:
+
+-   whether your code is executed
+-   whether your code is displayed
+-   if warnings and errors are displayed
+-   how figures are presented
+-   how tables are presented
+
+## Code chunk options {auto-animate="true"}
+
+<br/>
+
+They are included in a special comment at the top of the chunk prefaced with `#|`:
+
+<br/>
+
+```{r}
+#| echo: fenced
+#| output: true
+2 + 2
+```
+
+## Code chunk options {auto-animate="true"}
+
+<br/> <br/>
+
+| Option | Description |
+|--------------------|----------------------------------------------------|
+| `eval` | Evaluate the code chunk |
+| `echo` | Include the source code in output |
+| `output` | Include the results of executing the code |
+| `warning` | Include warnings in the output |
+| `error` | Include errors in the output (errors won't halt document processing) |
+| `include` | Prevent any output (code or results) from being included |
+
+## Code chunk options: `fig-`
+
+<br/>
+
+```{r}
+#| echo: false
+library(ggplot2)
+library(knitr)
+library(palmerpenguins)
+data(penguins)
+```
+
+```{r}
+#| warning: false
+#| echo: fenced
+#| fig-align: center 
+#| fig-width: 6
+#| fig-asp: 0.9
+#| fig-cap: "Distribution of bill depth sizes"
+#| output-location: column
+
+ggplot(data = penguins,
+       mapping = aes(x = bill_depth_mm)) +
+  geom_density() +
+  theme_bw()
+```
+
+## Code block options: `tbl-` , `eq-` {auto-animate="\"true"}
+
+<br/>
+
+For tables, it is exactly the same as for figures, but instead of `fig-`, you replace it is `tbl-`.
+
+For equations it is similar but with `eq-`.
+
+## Code block options: `tbl-` , `eq-` {auto-animate="\"true"}
+
+```{r}
+#| echo: fenced
+#| tbl-align: center 
+#| tbl-cap: "First 5 rows and columns of the penguins dataset"
+
+knitr::kable(head(penguins[,1:5]))
+```
+
+## Code chunk options: `label` {auto-animate="true"}
+
+<br/> <br/>
+
+You can add a `label` to each code chunk
+
+<br/>
+
+This allows you to:
+
+-   associate an "label" with an error (if one occurs)
+
+-   cross-reference a figure in the text.
+
+## Code block options: `label` {auto-animate="true"}
+
+<br/>
+
+To cross-reference, supposing the label of the code chunk is:
+
+<br/>
+
+::: r-stack
+`#| label: fig-billdepthdist`
+:::
+
+<br/>
+
+you simply write in the text as:
+
+<br/>
+
+``` markdown
+Many penguins in the dataset seem to have a bill depth between 18 and 19mm ([@fig-billdepthdist]).
+```
+
+## Code block options: `label` {auto-animate="true"}
+
+<br/>
+
+Many penguins in the dataset seem to have a bill depth between 18 and 19mm ([@fig-billdepthdist]).
+
+```{r}
+#| echo: fenced
+#| fig-cap: "Distribution of bill depth sizes"
+#| label: fig-billdepthdist
+#| output-location: column
+
+ggplot(data = penguins,
+       mapping = aes(x = bill_depth_mm)) +
+  geom_density() +
+  theme_bw()
+```
+
+## Inline code
+
+<br/>
+
+You can include executable expressions inside the markdown (text) by enclosing the expression in `` `r ` ``:
+
+<br/>
+
+``` markdown
+The penguins dataset is composed of `r nrow(penguins)` observations. 
+```
+
+gives:
+
+The penguins dataset is composed of `r nrow(penguins)` observations.
+
+<br/>
+
+This is very useful for automating reports!
+
+## There is much more...
+
+<br/>
+
+For more on each part of this sections:
+
+-   [Executions Options - Quarto](https://quarto.org/docs/computations/execution-options.html) for more on code chunk options
+
+-   [Cross References – Quarto](https://quarto.org/docs/authoring/cross-references.html) for more on labels and cross-referencing
+
+-   [Tables - Quarto](https://quarto.org/docs/authoring/tables.html) for more on tables
+
+-   [Technical Writing - Quarto](https://quarto.org/docs/visual-editor/technical.html) for more on equations and technical writing
+
+-   [Inline Code – Quarto](https://quarto.org/docs/computations/inline-code.html) for more on inline codes
+
+For more advanced notions on coding aspects in Quarto, visit [HTML Code Blocks – Quarto](https://quarto.org/docs/output-formats/html-code.html)
+
+## Exercise 3
+
+<br/> <br/>
+
+::: r-stack
+Go to the [Exercise section](03-exercises.qmd) :pencil2:
+:::
+
+## Is that all? Nope
+
+<br/>
+
+-   Citations
+-   Projects
+-   Other useful formats:
+    -   Presentations (like this one today)
+    -   Manuscripts
+-   There is so much more!
+
+You'll find everything at the official [Quarto - Documentation](https://quarto.org/docs/authoring/markdown-basics.html).
+
+## Closing shop
