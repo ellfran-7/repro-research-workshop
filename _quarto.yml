@@ -1,7 +1,10 @@
 project:
   type: website
   render: 
-    - "*.qmd"
+    - "01-reprores-slides.qmd"
+    - "02-quarto-page.qmd"
+    - "!03-exercises-page.qmd"
+    - "!02-quarto-slides.qmd"
     - "!/templates"
 
 execute:
@@ -13,14 +16,14 @@ website:
     left: 
       - text: Pre-work
         href: index.qmd
-      - text: Slides
-        menu:
-          - text: 1 - Reproducible research
-            href: 01-reprores.qmd
-          - text: 2 - Hello Quarto
-            href: 02-quarto.qmd
-      - text: Exercises
-        href: 03-exercises.qmd 
+      - text: Repro-Research
+        href: 01-reprores.qmd
+      # - text: Quarto
+      #   href: 02-quarto-slides.qmd
+      - text: Quarto
+        href: 02-quarto-page.qmd
+      # - text: Exercises
+      #   href: 03-exercises-page.qmd 
     tools:
       - icon: github
         text: Source Code
@@ -32,7 +35,7 @@ format:
     toc: true
     theme: [minty, web-styles.scss]
     grid: 
-      body-width: 900px
+      body-width: 1000px
     
 
 
