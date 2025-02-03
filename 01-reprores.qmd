@@ -200,11 +200,11 @@ ggplot(tidy_surv_data, aes(x = answer, fill = answer)) +
 </ul>
 :::
 
-## What does reproducibility mean actually? {auto-animate="true"}
+<!-- ## What does reproducibility mean actually? {auto-animate="true"} -->
 
-<br/>
+<!-- <br/> -->
 
-![The Turing Way project illustration by Scriberia. Used under a CC-BY 4.0 licence. DOI: [10.5281/zenodo.3332807](https://doi.org/10.5281/zenodo.3332807)](images/turingway-definition.svg){.lightbox fig-align="center"}
+<!-- ![The Turing Way project illustration by Scriberia. Used under a CC-BY 4.0 licence. DOI: [10.5281/zenodo.3332807](https://doi.org/10.5281/zenodo.3332807)](images/turingway-definition.svg){.lightbox fig-align="center"} -->
 
 ## In other words... {auto-animate="true"}
 
@@ -403,10 +403,10 @@ Inspired by [Repro4Everyone. (n.d.). Introduction to Reproducibility. Repro4Ever
 -   Document practices (e.g., lab notebooks, ELNs with [eLabFTW](https://scienceouverte.univ-lorraine.fr/en/research-data-ul/electronic-laboratory-notebook-elabftw-solution/))
 -   Organise code, data and files (e.g., separate folders for different data, clear filenames, tidy principles)
 
-::: {layout="[6,-2,6]"}
+::: {layout="[-1,6,-2,6,-1]"}
 ![](images/phdcomic-finaldoc.png){.lightbox fig-align="center"}
 
-![](images/jlowndes-ahorst-tidydata.jpg){fig-align="center"}
+![](images/jlowndes-ahorst-tidydata.jpg){.lightbox fig-align="center"}
 :::
 
 ## How can we be bit more reproducible? {auto-animate="true"}
@@ -417,7 +417,7 @@ Inspired by [Repro4Everyone. (n.d.). Introduction to Reproducibility. Repro4Ever
 -   Organise code, data and files (e.g., separate folders for different data, clear filenames, tidy principles)
 -   Share data and outputs
 
-::: {layout="[10,-4,10,-4,10]" layout-valign="center"}
+::: {layout="[10,-3,10,-3,10]" layout-valign="center"}
 ![](images/logo-zenodo.png){fig-align="center" width="30%"}
 
 ![](images/logo-figshare.png){fig-align="center" width="30%"}
@@ -434,7 +434,7 @@ Inspired by [Repro4Everyone. (n.d.). Introduction to Reproducibility. Repro4Ever
 -   Share data and outputs
 -   Track changes (= versionning)
 
-::: {layout="[10,-4,10,-4,10]" layout-valign="center"}
+::: {layout="[10,-3,10,-3,10]" layout-valign="center"}
 ![](images/logo-git.png){fig-align="center" width="35%"}
 
 ![](images/logo-github.png){fig-align="center" width="35%"}
@@ -452,7 +452,7 @@ Inspired by [Repro4Everyone. (n.d.). Introduction to Reproducibility. Repro4Ever
 -   Track changes (= versionning)
 -   Learn to code (even a little)
 
-![Artwork by Allison Horst](images/ahorst-rabbit-mouse-comp.jpg){fig-align="center" width="100%".a bsolute bottom=10 right=10}}
+![Artwork by Allison Horst](images/ahorst-rabbit-mouse-comp.jpg){fig-align="center" width="40%".absolute bottom=15 right=15}
 
 # Every little helps:<br />Literate Programming with Quarto {#lp-quarto}
 
@@ -508,7 +508,7 @@ Inspired by [Repro4Everyone. (n.d.). Introduction to Reproducibility. Repro4Ever
 -   Open source so anyone can use it
 :::
 
-![Illustration by Alison Hill and Allison Horst, for RStudio](images/ahill-ahorst-hedgehog-outputs.png){fig-align="center" width="30%"}
+![Illustration by Alison Hill and Allison Horst, for RStudio](images/ahill-ahorst-hedgehog-outputs.png){fig-align="center" width="40%"}
 
 ## Main use cases
 
