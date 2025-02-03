@@ -1,5 +1,8 @@
 project:
   type: website
+  render: 
+    - "*.qmd"
+    - "!/templates"
 
 execute:
   freeze: auto # computational documents re-render only when source changes
@@ -10,13 +13,14 @@ website:
     left: 
       - text: Pre-work
         href: index.qmd
-    # right: 
-    #   - text: Slides
-    #     menu: 
-    #       - text: 01 - Reproducible research
-    #         href: ...
-    #       - text: 02 - Quarto
-    #         href: ...
+      - text: Slides
+        menu:
+          - text: 1 - Reproducible research
+            href: 01-reprores.qmd
+          - text: 2 - Hello Quarto
+            href: 02-quarto.qmd
+      - text: Exercises
+        href: 03-exercises.qmd 
     tools:
       - icon: github
         text: Source Code
