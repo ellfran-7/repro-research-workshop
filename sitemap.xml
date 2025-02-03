@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://ellfran-7.github.io/repro-research-workshop/slides.html</loc>
-    <lastmod>2025-01-12T14:29:02.932Z</lastmod>
+    <loc>https://ellfran-7.github.io/repro-research-workshop/02-quarto.html</loc>
+    <lastmod>2025-02-02T14:58:05.246Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ellfran-7.github.io/repro-research-workshop/01-reprores.html</loc>
+    <lastmod>2025-02-03T07:52:31.412Z</lastmod>
   </url>
   <url>
     <loc>https://ellfran-7.github.io/repro-research-workshop/index.html</loc>
-    <lastmod>2025-01-15T15:43:43.293Z</lastmod>
+    <lastmod>2025-02-02T15:12:46.535Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ellfran-7.github.io/repro-research-workshop/03-exercises.html</loc>
+    <lastmod>2025-02-02T17:01:20.104Z</lastmod>
   </url>
 </urlset>

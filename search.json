@@ -1,10 +1,367 @@
 [
   {
-    "objectID": "slides.html#to-come-soon",
-    "href": "slides.html#to-come-soon",
+    "objectID": "02-quarto.html#live-demo",
+    "href": "02-quarto.html#live-demo",
+    "title": "Enter Quarto",
+    "section": "Live demo 🎥",
+    "text": "Live demo 🎥\n\nCreating a .qmd file\nTwo editors\nRendering a doc\nWhat makes a Quarto document?\n\nYAML header\nText\nChunks of R code"
+  },
+  {
+    "objectID": "02-quarto.html#your-turn",
+    "href": "02-quarto.html#your-turn",
+    "title": "Enter Quarto",
+    "section": "Your turn!",
+    "text": "Your turn!"
+  },
+  {
+    "objectID": "02-quarto.html#exercise-1",
+    "href": "02-quarto.html#exercise-1",
+    "title": "Enter Quarto",
+    "section": "Exercise 1",
+    "text": "Exercise 1\n \n\nGo to the Exercise section ✏️"
+  },
+  {
+    "objectID": "02-quarto.html#markdown-syntax",
+    "href": "02-quarto.html#markdown-syntax",
+    "title": "Enter Quarto",
+    "section": "Markdown syntax",
+    "text": "Markdown syntax\n\n\nYou don’t need special software to read it\nSeparates out the content and structure from the document styling\nFocus on the content not the way it looks\n\n\n\nMarkdown-formatted document should be publishable as-is, as plain text, without looking like it’s been marked up with tags or formatting instructions. - John Gruber"
+  },
+  {
+    "objectID": "02-quarto.html#text-formats",
+    "href": "02-quarto.html#text-formats",
+    "title": "Enter Quarto",
+    "section": "Text formats",
+    "text": "Text formats\n\nFormatting text is easy, and follows a common structure by surrounding the text with special characters\n\n*This* **workshop** ~~will be~~ is `so` [cool!]{.underline} [Yay!]{.smallcaps}\ngives:\nThis workshop will be is so cool! Yay!"
+  },
+  {
+    "objectID": "02-quarto.html#sections",
+    "href": "02-quarto.html#sections",
+    "title": "Enter Quarto",
+    "section": "Sections",
+    "text": "Sections\n\nSections are added to a document using different numbers of #:\n\n\n# creates a Level 1 heading (section)\n## creates a level 2 heading (subsection)\n### creates a Level 3 heading (sub-subsection)\nAnd so on…"
+  },
+  {
+    "objectID": "02-quarto.html#lists",
+    "href": "02-quarto.html#lists",
+    "title": "Enter Quarto",
+    "section": "Lists",
+    "text": "Lists\n\n\nUnordered lists can be created using - (or *):\n\n\n\n\n\n\n- Item 1\n- Item 2\n- Item 3\n\n\ngives\n\n\n\nItem 1\nItem 2\nItem 3\n\n\n\n\n\n\nOrdered lists can be created with progressive numbers or letters:\n\n\n\n\n\n\n1. Item 1\n2. Item 2\n3. Item 3\n\n\ngives\n\n\n\nItem 1\nItem 2\nItem 3"
+  },
+  {
+    "objectID": "02-quarto.html#links",
+    "href": "02-quarto.html#links",
+    "title": "Enter Quarto",
+    "section": "Links",
+    "text": "Links\n\nAdd a link using square brackets and round brackets:\n\nthe text to appear in square brackets\nfollowed by the URL in round brackets\n\n\nA link to the [Quarto documentation](https://quarto.org/).\nwhich gives:\nA link to the Quarto documentation."
+  },
+  {
+    "objectID": "02-quarto.html#images",
+    "href": "02-quarto.html#images",
+    "title": "Enter Quarto",
+    "section": "Images",
+    "text": "Images\n\nAdd an image using ![](path/image.png).\n\nYou can add a caption easily within the brackets as such ![Cool image](path/image.png)\n\n\n\n\n\n\nTip\n\n\n\nUse relative file paths rather than absolute file paths - other people won’t share the same absolute file path as you!\nFile paths are relative to where the Quarto document is!"
+  },
+  {
+    "objectID": "02-quarto.html#there-is-much-more",
+    "href": "02-quarto.html#there-is-much-more",
+    "title": "Enter Quarto",
+    "section": "There is much more…",
+    "text": "There is much more…\n  \nFor further reading on this part, visit the Quarto documentation on Markdown Basics.\nFor quick help in the syntax, click in the top navigation bar in Rstudio Help &gt; Markdown Quick Reference for a guide."
+  },
+  {
+    "objectID": "02-quarto.html#exercise-2",
+    "href": "02-quarto.html#exercise-2",
+    "title": "Enter Quarto",
+    "section": "Exercise 2",
+    "text": "Exercise 2\n \n\nGo to the Exercise section ✏️"
+  },
+  {
+    "objectID": "02-quarto.html#code-chunks",
+    "href": "02-quarto.html#code-chunks",
+    "title": "Enter Quarto",
+    "section": "Code chunks",
+    "text": "Code chunks\n\n\nCode blocks are the main way of including executable R code in a document.\nCode blocks always start with three backticks, followed by the an r in curly brackets.\n\n\n\n```{r}\n2 + 2\n```\n\n[1] 4"
+  },
+  {
+    "objectID": "02-quarto.html#code-chunk-options",
+    "href": "02-quarto.html#code-chunk-options",
+    "title": "Enter Quarto",
+    "section": "Code chunk options",
+    "text": "Code chunk options\nCode chunk options can control:\n\nwhether your code is executed\nwhether your code is displayed\nif warnings and errors are displayed\nhow figures are presented\nhow tables are presented"
+  },
+  {
+    "objectID": "02-quarto.html#code-chunk-options-1",
+    "href": "02-quarto.html#code-chunk-options-1",
+    "title": "Enter Quarto",
+    "section": "Code chunk options",
+    "text": "Code chunk options\n\nThey are included in a special comment at the top of the chunk prefaced with #|:\n\n\n```{r}\n#| output: true\n2 + 2\n```\n\n[1] 4"
+  },
+  {
+    "objectID": "02-quarto.html#code-chunk-options-2",
+    "href": "02-quarto.html#code-chunk-options-2",
+    "title": "Enter Quarto",
+    "section": "Code chunk options",
+    "text": "Code chunk options\n \n\n\n\n\n\n\n\nOption\nDescription\n\n\n\n\neval\nEvaluate the code chunk\n\n\necho\nInclude the source code in output\n\n\noutput\nInclude the results of executing the code\n\n\nwarning\nInclude warnings in the output\n\n\nerror\nInclude errors in the output (errors won’t halt document processing)\n\n\ninclude\nPrevent any output (code or results) from being included"
+  },
+  {
+    "objectID": "02-quarto.html#code-chunk-options-fig-",
+    "href": "02-quarto.html#code-chunk-options-fig-",
+    "title": "Enter Quarto",
+    "section": "Code chunk options: fig-",
+    "text": "Code chunk options: fig-\n\n\n\n```{r}\n#| warning: false\n#| fig-align: center \n#| fig-width: 6\n#| fig-asp: 0.9\n#| fig-cap: \"Distribution of bill depth sizes\"\n#| output-location: column\n\nggplot(data = penguins,\n       mapping = aes(x = bill_depth_mm)) +\n  geom_density() +\n  theme_bw()\n```\n\n\n\n\n\nDistribution of bill depth sizes"
+  },
+  {
+    "objectID": "02-quarto.html#code-block-options-tbl--eq-",
+    "href": "02-quarto.html#code-block-options-tbl--eq-",
+    "title": "Enter Quarto",
+    "section": "Code block options: tbl- , eq-",
+    "text": "Code block options: tbl- , eq-\n\nFor tables, it is exactly the same as for figures, but instead of fig-, you replace it is tbl-.\nFor equations it is similar but with eq-."
+  },
+  {
+    "objectID": "02-quarto.html#code-block-options-tbl--eq--1",
+    "href": "02-quarto.html#code-block-options-tbl--eq--1",
+    "title": "Enter Quarto",
+    "section": "Code block options: tbl- , eq-",
+    "text": "Code block options: tbl- , eq-\n\n```{r}\n#| tbl-align: center \n#| tbl-cap: \"First 5 rows and columns of the penguins dataset\"\n\nknitr::kable(head(penguins[,1:5]))\n```\n\n\nFirst 5 rows and columns of the penguins dataset\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\n\n\n\n\nAdelie\nTorgersen\n39.1\n18.7\n181\n\n\nAdelie\nTorgersen\n39.5\n17.4\n186\n\n\nAdelie\nTorgersen\n40.3\n18.0\n195\n\n\nAdelie\nTorgersen\nNA\nNA\nNA\n\n\nAdelie\nTorgersen\n36.7\n19.3\n193\n\n\nAdelie\nTorgersen\n39.3\n20.6\n190"
+  },
+  {
+    "objectID": "02-quarto.html#code-chunk-options-label",
+    "href": "02-quarto.html#code-chunk-options-label",
+    "title": "Enter Quarto",
+    "section": "Code chunk options: label",
+    "text": "Code chunk options: label\n \nYou can add a label to each code chunk\n\nThis allows you to:\n\nassociate an “label” with an error (if one occurs)\ncross-reference a figure in the text."
+  },
+  {
+    "objectID": "02-quarto.html#code-block-options-label",
+    "href": "02-quarto.html#code-block-options-label",
+    "title": "Enter Quarto",
+    "section": "Code block options: label",
+    "text": "Code block options: label\n\nTo cross-reference, supposing the label of the code chunk is:\n\n\n#| label: fig-billdepthdist\n\n\nyou simply write in the text as:\n\nMany penguins in the dataset seem to have a bill depth between 18 and 19mm ([@fig-billdepthdist])."
+  },
+  {
+    "objectID": "02-quarto.html#code-block-options-label-1",
+    "href": "02-quarto.html#code-block-options-label-1",
+    "title": "Enter Quarto",
+    "section": "Code block options: label",
+    "text": "Code block options: label\n\nMany penguins in the dataset seem to have a bill depth between 18 and 19mm (Figure 1).\n\n\n```{r}\n#| fig-cap: \"Distribution of bill depth sizes\"\n#| label: fig-billdepthdist\n#| output-location: column\n\nggplot(data = penguins,\n       mapping = aes(x = bill_depth_mm)) +\n  geom_density() +\n  theme_bw()\n```\n\n\n\n\n\n\n\n\nFigure 1: Distribution of bill depth sizes"
+  },
+  {
+    "objectID": "02-quarto.html#inline-code",
+    "href": "02-quarto.html#inline-code",
+    "title": "Enter Quarto",
+    "section": "Inline code",
+    "text": "Inline code\n\nYou can include executable expressions inside the markdown (text) by enclosing the expression in `r `:\n\nThe penguins dataset is composed of 344 observations. \ngives:\nThe penguins dataset is composed of 344 observations.\n\nThis is very useful for automating reports!"
+  },
+  {
+    "objectID": "02-quarto.html#there-is-much-more-1",
+    "href": "02-quarto.html#there-is-much-more-1",
+    "title": "Enter Quarto",
+    "section": "There is much more…",
+    "text": "There is much more…\n\nFor more on each part of this sections:\n\nExecutions Options - Quarto for more on code chunk options\nCross References – Quarto for more on labels and cross-referencing\nTables - Quarto for more on tables\nTechnical Writing - Quarto for more on equations and technical writing\nInline Code – Quarto for more on inline codes\n\nFor more advanced notions on coding aspects in Quarto, visit HTML Code Blocks – Quarto"
+  },
+  {
+    "objectID": "02-quarto.html#exercise-3",
+    "href": "02-quarto.html#exercise-3",
+    "title": "Enter Quarto",
+    "section": "Exercise 3",
+    "text": "Exercise 3\n \n\nGo to the Exercise section ✏️"
+  },
+  {
+    "objectID": "02-quarto.html#is-that-all-nope",
+    "href": "02-quarto.html#is-that-all-nope",
+    "title": "Enter Quarto",
+    "section": "Is that all? Nope",
+    "text": "Is that all? Nope\n\n\nCitations\nProjects\nOther useful formats:\n\nPresentations (like this one today)\nManuscripts\n\nThere is so much more!\n\nYou’ll find everything at the official Quarto - Documentation."
+  },
+  {
+    "objectID": "02-quarto.html#closing-shop",
+    "href": "02-quarto.html#closing-shop",
+    "title": "Enter Quarto",
+    "section": "Closing shop",
+    "text": "Closing shop\n\n\n\nCS-WORKSHOP Feb 2025 | Materials: ellfrank7/repro-research-workshop"
+  },
+  {
+    "objectID": "01-reprores.html#have-you-ever-encountered-challenges-when-trying-to-reproduce-data-analyses",
+    "href": "01-reprores.html#have-you-ever-encountered-challenges-when-trying-to-reproduce-data-analyses",
     "title": "Reproducible Research",
-    "section": "To come soon…",
-    "text": "To come soon…\n\n\n\nCS WORKSHOP - 2025/02/06"
+    "section": "Have you ever encountered challenges when trying to reproduce data analyses?",
+    "text": "Have you ever encountered challenges when trying to reproduce data analyses?"
+  },
+  {
+    "objectID": "01-reprores.html#what-should-be-kept-the-same-when-reproducing-a-study",
+    "href": "01-reprores.html#what-should-be-kept-the-same-when-reproducing-a-study",
+    "title": "Reproducible Research",
+    "section": "What should be kept the same when reproducing a study? 🤔",
+    "text": "What should be kept the same when reproducing a study? 🤔\nCreate WOOCLAP then add QR code and code for session !!!"
+  },
+  {
+    "objectID": "01-reprores.html#what-does-reproducibility-mean-actually",
+    "href": "01-reprores.html#what-does-reproducibility-mean-actually",
+    "title": "Reproducible Research",
+    "section": "What does reproducibility mean actually?",
+    "text": "What does reproducibility mean actually?\n\n\n \n\n\nDifficult question to answer…\n“Lack of reproducibility” ➡️ understood but broad expression\nNo clear definition ➡️ varies between the disciplines"
+  },
+  {
+    "objectID": "01-reprores.html#what-does-reproducibility-mean-actually-1",
+    "href": "01-reprores.html#what-does-reproducibility-mean-actually-1",
+    "title": "Reproducible Research",
+    "section": "What does reproducibility mean actually?",
+    "text": "What does reproducibility mean actually?\n\n\n \n\nDifficult question to answer…\n“Lack of reproducibility” ➡️ understood but broad expression\nNo clear definition ➡️ varies between the disciplines\n\n\n\n\n\nGundersen Odd Erik 2021 The fundamental principles of reproducibility Phil. Trans. R. Soc. A.37920200210 DOI: 10.1098/rsta.2020.0210."
+  },
+  {
+    "objectID": "01-reprores.html#what-does-reproducibility-mean-actually-2",
+    "href": "01-reprores.html#what-does-reproducibility-mean-actually-2",
+    "title": "Reproducible Research",
+    "section": "What does reproducibility mean actually?",
+    "text": "What does reproducibility mean actually?\n\n\n\nDirect reproducibility (commonly ‘replication’ or ‘experimental reproducibility’)\n\n\n\n\nAnalytical reproducibility (commonly ‘computational reproducibility’)\n\n\n\n\nSystemic reproducibility (commonly ‘robustness’)\n\n\n\n\nConceptual reproducibility (commonly ‘generalisation’)\n\n\n\n\n\n\nSchloss, 2018. DOI: 10.1128/mbio.00525-18\n\n\nNational Academies of Sciences, Engineering, and Medicine. 2019. Reproducibility and Replicability in Science. Washington, DC: The National Academies Press. DOI: 10.17226/25303"
+  },
+  {
+    "objectID": "01-reprores.html#what-does-reproducibility-mean-actually-3",
+    "href": "01-reprores.html#what-does-reproducibility-mean-actually-3",
+    "title": "Reproducible Research",
+    "section": "What does reproducibility mean actually?",
+    "text": "What does reproducibility mean actually?\n\n\n\nDirect reproducibility (commonly ‘replication’ or ‘experimental reproducibility’)\n\n\n\n\nAnalytical reproducibility (commonly ‘computational reproducibility’)\n\n\n\n\nSystemic reproducibility (commonly ‘robustness’)\n\n\n\n\nConceptual reproducibility (commonly ‘generalisation’)\n\n\n\n\n\n\n\n\n\nSchloss, 2018. DOI: 10.1128/mbio.00525-18\n\n\nNational Academies of Sciences, Engineering, and Medicine. 2019. Reproducibility and Replicability in Science. Washington, DC: The National Academies Press. DOI: 10.17226/25303"
+  },
+  {
+    "objectID": "01-reprores.html#in-other-words",
+    "href": "01-reprores.html#in-other-words",
+    "title": "Reproducible Research",
+    "section": "In other words…",
+    "text": "In other words…\n \n\n\nData\n\n\nCode\n\n\nDocumentation"
+  },
+  {
+    "objectID": "01-reprores.html#in-other-words-1",
+    "href": "01-reprores.html#in-other-words-1",
+    "title": "Reproducible Research",
+    "section": "In other words…",
+    "text": "In other words…\n \n\n\n\n\n\n\n\n\nReproducible Research"
+  },
+  {
+    "objectID": "01-reprores.html#why-are-we-talking-about-this-now",
+    "href": "01-reprores.html#why-are-we-talking-about-this-now",
+    "title": "Reproducible Research",
+    "section": "Why are we talking about this now?",
+    "text": "Why are we talking about this now?\n\n\n\n\n\n\n\n\n\n\nBaker, M. 1,500 scientists lift the lid on reproducibility. Nature 533, 452–454 (2016). DOI: 10.1038/533452a.\n\n\n\n\n\n\n70% of researchers can’t reproduce others’ findings\n60% can’t reproduce their own findings\nNon-reproducible biomedical research costs $28 billion/year (Freedman et al. 2015)"
+  },
+  {
+    "objectID": "01-reprores.html#how-important-is-it-well-quite-important",
+    "href": "01-reprores.html#how-important-is-it-well-quite-important",
+    "title": "Reproducible Research",
+    "section": "How important is it? Well, quite important",
+    "text": "How important is it? Well, quite important\n \n\n\nAnyone (with a similar level of skills) should be able to do reproduce your research and benefit from it\nFunders (e.g., ANR) and journals now require data and code accessibility, which aligns with the growing open-science movement\nIf I keep my data and code, I have a competitive advantage\nIf I share my data and code, my work will gain more visibility (and citations 😎)"
+  },
+  {
+    "objectID": "01-reprores.html#advantages",
+    "href": "01-reprores.html#advantages",
+    "title": "Reproducible Research",
+    "section": "Advantages",
+    "text": "Advantages\n \n\n\nIt obliges you to verify your work (by sharing both docs, data and code)\nYour future self will thank you (you’ll be much more productive)\nYour collaborators too\nBy ensuring reproducibility, you reinforce your credibility and reputation\nReproducibility fosters trust in scientific progress and accelerates it"
+  },
+  {
+    "objectID": "01-reprores.html#what-sources-of-irreproducibility-can-you-think-of",
+    "href": "01-reprores.html#what-sources-of-irreproducibility-can-you-think-of",
+    "title": "Reproducible Research",
+    "section": "What sources of irreproducibilitycan you think of? 🤔",
+    "text": "What sources of irreproducibilitycan you think of? 🤔"
+  },
+  {
+    "objectID": "01-reprores.html#factors-decreasing-reproducibility",
+    "href": "01-reprores.html#factors-decreasing-reproducibility",
+    "title": "Reproducible Research",
+    "section": "Factors decreasing reproducibility",
+    "text": "Factors decreasing reproducibility\n\n\n  \n\nFailures of reproducibility cannot be traced to a single cause\nNearly every aspect of a study needs to be considered\n\n\n\n\n\n\n\n\n\nBaker, M. 1,500 scientists lift the lid on reproducibility. Nature 533, 452–454 (2016). DOI:  10.1038/533452a."
+  },
+  {
+    "objectID": "01-reprores.html#example-a-drawing-protocol",
+    "href": "01-reprores.html#example-a-drawing-protocol",
+    "title": "Reproducible Research",
+    "section": "Example: a drawing protocol",
+    "text": "Example: a drawing protocol\n\nYou really want to draw something but don’t know how. You’ve found this protocol in a very prestigious journal and want to reproduce it. Grab your pens and papers 📝 !\n\n\n\n\nSwitch Language\n\n\n\nDraw a large circle in the center of your page.\nInside the circle, slightly above the middle, draw two medium-sized ovals next to each other. Inside each oval, draw a smaller filled-in oval.\nBelow the ovals, in the center of the circle, draw a small upside-down triangle.\nOn top of the circle, draw two small triangles with the base of each triangle touching the edge of the circle and the points facing outward.\nFrom the bottom point of the triangle, draw two curved lines that extend outward, one curving to the left and one to the right, forming a “W” shape.\nOn each side of the curved lines, draw three short straight lines extending outward.\n\n\n\n\nDessinez un grand cercle au centre de votre page.\nÀ l’intérieur du cercle, légèrement au-dessus du milieu, dessinez deux ovales de taille moyenne côte à côte. À l’intérieur de chaque ovale, dessinez un petit ovale rempli.\nSous les ovales, au centre du cercle, dessinez un petit triangle inversé.\nAu-dessus du cercle, dessinez deux petits triangles avec la base de chaque triangle touchant le bord du cercle et les pointes dirigées vers l’extérieur.\nÀ partir de la pointe inférieure du triangle, dessinez deux lignes courbées qui s’étendent vers l’extérieur, l’une courbant vers la gauche et l’autre vers la droite, formant une forme en “W”.\nDe chaque côté des lignes courbées, dessinez trois petites lignes droites qui s’étendent vers l’extérieur.\n\n\n\n\n\n\n\nInspired by Repro4Everyone. (n.d.). Introduction to Reproducibility. Repro4Everyone. Retrieved January 30, 2025."
+  },
+  {
+    "objectID": "01-reprores.html#example-a-drawing-protocol-1",
+    "href": "01-reprores.html#example-a-drawing-protocol-1",
+    "title": "Reproducible Research",
+    "section": "Example: a drawing protocol",
+    "text": "Example: a drawing protocol\n\n\n\n\n\n\n\n\n\nMy attempt\n\n\n\n\n \n\n\n\n\n\nThe result in the study\n\n\n\n\n\nHow did you do?"
+  },
+  {
+    "objectID": "01-reprores.html#example-a-drawing-protocol-2",
+    "href": "01-reprores.html#example-a-drawing-protocol-2",
+    "title": "Reproducible Research",
+    "section": "Example: a drawing protocol",
+    "text": "Example: a drawing protocol\n\n\n\n\n\n\n\n\n\n\nTimothée Poisot (Sep 8 2015) ‘Step 2 — do the rest of the fucking analysis’ [Medium], Page 1, accessed 10 Jan 2025.\n\n\n\n\n \n\n\n\n\n\n“Unavailable protocol”\n\n\n\n\n \n\n\n\n\n\n“Ambiguous protocol”"
+  },
+  {
+    "objectID": "01-reprores.html#how-can-we-be-bit-more-reproducible",
+    "href": "01-reprores.html#how-can-we-be-bit-more-reproducible",
+    "title": "Reproducible Research",
+    "section": "How can we be bit more reproducible?",
+    "text": "How can we be bit more reproducible?\n\n\nDocument practices (e.g., lab notebooks, ELNs with eLabFTW)"
+  },
+  {
+    "objectID": "01-reprores.html#how-can-we-be-bit-more-reproducible-1",
+    "href": "01-reprores.html#how-can-we-be-bit-more-reproducible-1",
+    "title": "Reproducible Research",
+    "section": "How can we be bit more reproducible?",
+    "text": "How can we be bit more reproducible?\n\n\nDocument practices (e.g., lab notebooks, ELNs with eLabFTW)\nOrganise code, data and files (e.g., separate folders for different data, clear filenames, tidy principles)"
+  },
+  {
+    "objectID": "01-reprores.html#how-can-we-be-bit-more-reproducible-2",
+    "href": "01-reprores.html#how-can-we-be-bit-more-reproducible-2",
+    "title": "Reproducible Research",
+    "section": "How can we be bit more reproducible?",
+    "text": "How can we be bit more reproducible?\n\n\nDocument practices (e.g., lab notebooks, ELNs with eLabFTW)\nOrganise code, data and files (e.g., separate folders for different data, clear filenames, tidy principles)\nShare data and outputs"
+  },
+  {
+    "objectID": "01-reprores.html#how-can-we-be-bit-more-reproducible-3",
+    "href": "01-reprores.html#how-can-we-be-bit-more-reproducible-3",
+    "title": "Reproducible Research",
+    "section": "How can we be bit more reproducible?",
+    "text": "How can we be bit more reproducible?\n\n\nDocument practices (e.g., lab notebooks, ELNs with eLabFTW)\nOrganise code, data and files (e.g., separate folders for different data, clear filenames, tidy principles)\nShare data and outputs\nTrack changes (= versionning)"
+  },
+  {
+    "objectID": "01-reprores.html#how-can-we-be-bit-more-reproducible-4",
+    "href": "01-reprores.html#how-can-we-be-bit-more-reproducible-4",
+    "title": "Reproducible Research",
+    "section": "How can we be bit more reproducible?",
+    "text": "How can we be bit more reproducible?\n\n\nDocument practices (e.g., lab notebooks, ELNs with eLabFTW)\nOrganise code, data and files (e.g., separate folders for different data, clear filenames, tidy principles)\nShare data and outputs\nTrack changes (= versionning)\nLearn to code (even a little)\n\n\n\n\nArtwork by Allison Horst"
+  },
+  {
+    "objectID": "01-reprores.html#what-is-literate-programming",
+    "href": "01-reprores.html#what-is-literate-programming",
+    "title": "Reproducible Research",
+    "section": "What is Literate programming?",
+    "text": "What is Literate programming?\n\n\n\nIntroduced by Donald Knuth in 1984\nIdea of combining source code and text\nMethod for writing computer programs as literary essays\nMany tools exist for various languages:\n\nRMarkdown (R)\nJupyter (Python)\nQuarto (multi-language)\n\n\n\n\n\n\nKnuth, Donald Ervin. “Literate Programming.” Computer/law journal (1984).\n\n\n\n\n\n“The best way to communicate from one human being to another is through story”Donald Knuth"
+  },
+  {
+    "objectID": "01-reprores.html#what-is-quarto",
+    "href": "01-reprores.html#what-is-quarto",
+    "title": "Reproducible Research",
+    "section": "What is Quarto?",
+    "text": "What is Quarto?\n\n\nQuarto is an open-source, scientific and technical publishing system\nIt implements the concept of literate programming\nIt provides a unified authoring framework for data science, combining your code, its results, and your prose (text)\n\n\n\nIllustration by Alison Hill and Allison Horst, for RStudio"
+  },
+  {
+    "objectID": "01-reprores.html#advantages-of-quarto",
+    "href": "01-reprores.html#advantages-of-quarto",
+    "title": "Reproducible Research",
+    "section": "Advantages of Quarto",
+    "text": "Advantages of Quarto\n\n\n\nQuarto documents are fully reproducible and dynamic\nThey automate the inclusion of the last versions of the results of an analysis\nAllows you to avoid copy + paste, avoid accidental errors and save time\nLiterally dozens of output formats are available: Web pages, PDFs, Word files, websites, books, and more.\nOpen source so anyone can use it\n\n\n\nIllustration by Alison Hill and Allison Horst, for RStudio"
+  },
+  {
+    "objectID": "01-reprores.html#main-use-cases",
+    "href": "01-reprores.html#main-use-cases",
+    "title": "Reproducible Research",
+    "section": "Main use cases",
+    "text": "Main use cases\n\nThere can be three relevant use cases:\n\n\n\nFor communicating to decision-makers or to a more general audience, who want to focus on the conclusions, not the code behind the analysis\nFor collaborating with other data scientists (including future you!), who are interested in both your conclusions, and how you reached them (i.e. the code)\nAs an environment in which to do data science, as a modern-day lab notebook where you can capture not only what you did, but also what you were thinking"
+  },
+  {
+    "objectID": "01-reprores.html#to-advance-we-must-code-a-little",
+    "href": "01-reprores.html#to-advance-we-must-code-a-little",
+    "title": "Reproducible Research",
+    "section": "To advance, we must code a little…",
+    "text": "To advance, we must code a little…\n\n\n\n\nArtwork by Allison Horst\n\n\n\n\n\n\n\nCS-WORKSHOP Feb 2025 | Materials: ellfrank7/repro-research-workshop"
   },
   {
     "objectID": "index.html",
@@ -40,5 +397,33 @@
     "title": "Pre-workshop Instructions",
     "section": "Footnotes",
     "text": "Footnotes\n\n\nPandoc is a tool that converts documents to different formats. Quarto leverages it to convert markdown to a variety of output formats.↩︎\nIntegrated Development Environment↩︎"
+  },
+  {
+    "objectID": "03-exercises.html",
+    "href": "03-exercises.html",
+    "title": "Exercises",
+    "section": "",
+    "text": "Create a new Quarto HTML document using File &gt; New File &gt; Quarto Document\nAdd a title and author in the YAML section at the top of the document\nRender the document\nModify the YAML header to change the output format to docs\nRe-render your document\nWhat about PDF?"
+  },
+  {
+    "objectID": "03-exercises.html#exercise-1---quarto-basics",
+    "href": "03-exercises.html#exercise-1---quarto-basics",
+    "title": "Exercises",
+    "section": "",
+    "text": "Create a new Quarto HTML document using File &gt; New File &gt; Quarto Document\nAdd a title and author in the YAML section at the top of the document\nRender the document\nModify the YAML header to change the output format to docs\nRe-render your document\nWhat about PDF?"
+  },
+  {
+    "objectID": "03-exercises.html#exercise-2---markdown-basics",
+    "href": "03-exercises.html#exercise-2---markdown-basics",
+    "title": "Exercises",
+    "section": "Exercise 2 - Markdown basics",
+    "text": "Exercise 2 - Markdown basics\n\n\n\n\n\n\nNote\n\n\n\nBefore this exercise:\n\nDownload the zip file ‘penguins-template’ thats holds\n\npenguins-template.qmd file\nthree-penguins.png image\n\nOpen the Rstudio and create a new project:\n\nGo to File &gt; New Project, then Browse to the downloaded zip file and Create.\n\nCopy and paste install.packages(\"palmerpenguins\") into the Console and run it.\n\n\n\n\nOpen the penguins-template.qmd file in RStudio\nAdd a Level 2 header titled “Data Overview” after the existing content in the file\nCopy and paste the following text into the file:\nThe `penguins` dataframe contains 344 observations of penguins.\nIt includes several qualitative variables, including the following:\n- Sex of the penguins\n- Island where they are found\n- Species to which they belong\nThe represented species are: Chinstrap, Gentoo, and Adélie.\nModify the text so that the final rendering looks like this, with the value 344 inserted using inline code:\n\nThe penguins penguins contains 344 observations of penguins. It includes several qualitative variables, including the following:\n\nSex of the penguins\nIsland where they are found\nSpecies to which they belong\n\nThe represented species are : Chinstrap, Gentoo et Adélie.\n\nAdd the image three-penguins.png to your document, then add a caption for this image."
+  },
+  {
+    "objectID": "03-exercises.html#exercise-3---code-blocks-and-ouputs",
+    "href": "03-exercises.html#exercise-3---code-blocks-and-ouputs",
+    "title": "Exercises",
+    "section": "Exercise 3 - Code blocks and ouputs",
+    "text": "Exercise 3 - Code blocks and ouputs\n\nAdd a code block to generate a table showing the first 5 rows of the penguins dataframe using the knitr::kable() function.\n\n\n\n\n\n\n\nTip\n\n\n\nFor those not familiar with R, unfold the following, copy and paste into the document, and render:\n\n\nCode\nknitr::kable(head(penguins))\n\n\n\n\n\nAdd a second code block to generate a figure (using R base or ggplot2) to explore the relationship between the body mass of penguins and the length of their flippers, as well as the differences between species.\n\n\n\n\n\n\n\nTip\n\n\n\nFor those not familiar with R, unfold the following, copy and paste into the document and render:\n\n\nCode\ng &lt;- ggplot(penguins, aes(x = flipper_length_mm, \n                              y = body_mass_g)) +\n      geom_point(aes(color = species, shape = species), \n                 size = 2, \n                 alpha = 0.7) + \n      scale_color_manual(values = c(\"darkorange\",\"purple\",\"cyan4\")) + \n      labs(x = \"Flipper length (mm)\", \n           y = \"Body mass (g)\", \n           color = \"Penguin species\", \n           shape = \"Penguin species\") + \n      theme_minimal()\n\ng\n\n\n\n\n\nAdd the following options to the code chunk, one by one. Generate the document after each modification and observe the changes:\n\necho: false\nwarning: false\n\nJust below the figure, provide a description of the relationship between the two variables, both overall and for each species.\nModify the size of the figure using the following options, one by one. Re-render the document after each modification and describe how the figure changes:\n\nfig-width: 10\nfig-height: 3\nout-width: \"100%\"\nout-width: \"20%\"\n\nAdd a label to the figure with the prefix fig-.\nAdd a caption to the figure using the fig-cap chunk option. Re-render one last time.\n\nWell done! You’ve just created your first Quarto report 🎉 !\n\n\n\nArtwork from “Hello, Quarto” keynote by Julia Lowndes and Mine Çetinkaya-Rundel, presented at RStudio Conference 2022. Illustrated by Allison Horst."
   }
 ]
