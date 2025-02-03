@@ -48,16 +48,22 @@ $body-bg:                   $light !default;
 
 // Links
 
-$link-color:                $green !default;
+$link-color:                $mossgreen !default;
 
 // Fonts
 $font-family-sans-serif: "Nunito", sans-serif;
 $font-size-root: 18px;
 
+
 // Text size
 $presentation-h1-font-size: 2.3em;
 $presentation-h2-font-size: 1.6em;
 $presentation-h3-font-size: 1.2em;
+
+// Code color
+$code-color: $blue;
+
+
 
 
 /*-- scss rules --*/
@@ -78,6 +84,13 @@ h6 {
 }
 
 
+/*--
+.reveal div.sourceCode {
+    border: 10px solid #d7d7d4;
+    border-radius: 4px;
+}
+--*/
+
 
 .reveal .slides section .fragment.highlight-moss.visible {
   color: $mossgreen;
@@ -88,11 +101,9 @@ h6 {
     margin-bottom: 0.5em !important;
 }
 
-// Counter margin class
-
-.no-margin-top ul li, .no-margin-top ol li {
-    margin-top: 0em !important; /* Remove top margin */
-    margin-bottom: 0em !important; /* Remove top margin */
+.quarto-figure {
+    position: relative;
+    margin-bottom: 0.1em !important;
 }
 
 .nice-green {
@@ -124,19 +135,19 @@ h6 {
   margin-bottom: 10px; /* Added margin-bottom to control space */
 
   &:hover {
-    background-color: #45a049;
+    background-color: $green;
     transform: scale(1.05);
   }
 
   &:active {
-    background-color: #3e8e41;
+    background-color: $mossgreen;
     transform: scale(0.98);
   }
 }
 
 
 .green-border {
-  border: 4px solid #90ee90; /* Light green border */
+  border: 4px solid $mossgreen; /* Light green border */
   padding: 15px; /* Increased padding for better spacing */
   border-radius: 8px; /* Slightly more rounded corners */
   display: inline-block; /* Ensure the border wraps around the content */
@@ -169,15 +180,53 @@ h6 {
   color: $pink;
 }
 
-$red: #bf2642 !default;
-$orange: #f2a03d !default;
-$green: #5a9f68 !default;
-$mossgreen: #588157 !default;
-$purple: #73245e !default;
-$beige: #f8f5f0 !default;
-$blue: #00817c !default;
-$indigo:  #6610f2 !default;
-$pink:    #e83e8c !default;
-$yellow:  #ffc107 !default;
-$teal:    #20c997 !default;
-$cyan:    #29abe0 !default;
+/*--
+re > code.sourceCode > span {
+    line-height: 2;
+}
+
+pre > code.sourceCode > span {
+    color: $blue;
+    font-size: 25px;
+}
+
+.reveal pre.sourceCode code {
+    padding: 25px 30px;
+}
+
+pre>code.sourceCode>span {
+    color: $green;
+    font-size: 25px;
+}
+
+code.sourceCode {
+  font-size: 1.3em;
+}
+
+
+.reveal code {
+    color: $mossgreen !important;
+}
+
+div.sourceCode {
+    background-color: lighten($blue, 20%);
+    border: 1px solid lighten($blue, 20%);
+    border-radius: .25rem;
+}
+
+code span.in {
+    color: $beige;
+}
+--*/
+
+/* Set the background and border color */
+div.sourceCode {
+    background-color: lighten($blue, 20%);
+    border: 1px solid lighten($blue, 20%);
+    border-radius: .25rem;
+}
+
+/* Set the text color */
+code.sourceCode {
+    color: $beige;
+}

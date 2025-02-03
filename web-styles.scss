@@ -48,7 +48,7 @@ $body-bg:                   $light !default;
 
 // Links
 
-$link-color:                $green !default;
+$link-color:                $mossgreen !default;
 
 // Fonts
 $font-family-sans-serif: "Nunito", sans-serif;
@@ -58,6 +58,10 @@ $font-size-root: 20px;
 // Navbar
 $navbar-bg:     lighten($green, 15%);
 $navbar-fg:     $light !default;
+
+
+// Code color
+$code-color: $blue;
 
 /*-- scss:rules --*/
 
@@ -78,7 +82,6 @@ a.nav-link.active span {
 a.dropdown-item:hover {
   background-color: lighten($green, 20%);
 }
-
 
 .sourceCode {
   background-color: $white;
