@@ -1,0 +1,24 @@
+---
+title: "Analysis of the Palmer penguins dataset"
+author: "Your name"
+format: html
+---
+
+## Introduction
+
+The aim of this analysis is to explore the relationship between flipper length and body mass in penguins, and to determine if this relationship varies between species.
+
+## Load data and packages
+
+```{r}
+
+# Load packages
+library(knitr)
+library(ggplot2)
+library(palmerpenguins)
+
+# Load data
+data(penguins)
+
+```
+
