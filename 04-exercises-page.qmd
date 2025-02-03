@@ -34,13 +34,10 @@ toc-depth: 2
 ::: callout-note
 Before this exercise: 
 
-1. Download the zip file '[penguins-template](https://github.com/ellfran-7/repro-research-workshop/tree/main/templates/penguins-template.zip)' thats holds
-    - `penguins-template.qmd` file
-    - `three-penguins.png` image
-2. Open the Rstudio and create a new project:
-    - Go to `File > New Project`, then `Browse` to the downloaded zip file and `Create`.
-3. Copy and paste `install.packages("palmerpenguins")` into the **Console** and run it.
- 
+1. Download the '[penguins-template.qmd](https://github.com/ellfran-7/repro-research-workshop/tree/main/templates/penguins-template.qmd)' 
+2. Move the file into a New Folder on your computer (call it something like "`cs-workshop-2025`")
+2. Now, open the `penguins-template.qmd` in Rstudio
+3. Once Rstudio up and running, copy and paste `install.packages("palmerpenguins")` into the **Console** and run it.
 :::
 
 1.  Open the `penguins-template.qmd` file in RStudio
