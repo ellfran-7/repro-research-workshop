@@ -1,9 +1,7 @@
 project:
   type: website
   render: 
-    - "01-reprores-slides.qmd"
-    - "02-quarto-page.qmd"
-    - "!03-exercises-page.qmd"
+    - "!04-exercises-page.qmd"
     - "!02-quarto-slides.qmd"
     - "!/templates"
 
@@ -16,14 +14,14 @@ website:
     left: 
       - text: Pre-work
         href: index.qmd
-      - text: Repro-Research
-        href: 01-reprores.qmd
+      - text: Repro Research
+        href: 01-reprores-slides.qmd
       # - text: Quarto
       #   href: 02-quarto-slides.qmd
       - text: Quarto
-        href: 02-quarto-page.qmd
+        href: 03-quarto-page.qmd
       # - text: Exercises
-      #   href: 03-exercises-page.qmd 
+      #   href: 04-exercises-page.qmd 
     tools:
       - icon: github
         text: Source Code
