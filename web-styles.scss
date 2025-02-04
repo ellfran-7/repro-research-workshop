@@ -76,6 +76,15 @@ h6 {
   font-family: "Nunito", serif;
 }
 
+h2, .h2 {
+  border-bottom: 4px solid rgba(0,0,0,.05);
+}
+
+.header-section-number {
+    color: $mossgreen;
+    padding-right: 5px;
+}
+
 a.nav-link.active span {
   text-decoration: underline;
   text-decoration-thickness: 0.5px;
