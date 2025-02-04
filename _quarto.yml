@@ -6,7 +6,7 @@ project:
     - "03-quarto-page.qmd"
     - "!04-exercises-page.qmd"
     - "!02-quarto-slides.qmd"
-    - "!/templates"
+    - "!templates/"
 
 execute:
   freeze: auto # computational documents re-render only when source changes
