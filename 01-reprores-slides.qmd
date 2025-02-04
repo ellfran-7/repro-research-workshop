@@ -103,9 +103,12 @@ ggplot(tidy_surv_data, aes(x = answer, fill = answer)) +
 ```
 :::
 
-## What should be kept the same when reproducing a study? :thinking: {style="text-align: center;"}
+## What should be kept the same<br />when reproducing a study? :thinking: {style="text-align: center;"}
 
-[Create WOOCLAP then add QR code and code for session !!!]{style="color: red"}
+<br/>
+
+![](images/wooclap-connect.png)
+
 
 ## What does reproducibility mean actually? {auto-animate="true"}
 

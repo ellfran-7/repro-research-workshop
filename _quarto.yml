@@ -29,7 +29,10 @@ website:
       - icon: github
         text: Source Code
         href: https://github.com/ellfran-7/repro-research-workshop
-  page-footer: "LIEC - CS WORKSHOP, Ellis Franklin"
+  page-footer: 
+    left: "© Ellis Franklin, 2025."
+    right: "Made with 💚 and Quarto"
+  
 
 format:
   html:
