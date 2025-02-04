@@ -1,6 +1,9 @@
 project:
   type: website
   render: 
+    - "index.qmd"
+    - "01-reprores-slides.qmd"
+    - "03-quarto-page.qmd"
     - "!04-exercises-page.qmd"
     - "!02-quarto-slides.qmd"
     - "!/templates"
