@@ -13,7 +13,7 @@ format:
     code-copy: true
     width: 1600
     height: 900
-    footer: "CS-WORKSHOP Feb 2025 | Materials: [ellfrank7/repro-research-workshop](https://github.com/ellfran-7/repro-research-workshop)"
+    footer: "CS-WORKSHOP Feb 2025 | [Home page](https://ellfran-7.github.io/repro-research-workshop)"
     transition: slide
     background-transition: fade
     auto-animate-easing: ease-in-out

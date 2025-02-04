@@ -15,13 +15,14 @@ format: html
 
 ## Introduction {.unnumbered}
 
-In brief, `Quarto` allows you to combine a variety of content in a document (text, equations, images, code, graphics, etc.) and then compile it all into a single document, such as HTML, PDF, etc. The term used in the Quarto environment for this compilation is very poetically called **knitting**.
+In brief, `Quarto` allows you to combine various types of content in a document (text, code, equations, images, graphics, etc.) and then compile it all into a single document, such as HTML, PDF, etc. The term used in the `Quarto` environment for this compilation is very poetically called **knitting**.
 
 ## Objectives {.unnumbered}
 
-Today, we will explore the data from the [**Palmerpenguins**](https://allisonhorst.github.io/palmerpenguins "palmerpenguins R package") package to answer the following question:
+Today, we will explore the data from the [**Palmerpenguins**](https://allisonhorst.github.io/palmerpenguins "palmerpenguins R package") package to answer the following questions:
 
-***What is the relationship between flipper length and body mass? Does this relationship varie between species?***
+
+[***What is the relationship between flipper length and body mass?<br />Does this relationship varie between species?***]{.center}
 
 But first, let's get a grasp of the basics and create our first Quarto document!
 
@@ -52,7 +53,7 @@ The most common thing you are likely to do in your Quarto document is text forma
 
 ### Text formats {#txt-formats}
 
-Formatting text is easy, and follows a common structure by surrounding the text with special characters
+Formatting text is easy and follows a common structure by surrounding the text with special characters:
 
 ``` markdown
 *italic* **bold** ~~strikeout~~ `code`
@@ -117,14 +118,14 @@ Sections are added to a document using different numbers of `#`:
     i)  sub-item 1 A. sub-sub-item 1
 
 ::: callout-caution
-For lists, Markdown is case-sensitive, meaning you need to format the text correctly for it to recognise a sub-item, for example.
+Markdown is case-sensitive, meaning you need to format the text correctly for it to recognise a sub-item, for example.
 :::
 
 <br/>
 
 ### Links {#links}
 
-Add a link using square brackets and round brackets:
+Add a link with angle brackets for displaying the raw URL, or use a combination of square and round brackets to define the link text and URL:
 
 -   the text to appear in square brackets
 -   followed by the URL in round brackets
@@ -166,10 +167,11 @@ File paths are relative to where the Quarto document is!
 ::: callout-important
 ## Before the exercise
 
-1.  Download the [penguins-template.qmd](https://github.com/ellfran-7/repro-research-workshop/tree/main/templates/penguins-template.qmd)
-2.  Move the file into a **New Folder** on your computer (call it something like "`cs-workshop-2025`")
-3.  Now, open the `penguins-template.qmd` in Rstudio
-4.  Once Rstudio up and running, copy and paste `install.packages("palmerpenguins")` into the **Console** and run it once
+1.  Download the [penguins-template.qmd](https://downgit.github.io/#/home?url=https://github.com/ellfran-7/repro-research-workshop/blob/main/templates/penguins-template.qmd) zip.
+
+2. Unzip the downloaded file and, if you want, rename the folder on your computer (something like "`cs-workshop-2025`")
+3.  Now, open the `penguins-template.qmd` file in Rstudio
+4.  Once Rstudio is up and running, copy and paste `install.packages("palmerpenguins")` into the **Console** and run it once.
 :::
 
 ::: {.callout-note collapse="\"true"}
@@ -218,7 +220,7 @@ They always start with three backticks, followed by the an r in curly brackets.
 2 + 2
 ```
 
-The result of the code is outputted after the chunk as you can see.
+The result of the code is outputted after the chunk, as you can see.
 
 A more coherent example:
 
@@ -257,7 +259,7 @@ ggplot(data = penguins,
 
 Most common execution options:
 
-| Option | Description if `: true` |
+| Option | Description if `____: true` |
 |----------------------|--------------------------------------------------|
 | `eval` | Evaluate the code chunk |
 | `echo` | Include the source code in output |
@@ -286,7 +288,7 @@ ggplot(data = penguins,
 
 <br/>
 
-### Figure options `fig-`  {#fig-option}
+### Figure options: `fig-`  {#fig-option}
 
 ```{r}
 #| echo: fenced
@@ -304,7 +306,7 @@ ggplot(data = penguins,
 
 <br/>
 
-### Cross-referencing with `label`  {#label}
+### Cross-referencing: `label`  {#label}
 
 We can add internal links for cross-referencing using `label`.
 
@@ -357,20 +359,18 @@ E = mc^2
 $$ {#eq-linear}
 
 ``` markdown
-
 According to the @eq-linear
-
 ```
 
 According to the @eq-linear
 
 <br/>
 
-### Inline code  {#inline-code}
+### Inline code {#inline-code}
 
 You can include executable expressions inside the markdown (text) by enclosing the expression in `` `r ` ``
 
-``` markdown
+``` default
 The penguins dataset is composed of `r nrow(penguins)` observations.
 ```
 
@@ -448,7 +448,7 @@ The penguins dataset is composed of `r nrow(penguins)` observations.
 
 Well done! You've just created your first Quarto report 🎉 !
 
-![Artwork from "Hello, Quarto" keynote by Julia Lowndes and Mine Çetinkaya-Rundel, presented at RStudio Conference 2022. Illustrated by Allison Horst.](images/ahorst-twopenguins-qsunset.png)
+![Artwork from "Hello, Quarto" keynote by Julia Lowndes and Mine Çetinkaya-Rundel, presented at RStudio Conference 2022. Illustrated by Allison Horst.](images/ahorst-twopenguins-qsunset.png){width="80%"}
 
  <br/>
 
@@ -464,7 +464,7 @@ There is much more that is possible with Quarto, such as:
     - Dashboards ([example](https://pub.demo.posit.team/public/nz-quakes/))
     - Websites (like this one)
     - Books ([example](https://r4ds.hadley.nz/))
-    Interactive docs ([example](https://quarto.org/docs/interactive/ojs/examples/penguins.html))
+    - Interactive docs ([example](https://quarto.org/docs/interactive/ojs/examples/penguins.html))
 
 
 And so much more... Go see the full [Quarto documentation](https://quarto.org/docs/guide/).

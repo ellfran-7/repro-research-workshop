@@ -13,7 +13,7 @@ format:
     code-copy: true
     width: 1600
     height: 900
-    footer: "CS-WORKSHOP Feb 2025 | Materials: [ellfrank7/repro-research-workshop](https://github.com/ellfran-7/repro-research-workshop)"
+    footer: "CS-WORKSHOP Feb 2025 | [Home page](https://ellfran-7.github.io/repro-research-workshop)"
     transition: slide
     background-transition: fade
     auto-animate-easing: ease-in-out
@@ -403,11 +403,12 @@ Inspired by [Repro4Everyone. (n.d.). Introduction to Reproducibility. Repro4Ever
 -   Document practices (e.g., lab notebooks, ELNs with [eLabFTW](https://scienceouverte.univ-lorraine.fr/en/research-data-ul/electronic-laboratory-notebook-elabftw-solution/))
 -   Organise code, data and files (e.g., separate folders for different data, clear filenames, tidy principles)
 
-::: {layout="[-1,6,-2,6,-1]"}
-![](images/phdcomic-finaldoc.png){.lightbox fig-align="center"}
+::: {layout="[-3,3,-2,6,-2]"}
+!["Piled Higher and Deeper" by Jorge Cham (www.phdcomics.com)](images/phdcomic-finaldoc.png){.lightbox fig-align="center"}
 
-![](images/jlowndes-ahorst-tidydata.jpg){.lightbox fig-align="center"}
+![Illustrations from the Openscapes blog Tidy Data for reproducibility, efficiency, and collaboration by Julia Lowndes and Allison Horst](images/jlowndes-ahorst-tidydata.jpg){.lightbox fig-align="center"}
 :::
+
 
 ## How can we be bit more reproducible? {auto-animate="true"}
 
@@ -452,7 +453,7 @@ Inspired by [Repro4Everyone. (n.d.). Introduction to Reproducibility. Repro4Ever
 -   Track changes (= versionning)
 -   Learn to code (even a little)
 
-![Artwork by Allison Horst](images/ahorst-rabbit-mouse-comp.jpg){fig-align="center" width="40%".absolute bottom=15 right=15}
+![Artwork by Allison Horst](images/ahorst-rabbit-mouse-comp.jpg)
 
 # Every little helps:<br />Literate Programming with Quarto {#lp-quarto}
 
@@ -520,9 +521,9 @@ There can be three relevant use cases:
 <br/>
 
 ::: incremental
-1.  For [**communicating**]{.nicegreen} to decision-makers or to a more general audience, who want to focus on the conclusions, not the code behind the analysis
-2.  For [**collaborating**]{.nicegreen} with other data scientists (including [**future you!**]{.nicegreen}), who are interested in both your conclusions, and how you reached them (i.e. the code)
-3.  As an environment in which to [*do*]{.nicegreen} data science, as a modern-day lab notebook where you can capture not only what you did, but also what you were thinking
+1.  For [**communicating**]{.nice-green} to decision-makers, your supervisors or to a more general audience, who want to [*focus on the conclusions, not the code behind the analysis*]{.nice-green}
+2.  For [**collaborating**]{.nice-green} with other data scientists (including [**future you!**]{.nice-green}), who are [*interested in both your conclusions, and how you reached them*]{.nice-green} (i.e. the code)
+3.  As an environment in which to [*do*]{.nice-green} data science, as a modern-day lab notebook where you can capture not only what you did, but also what you were thinking
 :::
 
 ## To advance, we must code a little... {style="text-align: center;"}
