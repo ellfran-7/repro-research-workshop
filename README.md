@@ -13,7 +13,7 @@
 
 ## Birthright of the workshop
 
-This workshop was designed for members of my lab, the Laboratoire des Environnements Continentaux (LIEC), spanning both the Metz and Nancy sites. Recognizing a need to share knowledge about reproducible research, I decided to organize this session to contribute what I know on the topic (or what I think I know :alien:). While I don’t claim to be an expert, every little helps. My hope is that this workshop sparks enough interest to encourage others to explore and strive toward more reproducible, transparent, and accessible research practices. 
+This workshop was designed for members of my lab, the Laboratoire des Environnements Continentaux (LIEC), spanning both the Metz and Nancy sites. Recognising a need to share knowledge about reproducible research, I decided to organize this session to contribute what I know on the topic (or what I think I know :alien:). While I don’t claim to be an expert, every little helps. My hope is that this workshop sparks enough interest to encourage others to explore and strive toward more reproducible, transparent, and accessible research practices. 
 
 ## Description
 
