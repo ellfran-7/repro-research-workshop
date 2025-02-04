@@ -34,5 +34,5 @@ and the
 
 ## Licence
 
-This work is licensed under a [Creative Commons Attribution 4.0 International
+Except where otherwise noted, this work is licensed under a [Creative Commons Attribution 4.0 International
 License](https://github.com/ellfran-7/repro-research-workshop/LICENCE.txt).
