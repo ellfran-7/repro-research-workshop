@@ -30,7 +30,7 @@ and the
 
 * the [Introduction to Reproducibility](https://www.repro4everyone.org/resources/intro-reproducibility) presentation created by [Repro4Everyone](https://www.repro4everyone.org/)
 
-
+* Nicole Rennie's [Introduction to Quarto](https://nrennie.rbind.io/training-intro-to-quarto/)
 
 ## Licence
 
