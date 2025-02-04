@@ -6,15 +6,6 @@ author:
   - name: "Elise Billoir"
 date: "2025-02-06"
 date-format: long
-# format:
-#   html:
-#     embed-resources: true
-#     theme: [minty, web-styles.scss]
-#     code-block-height: 700px
-#     code-copy: true
-#     width: 1600
-#     height: 900
-# code-line-numbers: true
 number-sections: true
 number-depth: 3
 toc: true
@@ -30,9 +21,9 @@ In brief, `Quarto` allows you to combine a variety of content in a document (tex
 
 Today, we will explore the data from the [**Palmerpenguins**](https://allisonhorst.github.io/palmerpenguins "palmerpenguins R package") package to answer the following question:
 
-***Comment est la relation entre la longueur des nageoires et la masse corporelle ? Cette relation varie-t-elle selon les espèces ?***
+***What is the relationship between flipper length and body mass? Does this relationship varie between species?***
 
-But first, get a grasp of the basics and create our first Quarto document!
+But first, let's get a grasp of the basics and create our first Quarto document!
 
 <br/>
 
