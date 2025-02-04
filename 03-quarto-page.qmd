@@ -252,7 +252,7 @@ ggplot(data = penguins,
 
 ### Code chunk options  {#code-chunk-opt}
 
-We can change the chunk execution options so that the code messages do not show with `warning: false`.
+We can change the chunk execution options so that the code *messages do not show* with `warning: false`.
 
 ```{r}
 #| echo: fenced
@@ -279,7 +279,7 @@ Most common execution options:
 
 ### Code chunk options: `code-fold`  {#code-fold}
 
-Instead of simply removing the code, we can choose to include code but have it hidden by default.
+Instead of simply removing the code, we can choose to *include code but have it hidden* by default.
 
 ```{r}
 #| echo: fenced
