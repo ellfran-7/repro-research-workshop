@@ -372,7 +372,7 @@ Elise Billoir
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="01-reprores-slides_files/figure-html/unnamed-chunk-2-1.png" class="quarto-figure quarto-figure-center" style="width:70.0%"></p>
+<p><img data-src="01-reprores-slides_files/figure-revealjs/unnamed-chunk-2-1.png" class="quarto-figure quarto-figure-center" width="960"></p>
 </figure>
 </div>
 </div>
@@ -380,9 +380,10 @@ Elise Billoir
 </div>
 </section>
 <section id="what-should-be-kept-the-same-when-reproducing-a-study" class="slide level2" style="text-align: center;">
-<h2>What should be kept the same when reproducing a study? <span class="emoji" data-emoji="thinking">🤔</span></h2>
-<p><span style="color: red">Create WOOCLAP then add QR code and code for session !!!</span></p>
-</section>
+<h2>What should be kept the same<br>when reproducing a study? <span class="emoji" data-emoji="thinking">🤔</span></h2>
+<p><br></p>
+
+<img data-src="images/wooclap-connect.png" class="r-stretch"></section>
 <section id="what-does-reproducibility-mean-actually" class="slide level2" data-auto-animate="true">
 <h2 data-id="quarto-animate-title">What does reproducibility mean actually?</h2>
 <div class="columns">
@@ -1174,6 +1175,82 @@ function toggleLanguage() {
         ]
       });
     </script>
+    
+
+    <script>
+
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+
+      // slide changes (different for each slide format).
+
+      (function () {
+
+        // dispatch for htmlwidgets
+
+        function fireSlideEnter() {
+
+          const event = window.document.createEvent("Event");
+
+          event.initEvent("slideenter", true, true);
+
+          window.document.dispatchEvent(event);
+
+        }
+
+    
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+
+          fireSlideEnter();
+
+    
+
+          // dispatch for shiny
+
+          if (window.jQuery) {
+
+            if (previousSlide) {
+
+              window.jQuery(previousSlide).trigger("hidden");
+
+            }
+
+            if (currentSlide) {
+
+              window.jQuery(currentSlide).trigger("shown");
+
+            }
+
+          }
+
+        }
+
+    
+
+        // hookup for slidy
+
+        if (window.w3c_slidy) {
+
+          window.w3c_slidy.add_observer(function (slide_num) {
+
+            // slide_num starts at position 1
+
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+
+          });
+
+        }
+
+    
+
+      })();
+
+    </script>
+
+    
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {
@@ -1361,7 +1438,7 @@ function toggleLanguage() {
       }
     });
     </script>
-    <script>var lightboxQuarto = GLightbox({"selector":".lightbox","openEffect":"zoom","closeEffect":"zoom","loop":false,"descPosition":"bottom"});
+    <script>var lightboxQuarto = GLightbox({"openEffect":"zoom","loop":false,"selector":".lightbox","closeEffect":"zoom","descPosition":"bottom"});
     (function() {
       let previousOnload = window.onload;
       window.onload = () => {

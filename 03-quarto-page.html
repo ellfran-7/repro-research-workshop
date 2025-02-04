@@ -248,7 +248,9 @@ window.Quarto = {
 <section id="objectives" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="objectives">Objectives</h2>
 <p>Today, we will explore the data from the <a href="https://allisonhorst.github.io/palmerpenguins" title="palmerpenguins R package"><strong>Palmerpenguins</strong></a> package to answer the following questions:</p>
-<p><span class="center"><strong><em>What is the relationship between flipper length and body mass?<br>Does this relationship varie between species?</em></strong></span></p>
+<div style="text-align: center;">
+<p><strong><em>What is the relationship between flipper length and body mass?<br>Does this relationship vary between species?</em></strong></p>
+</div>
 <p>But first, let’s get a grasp of the basics and create our first Quarto document!</p>
 <p><br></p>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -264,7 +266,7 @@ Exercise 1 - Quarto basics
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ol type="1">
-<li>Create a new Quarto document (<code>.qmd</code>) clicking on <em><code>File &gt; New File &gt; Quarto Document</code></em></li>
+<li>Create a new Quarto document (<code>.qmd</code>) by clicking on <em><code>File &gt; New File &gt; Quarto Document</code></em></li>
 <li>Add a title and author in the YAML<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> section at the top of the document</li>
 <li>Click <code>Render</code> to render/knit your document. Observe the result. What type of document is this?</li>
 <li>Modify the YAML header to change the output format to docs</li>
@@ -278,7 +280,7 @@ Exercise 1 - Quarto basics
 </section>
 <section id="include-content" class="level2" data-number="1">
 <h2 data-number="1" class="anchored" data-anchor-id="include-content"><span class="header-section-number">1</span> Including common content</h2>
-<p>The most common thing you are likely to do in your Quarto document is text formatting. The language used for this is called Markdown. It is a fairly basic language but allows you to intuitively perform most basic formatting tasks.</p>
+<p>The most common thing you are likely to do in your Quarto document is text formatting. The language used for this is called <strong>Markdown</strong>. It is a fairly basic language but allows you to intuitively perform most basic formatting tasks.</p>
 <blockquote class="blockquote">
 <p>Markdown-formatted document should be publishable as-is, as plain text, without looking like it’s been marked up with tags or formatting instructions. - <a href="https://daringfireball.net/projects/markdown/syntax#philosophy">John Gruber</a></p>
 </blockquote>
@@ -291,9 +293,11 @@ Exercise 1 - Quarto basics
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>superscript^2^ subscript~2~</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">underline</span><span class="co">]</span>{.underline} <span class="co">[</span><span class="ot">small caps</span><span class="co">]</span>{.smallcaps}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<blockquote class="blockquote">
 <p><em>italic</em> <strong>bold</strong> <del>strikeout</del> <code>code</code></p>
 <p>superscript<sup>2</sup> subscript<sub>2</sub></p>
 <p><u>underline</u> <span class="smallcaps">small caps</span></p>
+</blockquote>
 <p><br></p>
 </section>
 <section id="sections" class="level3" data-number="1.2">
@@ -319,8 +323,11 @@ Exercise 1 - Quarto basics
 <span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="ss">1.  </span>Numbered list item 1</span>
 <span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="ss">2.  </span>Item 2</span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>     i) sub-item 1</span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>          A. sub-sub-item 1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    i)  Sub-item 1</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="in">        A.  Sub-sub-item 1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<blockquote class="blockquote">
 <ul>
 <li><p>Bulleted list item 1</p></li>
 <li><p>Item 2</p>
@@ -333,9 +340,11 @@ Exercise 1 - Quarto basics
 <li><p>Numbered list item 1</p></li>
 <li><p>Item 2</p>
 <ol type="i">
-<li>sub-item 1 A. sub-sub-item 1</li>
+<li><p>sub-item 1</p>
+<p>A. sub-sub-item 1</p></li>
 </ol></li>
 </ol>
+</blockquote>
 <div class="callout callout-style-default callout-caution callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -361,8 +370,10 @@ Caution
 <div class="sourceCode" id="cb4"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ot">&lt;https://quarto.org/&gt;</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>A link to the <span class="co">[</span><span class="ot">Quarto documentation</span><span class="co">](https://quarto.org/)</span>.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<blockquote class="blockquote">
 <p><a href="https://quarto.org/" class="uri">https://quarto.org/</a></p>
 <p>A link to the <a href="https://quarto.org/">Quarto documentation</a>.</p>
+</blockquote>
 <p><br></p>
 </section>
 <section id="images" class="level3" data-number="1.5">
@@ -405,15 +416,15 @@ Before the exercise
 </div>
 <div class="callout-body-container callout-body">
 <ol type="1">
-<li><p>Download the <a href="https://downgit.github.io/#/home?url=https://github.com/ellfran-7/repro-research-workshop/blob/main/templates/penguins-template.qmd">penguins-template.qmd</a> zip.</p></li>
-<li><p>Unzip the downloaded file and, if you want, rename the folder on your computer (something like “<code>cs-workshop-2025</code>”)</p></li>
+<li><p>Download the <a href="https://downgit.github.io/#/home?url=https://github.com/ellfran-7/repro-research-workshop/blob/main/templates/penguins-template.qmd">penguins-template.qmd</a> zip</p></li>
+<li><p>Unzip the downloaded folder and, if you want, rename the unzipped folder on your computer (something like “<code>cs-workshop-2025</code>”)</p></li>
 <li><p>Now, open the <code>penguins-template.qmd</code> file in Rstudio</p></li>
-<li><p>Once Rstudio is up and running, copy and paste <code>install.packages("palmerpenguins")</code> into the <strong>Console</strong> and run it once.</p></li>
+<li><p>Once Rstudio is up and running, copy and paste <code>install.packages("palmerpenguins")</code> into the <strong>Console</strong> and run it once</p></li>
 </ol>
 </div>
 </div>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -422,13 +433,13 @@ Exercise 2 - Markdown basics
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-5" class="callout-5-contents callout-collapse collapse show">
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ol type="1">
 <li><p>Open the <code>penguins-template.qmd</code> file in RStudio</p></li>
 <li><p><strong>Add a Level 2 header</strong> titled “<strong>Data Overview</strong>” after the existing content in the file</p></li>
 <li><p><strong>Copy and paste</strong> the following text into the file:</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>The <span class="in">`penguins`</span> dataframe contains 344 observations of penguins.</span>
+<div class="sourceCode" id="cb6"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>The penguins dataframe contains 344 observations of penguins.</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>It includes several qualitative variables, including the following:</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Sex of the penguins</span>
 <span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Island where they are found</span>
@@ -436,7 +447,7 @@ Exercise 2 - Markdown basics
 <span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>The represented species are: Chinstrap, Gentoo, and Adélie.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 <li><p><strong>Modify the text</strong> so that the final rendering looks like this:</p>
 <blockquote class="blockquote">
-<p>The penguins <code>penguins</code> contains 344 observations of penguins. It includes several qualitative variables, including the following:</p>
+<p>The <code>penguins</code> dataframe contains 344 observations of penguins. It includes several qualitative variables, including the following:</p>
 <ul>
 <li><em>Sex</em> of the penguins</li>
 <li><strong>Island</strong> where they are found</li>
@@ -445,7 +456,7 @@ Exercise 2 - Markdown basics
 <p>The represented species are : <strong>Chinstrap</strong>, <strong>Gentoo</strong> et <strong>Adélie</strong>.</p>
 </blockquote></li>
 <li><p><strong>Add the online image</strong> found at this <a href="https://allisonhorst.github.io/palmerpenguins/reference/figures/lter_penguins.png">link</a> to your document, then add <strong>a caption to this image</strong></p></li>
-<li><p><strong>Render</strong> your document. Observe the changes.</p></li>
+<li><p><strong>Render</strong> your document. Observe the changes</p></li>
 </ol>
 </div>
 </div>
@@ -517,8 +528,8 @@ Exercise 2 - Markdown basics
 <p>Most common execution options:</p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 30%">
-<col style="width: 69%">
+<col style="width: 31%">
+<col style="width: 68%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -638,12 +649,14 @@ Figure&nbsp;1: Distribution of bill depth sizes
 </div>
 </div>
 <div class="sourceCode" id="cb16"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>Many penguins in the dataset seem to have a bill depth between 18 and 19mm (<span class="co">[</span><span class="ot">@fig-billdepth</span><span class="co">]</span>).</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<blockquote class="blockquote">
 <p>Many penguins seem to have bill depths between 18 and 19mm (<a href="#fig-billdepth" class="quarto-xref">Figure&nbsp;1</a>).</p>
+</blockquote>
 <p><br></p>
 </section>
 <section id="tables-tbl--and-equations-eq-" class="level3" data-number="2.5">
 <h3 data-number="2.5" class="anchored" data-anchor-id="tables-tbl--and-equations-eq-"><span class="header-section-number">2.5</span> Tables (<code>tbl-</code>) and equations (<code>eq-</code>)</h3>
-<p>Table options are similar to those of figures, but instead of <code>fig-</code> for some options, it is <code>tbl-</code></p>
+<p>Table options are similar to those of figures, but instead of <code>fig-</code> for some options, it is <code>tbl-</code>:</p>
 <div class="cell" data-tbl-align="center">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="in">#| tbl-align: center </span></span>
@@ -719,22 +732,26 @@ Table&nbsp;1: First 5 rows and columns of the penguins dataset
 </figure>
 </div>
 </div>
-<p>For equations, it is a bit different but still intuitive for cross-referencing.</p>
+<p>For equations, it is slightly different for cross-referencing.</p>
 <div class="sourceCode" id="cb18"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>$$</span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>E = mc^2</span>
 <span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>$$ {#eq-linear}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><span id="eq-linear"><span class="math display">\[
 E = mc^2
 \tag{1}\]</span></span></p>
-<div class="sourceCode" id="cb19"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>According to the @eq-linear</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>According to the <a href="#eq-linear" class="quarto-xref">Equation&nbsp;1</a></p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>According to the @eq-linear, the relationship between energy and mass is directly proportional.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<blockquote class="blockquote">
+<p>According to the <a href="#eq-linear" class="quarto-xref">Equation&nbsp;1</a>, the relationship between energy and mass is directly proportional.</p>
+</blockquote>
 <p><br></p>
 </section>
 <section id="inline-code" class="level3" data-number="2.6">
 <h3 data-number="2.6" class="anchored" data-anchor-id="inline-code"><span class="header-section-number">2.6</span> Inline code</h3>
 <p>You can include executable expressions inside the markdown (text) by enclosing the expression in <code>`r `</code></p>
-<div class="sourceCode" id="cb20"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>The penguins dataset is composed of 344 observations.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<pre><code>The penguins dataset is composed of `` 344 `` observations.</code></pre>
+<blockquote class="blockquote">
 <p>The penguins dataset is composed of 344 observations.</p>
+</blockquote>
 <p><br> <br></p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="true" aria-label="Toggle callout">
@@ -827,7 +844,7 @@ Hint
 </div>
 </div>
 <p><br> <br></p>
-<p>Well done! You’ve just created your first Quarto report 🎉 !</p>
+<p>Well done! You’ve just created your first Quarto report <span class="emoji" data-emoji="tada">🎉</span> !</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/ahorst-twopenguins-qsunset.png" class="img-fluid figure-img" style="width:80.0%"></p>
@@ -1289,14 +1306,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-      &nbsp;
-    </div>   
+<p>© Ellis Franklin, 2025.</p>
+</div>   
     <div class="nav-footer-center">
-<p>LIEC - CS WORKSHOP, Ellis Franklin</p>
-</div>
-    <div class="nav-footer-right">
       &nbsp;
     </div>
+    <div class="nav-footer-right">
+<p>Made with 💚 and Quarto</p>
+</div>
   </div>
 </footer>
 
