@@ -7,13 +7,16 @@
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.5.55">
 
   <meta name="author" content="Ellis Franklin">
   <meta name="author" content="Elise Billoir">
   <meta name="dcterms.date" content="2025-02-06">
-  <title>Reproducible Research Workshop – Enter Quarto</title>
+  <title>Reproducible Research Workshop – Reproducible Research</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -31,71 +34,6 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-    /* CSS for syntax highlighting */
-    pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { line-height: 1.25; }
-    pre > code.sourceCode > span:empty { height: 1.2em; }
-    .sourceCode { overflow: visible; }
-    code.sourceCode > span { color: inherit; text-decoration: inherit; }
-    div.sourceCode { margin: 1em 0; }
-    pre.sourceCode { margin: 0; }
-    @media screen {
-    div.sourceCode { overflow: auto; }
-    }
-    @media print {
-    pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-    }
-    pre.numberSource code
-      { counter-reset: source-line 0; }
-    pre.numberSource code > span
-      { position: relative; left: -4em; counter-increment: source-line; }
-    pre.numberSource code > span > a:first-child::before
-      { content: counter(source-line);
-        position: relative; left: -1em; text-align: right; vertical-align: baseline;
-        border: none; display: inline-block;
-        -webkit-touch-callout: none; -webkit-user-select: none;
-        -khtml-user-select: none; -moz-user-select: none;
-        -ms-user-select: none; user-select: none;
-        padding: 0 4px; width: 4em;
-        color: #aaaaaa;
-      }
-    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-    div.sourceCode
-      { color: #003b4f; background-color: #f1f3f5; }
-    @media screen {
-    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-    }
-    code span { color: #003b4f; } /* Normal */
-    code span.al { color: #ad0000; } /* Alert */
-    code span.an { color: #5e5e5e; } /* Annotation */
-    code span.at { color: #657422; } /* Attribute */
-    code span.bn { color: #ad0000; } /* BaseN */
-    code span.bu { } /* BuiltIn */
-    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
-    code span.ch { color: #20794d; } /* Char */
-    code span.cn { color: #8f5902; } /* Constant */
-    code span.co { color: #5e5e5e; } /* Comment */
-    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
-    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
-    code span.dt { color: #ad0000; } /* DataType */
-    code span.dv { color: #ad0000; } /* DecVal */
-    code span.er { color: #ad0000; } /* Error */
-    code span.ex { } /* Extension */
-    code span.fl { color: #ad0000; } /* Float */
-    code span.fu { color: #4758ab; } /* Function */
-    code span.im { color: #00769e; } /* Import */
-    code span.in { color: #5e5e5e; } /* Information */
-    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
-    code span.op { color: #5e5e5e; } /* Operator */
-    code span.ot { color: #003b4f; } /* Other */
-    code span.pp { color: #ad0000; } /* Preprocessor */
-    code span.sc { color: #5e5e5e; } /* SpecialChar */
-    code span.ss { color: #20794d; } /* SpecialString */
-    code span.st { color: #20794d; } /* String */
-    code span.va { color: #111111; } /* Variable */
-    code span.vs { color: #20794d; } /* VerbatimString */
-    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto.css">
   <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -393,8 +331,8 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Enter <code>Quarto</code></h1>
-  <p class="subtitle">Hands on</p>
+  <h1 class="title">Reproducible Research</h1>
+  <p class="subtitle">Open-Discussion</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -412,482 +350,608 @@ Elise Billoir
   <p class="date">February 6, 2025</p>
 </section>
 <section id="table-of-contents" class="title-slide slide level1 center">
-<h1>Table of contents</h1>
+<h1>Table of Contents</h1>
 <ul>
-<li><a href="#/first-qmd">Your first Quarto document</a></li>
-<li><a href="#/txt-format">Including content</a></li>
-<li><a href="#/code-plots">Code chunks and plots</a></li>
+<li><a href="#/intro-to-rr">Introduction to RR</a></li>
+<li><a href="#/sources-of-nr">Sources of irreproducibility</a></li>
+<li><a href="#/lp-quarto">Every little helps: Literate Programming with Quarto</a></li>
+<li><a href="#/refs">References</a></li>
 </ul>
 </section>
 
 <section>
-<section id="first-qmd" class="title-slide slide level1 center">
-<h1>Your first Quarto document</h1>
+<section id="intro-to-rr" class="title-slide slide level1 center">
+<h1>Introduction to RR</h1>
 
 </section>
-<section id="live-demo" class="slide level2">
-<h2>Live demo <span class="emoji" data-emoji="movie_camera">🎥</span></h2>
-<ol type="1">
-<li>Creating a <code>.qmd</code> file</li>
-<li>Two editors</li>
-<li>Rendering a doc</li>
-<li>What makes a Quarto document?
-<ul>
-<li>YAML header</li>
-<li>Text</li>
-<li>Chunks of R code</li>
-</ul></li>
-</ol>
-</section>
-<section id="your-turn" class="slide level2" data-auto-animate="true">
-<h2 data-id="quarto-animate-title">Your turn!</h2>
-</section>
-<section id="exercise-1" class="slide level2" data-auto-animate="true">
-<h2 data-id="quarto-animate-title">Exercise 1</h2>
-<p><br> <br></p>
-<div class="r-stack">
-<p>Go to the <a href="./03-exercises.html">Exercise section</a> <span class="emoji" data-emoji="pencil2">✏️</span></p>
-</div>
-</section></section>
-<section>
-<section id="txt-format" class="title-slide slide level1 center">
-<h1>Including content</h1>
-
-</section>
-<section id="markdown-syntax" class="slide level2">
-<h2>Markdown syntax</h2>
-<p><br></p>
-<ul>
-<li>You don’t need special software to read it</li>
-<li>Separates out the content and structure from the document styling</li>
-<li>Focus on the content not the way it looks</li>
-</ul>
-<p><br></p>
-<blockquote>
-<p>Markdown-formatted document should be publishable as-is, as plain text, without looking like it’s been marked up with tags or formatting instructions. - <a href="https://daringfireball.net/projects/markdown/syntax#philosophy">John Gruber</a></p>
-</blockquote>
-</section>
-<section id="text-formats" class="slide level2">
-<h2>Text formats</h2>
-<p><br></p>
-<p>Formatting text is easy, and follows a common structure by surrounding the text with special characters</p>
-<p><br></p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a aria-hidden="true" tabindex="-1"></a>*This* **workshop** ~~will be~~ is <span class="in">`so`</span> <span class="co">[</span><span class="ot">cool!</span><span class="co">]</span>{.underline} <span class="co">[</span><span class="ot">Yay!</span><span class="co">]</span>{.smallcaps}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>gives:</p>
-<p><em>This</em> <strong>workshop</strong> <del>will be</del> is <code>so</code> <u>cool!</u> <span class="smallcaps">Yay!</span></p>
-</section>
-<section id="sections" class="slide level2">
-<h2>Sections</h2>
-<p><br></p>
-<p>Sections are added to a document using different numbers of <code>#</code>:</p>
-<p><br></p>
-<ul>
-<li><code>#</code> creates a Level 1 heading (section)</li>
-<li><code>##</code> creates a level 2 heading (subsection)</li>
-<li><code>###</code> creates a Level 3 heading (sub-subsection)</li>
-<li>And so on…</li>
-</ul>
-</section>
-<section id="lists" class="slide level2">
-<h2>Lists</h2>
+<section id="have-you-ever-encountered-challenges-when-trying-to-reproduce-data-analyses" class="slide level2" style="text-align: center;">
+<h2>Have you ever encountered challenges when trying to reproduce data analyses?</h2>
 <p><br></p>
 <div class="fragment">
-<p>Unordered lists can be created using - (or *):</p>
-<div>
-
-</div>
-<div class="quarto-layout-panel" data-layout="[1,1,1]">
-<div class="quarto-layout-row quarto-layout-valign-center">
-<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
-<div class="sourceCode" id="cb2"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Item 1</span>
-<span id="cb2-2"><a aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Item 2</span>
-<span id="cb2-3"><a aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Item 3</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
-<p>gives</p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
-<ul>
-<li>Item 1</li>
-<li>Item 2</li>
-<li>Item 3</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div class="fragment">
-<p>Ordered lists can be created with progressive numbers or letters:</p>
-<div>
-
-</div>
-<div class="quarto-layout-panel" data-layout="[1,1,1]">
-<div class="quarto-layout-row quarto-layout-valign-center">
-<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
-<div class="sourceCode" id="cb3"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Item 1</span>
-<span id="cb3-2"><a aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Item 2</span>
-<span id="cb3-3"><a aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Item 3</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
-<p>gives</p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
-<ol type="1">
-<li>Item 1</li>
-<li>Item 2</li>
-<li>Item 3</li>
-</ol>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="links" class="slide level2">
-<h2>Links</h2>
-<p><br></p>
-<p>Add a link using square brackets and round brackets:</p>
-<ul>
-<li>the text to appear in square brackets</li>
-<li>followed by the URL in round brackets</li>
-</ul>
-<p><br></p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a aria-hidden="true" tabindex="-1"></a>A link to the <span class="co">[</span><span class="ot">Quarto documentation</span><span class="co">](https://quarto.org/)</span>.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>which gives:</p>
-<p>A link to the <a href="https://quarto.org/">Quarto documentation</a>.</p>
-</section>
-<section id="images" class="slide level2">
-<h2>Images</h2>
-<p><br></p>
-<p>Add an image using <code>![](path/image.png)</code>.</p>
-<p><br></p>
-<p>You can add a caption easily within the brackets as such <code>![Cool image](path/image.png)</code></p>
-<div class="callout callout-tip callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Tip</strong></p>
-</div>
-<div class="callout-content">
-<ul>
-<li><p>Use relative file paths rather than absolute file paths - other people won’t share the same absolute file path as you!</p></li>
-<li><p>File paths are relative to where the Quarto document is!</p></li>
-</ul>
-</div>
-</div>
-</div>
-</section>
-<section id="there-is-much-more" class="slide level2">
-<h2>There is much more…</h2>
-<p><br> <br> <br></p>
-<p>For further reading on this part, visit the <a href="https://quarto.org/docs/authoring/markdown-basics.html">Quarto documentation on Markdown Basics</a>.</p>
-<p>For quick help in the syntax, click in the top navigation bar in Rstudio <em><code>Help &gt; Markdown Quick Reference</code></em> for a guide.</p>
-</section>
-<section id="exercise-2" class="slide level2">
-<h2>Exercise 2</h2>
-<p><br> <br></p>
-<div class="r-stack">
-<p>Go to the <a href="./03-exercises.html">Exercise section</a> <span class="emoji" data-emoji="pencil2">✏️</span></p>
-</div>
-</section></section>
-<section>
-<section id="code-plots" class="title-slide slide level1 center">
-<h1>Code chunks and plots</h1>
-
-</section>
-<section id="code-chunks" class="slide level2">
-<h2>Code chunks</h2>
-<p><br></p>
-<ul>
-<li>Code blocks are the main way of including executable R code in a document.</li>
-<li>Code blocks always start with three backticks, followed by the an r in curly brackets.</li>
-</ul>
-<p><br></p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb5-2"><a aria-hidden="true" tabindex="-1"></a><span class="in">2 + 2</span></span>
-<span id="cb5-3"><a aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 4</code></pre>
-</div>
-</div>
-</section>
-<section id="code-chunk-options" class="slide level2" data-auto-animate="true">
-<h2 data-id="quarto-animate-title">Code chunk options</h2>
-<p>Code chunk options can control:</p>
-<ul>
-<li>whether your code is executed</li>
-<li>whether your code is displayed</li>
-<li>if warnings and errors are displayed</li>
-<li>how figures are presented</li>
-<li>how tables are presented</li>
-</ul>
-</section>
-<section id="code-chunk-options-1" class="slide level2" data-auto-animate="true">
-<h2 data-id="quarto-animate-title">Code chunk options</h2>
-<p><br></p>
-<p>They are included in a special comment at the top of the chunk prefaced with <code>#|</code>:</p>
-<p><br></p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode markdown code-with-copy" data-id="quarto-animate-code"><code class="sourceCode markdown hljs"><span id="cb7-1" class="hljs-ln-code"><a aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb7-2" class="hljs-ln-code"><a aria-hidden="true" tabindex="-1"></a><span class="in">#| output: true</span></span>
-<span id="cb7-3" class="hljs-ln-code"><a aria-hidden="true" tabindex="-1"></a><span class="in">2 + 2</span></span>
-<span id="cb7-4" class="hljs-ln-code"><a aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 4</code></pre>
-</div>
-</div>
-</section>
-<section id="code-chunk-options-2" class="slide level2" data-auto-animate="true">
-<h2 data-id="quarto-animate-title">Code chunk options</h2>
-<p><br> <br></p>
-<table class="caption-top">
-<colgroup>
-<col style="width: 27%">
-<col style="width: 72%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Option</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><code>eval</code></td>
-<td>Evaluate the code chunk</td>
-</tr>
-<tr class="even">
-<td><code>echo</code></td>
-<td>Include the source code in output</td>
-</tr>
-<tr class="odd">
-<td><code>output</code></td>
-<td>Include the results of executing the code</td>
-</tr>
-<tr class="even">
-<td><code>warning</code></td>
-<td>Include warnings in the output</td>
-</tr>
-<tr class="odd">
-<td><code>error</code></td>
-<td>Include errors in the output (errors won’t halt document processing)</td>
-</tr>
-<tr class="even">
-<td><code>include</code></td>
-<td>Prevent any output (code or results) from being included</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="code-chunk-options-fig-" class="slide level2">
-<h2>Code chunk options: <code>fig-</code></h2>
-<p><br></p>
-<div class="cell columns column-output-location" data-layout-align="center">
-<div class="column">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb9-1"><a aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb9-2"><a aria-hidden="true" tabindex="-1"></a><span class="in">#| warning: false</span></span>
-<span id="cb9-3"><a aria-hidden="true" tabindex="-1"></a><span class="in">#| fig-align: center </span></span>
-<span id="cb9-4"><a aria-hidden="true" tabindex="-1"></a><span class="in">#| fig-width: 6</span></span>
-<span id="cb9-5"><a aria-hidden="true" tabindex="-1"></a><span class="in">#| fig-asp: 0.9</span></span>
-<span id="cb9-6"><a aria-hidden="true" tabindex="-1"></a><span class="in">#| fig-cap: "Distribution of bill depth sizes"</span></span>
-<span id="cb9-7"><a aria-hidden="true" tabindex="-1"></a><span class="in">#| output-location: column</span></span>
-<span id="cb9-8"><a aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-9"><a aria-hidden="true" tabindex="-1"></a><span class="in">ggplot(data = penguins,</span></span>
-<span id="cb9-10"><a aria-hidden="true" tabindex="-1"></a><span class="in">       mapping = aes(x = bill_depth_mm)) +</span></span>
-<span id="cb9-11"><a aria-hidden="true" tabindex="-1"></a><span class="in">  geom_density() +</span></span>
-<span id="cb9-12"><a aria-hidden="true" tabindex="-1"></a><span class="in">  theme_bw()</span></span>
-<span id="cb9-13"><a aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div><div class="column">
+<div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="02-quarto_files/figure-revealjs/unnamed-chunk-4-1.png" width="576"></p>
-<figcaption>Distribution of bill depth sizes</figcaption>
+<p><img data-src="01-reprores-slides_files/figure-revealjs/unnamed-chunk-2-1.png" class="quarto-figure quarto-figure-center" style="width:70.0%"></p>
 </figure>
 </div>
 </div>
+</div>
+</div>
+</section>
+<section id="what-should-be-kept-the-same-when-reproducing-a-study" class="slide level2" style="text-align: center;">
+<h2>What should be kept the same when reproducing a study? <span class="emoji" data-emoji="thinking">🤔</span></h2>
+<p><span style="color: red">Create WOOCLAP then add QR code and code for session !!!</span></p>
+</section>
+<section id="what-does-reproducibility-mean-actually" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">What does reproducibility mean actually?</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><br> <br></p>
+<div>
+<ul>
+<li class="fragment">Difficult question to answer…</li>
+<li class="fragment">“Lack of reproducibility”<br> <span class="emoji" data-emoji="arrow_right">➡️</span> understood but broad expression</li>
+<li class="fragment">No clear definition<br> <span class="emoji" data-emoji="arrow_right">➡️</span> varies between the disciplines</li>
+</ul>
+</div>
+</div><div class="column" style="width:50%;">
+
 </div></div>
 </section>
-<section id="code-block-options-tbl--eq-" class="slide level2" data-auto-animate="&quot;true">
-<h2 data-id="quarto-animate-title">Code block options: <code>tbl-</code> , <code>eq-</code></h2>
-<p><br></p>
-<p>For tables, it is exactly the same as for figures, but instead of <code>fig-</code>, you replace it is <code>tbl-</code>.</p>
-<p>For equations it is similar but with <code>eq-</code>.</p>
-</section>
-<section id="code-block-options-tbl--eq--1" class="slide level2" data-auto-animate="&quot;true">
-<h2 data-id="quarto-animate-title">Code block options: <code>tbl-</code> , <code>eq-</code></h2>
-<div class="cell" data-tbl-align="center">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode markdown code-with-copy" data-id="quarto-animate-code"><code class="sourceCode markdown hljs"><span id="cb10-1" class="hljs-ln-code"><a aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb10-2" class="hljs-ln-code"><a aria-hidden="true" tabindex="-1"></a><span class="in">#| tbl-align: center </span></span>
-<span id="cb10-3" class="hljs-ln-code"><a aria-hidden="true" tabindex="-1"></a><span class="in">#| tbl-cap: "First 5 rows and columns of the penguins dataset"</span></span>
-<span id="cb10-4" class="hljs-ln-code"><a aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-5" class="hljs-ln-code"><a aria-hidden="true" tabindex="-1"></a><span class="in">knitr::kable(head(penguins[,1:5]))</span></span>
-<span id="cb10-6" class="hljs-ln-code"><a aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<table class="caption-top">
-<caption>First 5 rows and columns of the penguins dataset</caption>
-<thead>
-<tr class="header">
-<th style="text-align: left;">species</th>
-<th style="text-align: left;">island</th>
-<th style="text-align: right;">bill_length_mm</th>
-<th style="text-align: right;">bill_depth_mm</th>
-<th style="text-align: right;">flipper_length_mm</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Adelie</td>
-<td style="text-align: left;">Torgersen</td>
-<td style="text-align: right;">39.1</td>
-<td style="text-align: right;">18.7</td>
-<td style="text-align: right;">181</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Adelie</td>
-<td style="text-align: left;">Torgersen</td>
-<td style="text-align: right;">39.5</td>
-<td style="text-align: right;">17.4</td>
-<td style="text-align: right;">186</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Adelie</td>
-<td style="text-align: left;">Torgersen</td>
-<td style="text-align: right;">40.3</td>
-<td style="text-align: right;">18.0</td>
-<td style="text-align: right;">195</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Adelie</td>
-<td style="text-align: left;">Torgersen</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Adelie</td>
-<td style="text-align: left;">Torgersen</td>
-<td style="text-align: right;">36.7</td>
-<td style="text-align: right;">19.3</td>
-<td style="text-align: right;">193</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Adelie</td>
-<td style="text-align: left;">Torgersen</td>
-<td style="text-align: right;">39.3</td>
-<td style="text-align: right;">20.6</td>
-<td style="text-align: right;">190</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</section>
-<section id="code-chunk-options-label" class="slide level2" data-auto-animate="true">
-<h2 data-id="quarto-animate-title">Code chunk options: <code>label</code></h2>
+<section id="what-does-reproducibility-mean-actually-1" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">What does reproducibility mean actually?</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
 <p><br> <br></p>
-<p>You can add a <code>label</code> to each code chunk</p>
-<p><br></p>
-<p>This allows you to:</p>
 <ul>
-<li><p>associate an “label” with an error (if one occurs)</p></li>
-<li><p>cross-reference a figure in the text.</p></li>
+<li>Difficult question to answer…</li>
+<li>“Lack of reproducibility”<br> <span class="emoji" data-emoji="arrow_right">➡️</span> understood but broad expression</li>
+<li>No clear definition<br> <span class="emoji" data-emoji="arrow_right">➡️</span> varies between the disciplines</li>
 </ul>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/gundersen-2021-survey-def-repro.jpg"></p>
+<figcaption>Gundersen Odd Erik 2021 The fundamental principles of reproducibility Phil. Trans. R. Soc. A.37920200210 DOI:&nbsp;<a href="http://doi.org/10.1098/rsta.2020.0210">10.1098/rsta.2020.0210</a>.</figcaption>
+</figure>
+</div>
+</div></div>
 </section>
-<section id="code-block-options-label" class="slide level2" data-auto-animate="true">
-<h2 data-id="quarto-animate-title">Code block options: <code>label</code></h2>
+<section id="what-does-reproducibility-mean-actually-2" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">What does reproducibility mean actually?</h2>
 <p><br></p>
-<p>To cross-reference, supposing the label of the code chunk is:</p>
+<div class="fragment">
+<ul>
+<li><strong>Direct reproducibility</strong> <span class="smaller">(commonly ‘<em>replication</em>’ or ‘<em>experimental reproducibility</em>’)</span></li>
+</ul>
+</div>
+<div class="fragment">
+<ul>
+<li><strong>Analytical reproducibility</strong> <span class="smaller">(commonly ‘<em>computational reproducibility</em>’)</span></li>
+</ul>
+</div>
+<div class="fragment">
+<ul>
+<li><strong>Systemic reproducibility</strong> <span class="smaller">(commonly ‘<em>robustness</em>’)</span></li>
+</ul>
+</div>
+<div class="fragment">
+<ul>
+<li><strong>Conceptual reproducibility</strong> <span class="smaller">(commonly ‘<em>generalisation</em>’)</span></li>
+</ul>
+</div>
+
+<aside><div>
+<ul style="list-style: none;">
+<li>
+Schloss, 2018. DOI: <a href="https://doi.org/10.1128/mbio.00525-18">10.1128/mbio.00525-18</a>
+</li>
+<li>
+National Academies of Sciences, Engineering, and Medicine. 2019. Reproducibility and Replicability in Science. Washington, DC: The National Academies Press. DOI: <a href="https://doi.org/10.17226/25303">10.17226/25303</a>
+</li>
+</ul>
+</div></aside></section>
+<section id="what-does-reproducibility-mean-actually-3" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">What does reproducibility mean actually?</h2>
 <p><br></p>
+<div style="color: #588157;" data-auto-animate-delay="0.2">
+<ul>
+<li><strong>Direct reproducibility</strong> (commonly ‘<em>replication</em>’ or ‘<em>experimental reproducibility</em>’)</li>
+</ul>
+</div>
+<div style="color: #588157;" data-auto-animate-delay="0.2">
+<ul>
+<li><strong>Analytical reproducibility</strong> (commonly ‘<em>computational reproducibility</em>’)</li>
+</ul>
+</div>
+<div style="opacity: .5;" data-auto-animate-delay="0.2">
+<ul>
+<li><strong>Systemic reproducibility</strong> (commonly ‘<em>robustness</em>’)</li>
+</ul>
+</div>
+<div style="opacity: .5;" data-auto-animate-delay="0.2">
+<ul>
+<li><strong>Conceptual reproducibility</strong> (commonly ‘<em>generalisation</em>’)</li>
+</ul>
+</div>
+
+<!-- ## What does reproducibility mean actually? {auto-animate="true"} -->
+<!-- <br/> -->
+<!-- ![The Turing Way project illustration by Scriberia. Used under a CC-BY 4.0 licence. DOI: [10.5281/zenodo.3332807](https://doi.org/10.5281/zenodo.3332807)](images/turingway-definition.svg){.lightbox fig-align="center"} -->
+<aside><div>
+<ul style="list-style: none;">
+<li>
+Schloss, 2018. DOI: <a href="https://doi.org/10.1128/mbio.00525-18">10.1128/mbio.00525-18</a>
+</li>
+<li>
+National Academies of Sciences, Engineering, and Medicine. 2019. Reproducibility and Replicability in Science. Washington, DC: The National Academies Press. DOI: <a href="https://doi.org/10.17226/25303">10.17226/25303</a>
+</li>
+</ul>
+</div></aside></section>
+<section id="in-other-words" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">In other words…</h2>
+<p><br> <br></p>
+<div class="r-hstack">
+<div class="fragment" data-id="box1" data-auto-animate-delay="0" style="background: #A8DADC; width: 300px; height: 200px; margin: 10px; display: flex; justify-content: center; align-items: center;">
+<p>Data</p>
+</div>
+<div class="fragment" data-id="box2" data-auto-animate-delay="0.1" style="background: #AECBFA; width: 300px; height: 200px; margin: 10px; display: flex; justify-content: center; align-items: center;">
+<p>Code</p>
+</div>
+<div class="fragment" data-id="box3" data-auto-animate-delay="0.2" style="background: #D4A5E6; width: 300px; height: 200px; margin: 10px; display: flex; justify-content: center; align-items: center;">
+<p>Documentation</p>
+</div>
+</div>
+</section>
+<section id="in-other-words-1" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">In other words…</h2>
+<p><br> <br></p>
 <div class="r-stack">
-<p><code>#| label: fig-billdepthdist</code></p>
+<div data-id="box1" style="background: #A8DADC; width: 700px; height: 400px; border-radius: 50px;">
+
 </div>
-<p><br></p>
-<p>you simply write in the text as:</p>
-<p><br></p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode markdown code-with-copy" data-id="quarto-animate-code"><code class="sourceCode markdown hljs"><span id="cb11-1" class="hljs-ln-code"><a aria-hidden="true" tabindex="-1"></a>Many penguins in the dataset seem to have a bill depth between 18 and 19mm (<span class="co">[</span><span class="ot">@fig-billdepthdist</span><span class="co">]</span>).</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div data-id="box2" style="background: #AECBFA; width: 600px; height: 300px; border-radius: 50px;">
+
+</div>
+<div data-id="box3" style="background: #D4A5E6; width: 500px; height: 200px; border-radius: 50px; display: flex; justify-content: center; align-items: center;">
+<p>Reproducible Research</p>
+</div>
+</div>
 </section>
-<section id="code-block-options-label-1" class="slide level2" data-auto-animate="true">
-<h2 data-id="quarto-animate-title">Code block options: <code>label</code></h2>
-<p><br></p>
-<p>Many penguins in the dataset seem to have a bill depth between 18 and 19mm (<a href="#/code-block-options-label-1" class="quarto-xref">Figure&nbsp;1</a>).</p>
-<div class="cell columns column-output-location">
-<div class="column">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode markdown code-with-copy" data-id="quarto-animate-code"><code class="sourceCode markdown hljs"><span id="cb12-1" class="hljs-ln-code"><a aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb12-2" class="hljs-ln-code"><a aria-hidden="true" tabindex="-1"></a><span class="in">#| fig-cap: "Distribution of bill depth sizes"</span></span>
-<span id="cb12-3" class="hljs-ln-code"><a aria-hidden="true" tabindex="-1"></a><span class="in">#| label: fig-billdepthdist</span></span>
-<span id="cb12-4" class="hljs-ln-code"><a aria-hidden="true" tabindex="-1"></a><span class="in">#| output-location: column</span></span>
-<span id="cb12-5" class="hljs-ln-code"><a aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-6" class="hljs-ln-code"><a aria-hidden="true" tabindex="-1"></a><span class="in">ggplot(data = penguins,</span></span>
-<span id="cb12-7" class="hljs-ln-code"><a aria-hidden="true" tabindex="-1"></a><span class="in">       mapping = aes(x = bill_depth_mm)) +</span></span>
-<span id="cb12-8" class="hljs-ln-code"><a aria-hidden="true" tabindex="-1"></a><span class="in">  geom_density() +</span></span>
-<span id="cb12-9" class="hljs-ln-code"><a aria-hidden="true" tabindex="-1"></a><span class="in">  theme_bw()</span></span>
-<span id="cb12-10" class="hljs-ln-code"><a aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div><div class="column">
-<div class="cell-output-display">
-<div id="fig-billdepthdist" class="quarto-float quarto-figure quarto-figure-center">
-<figure class="quarto-float quarto-float-fig">
-<div aria-describedby="fig-billdepthdist-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img data-src="02-quarto_files/figure-revealjs/fig-billdepthdist-1.png" width="960">
+<section id="why-are-we-talking-about-this-now" class="slide level2">
+<h2>Why are we talking about this now?</h2>
+<!-- We need to have confidence that our research is good quality and we are doing good science. -->
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="images/nature-reproducibility-crisis.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Baker, M. 1,500 scientists lift the lid on reproducibility. Nature 533, 452–454 (2016). DOI: 10.1038/533452a."><img data-src="images/nature-reproducibility-crisis.png" class="quarto-figure quarto-figure-center" width="700" alt="Baker, M. 1,500 scientists lift the lid on reproducibility. Nature 533, 452–454 (2016). DOI: 10.1038/533452a."></a></p>
+</figure>
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-billdepthdist-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: Distribution of bill depth sizes
-</figcaption>
+<figcaption>Baker, M. 1,500 scientists lift the lid on reproducibility. Nature 533, 452–454 (2016). DOI: <a href="https://doi.org/10.1038/533452a">10.1038/533452a</a>.</figcaption>
+</figure>
+</div>
+</div><div class="column" style="width:50%;">
+<p><br></p>
+<div>
+<ul>
+<li class="fragment"><p>70% of researchers can’t reproduce others’ findings</p></li>
+<li class="fragment"><p>60% can’t reproduce <strong>their own findings</strong></p></li>
+<li class="fragment"><p>Non-reproducible biomedical research costs $28 billion/year (<a href="https://doi.org/10.1371/journal.pbio.1002165">Freedman et al.&nbsp;2015</a>)</p></li>
+</ul>
+</div>
+</div></div>
+</section>
+<section id="how-important-is-it-well-quite-important" class="slide level2">
+<h2>How important is it? <span class="fragment">Well, quite important</span></h2>
+<p><br> <br></p>
+<div>
+<ul>
+<li class="fragment">Anyone (with a similar level of skills) should be able to do reproduce your research and benefit from it</li>
+<li class="fragment">Funders (e.g., ANR) and journals now require data and code accessibility, which aligns with the growing open-science movement</li>
+<li class="fragment"><del>If I keep my data and code, I have a competitive advantage</del></li>
+<li class="fragment">If I share my data and code, my work will gain more visibility (and citations <span class="emoji" data-emoji="sunglasses">😎</span>)</li>
+</ul>
+</div>
+</section>
+<section id="advantages" class="slide level2">
+<h2>Advantages</h2>
+<p><br> <br></p>
+<div>
+<ul>
+<li class="fragment">It obliges you to verify your work (by sharing both docs, data and code)</li>
+<li class="fragment"><span class="nice-green"><strong>Your future self</strong></span> will thank you (you’ll be much more productive)</li>
+<li class="fragment">Your collaborators too</li>
+<li class="fragment">By ensuring reproducibility, you reinforce your credibility and reputation</li>
+<li class="fragment">Reproducibility fosters <span class="nice-green"><strong>trust</strong></span> in scientific progress and <span class="nice-green"><strong>accelerates</strong></span> it</li>
+</ul>
+</div>
+</section></section>
+<section>
+<section id="sources-of-nr" class="title-slide slide level1 center">
+<h1>Sources of irreproducibility</h1>
+
+</section>
+<section id="what-sources-of-irreproducibility-can-you-think-of" class="slide level2" style="text-align: center;">
+<h2>What sources of irreproducibility<br>can you think of? <span class="emoji" data-emoji="thinking">🤔</span></h2>
+</section>
+<section id="factors-decreasing-reproducibility" class="slide level2" data-auto-animate="&quot;true">
+<h2 data-id="quarto-animate-title">Factors decreasing reproducibility</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><br> <br> <br></p>
+<ul>
+<li>Failures of reproducibility cannot be traced to a single cause</li>
+<li>Nearly every aspect of a study needs to be considered</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="images/nature-factors-irrepro.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Baker, M. 1,500 scientists lift the lid on reproducibility. Nature 533, 452–454 (2016). DOI: &nbsp;10.1038/533452a."><img data-src="images/nature-factors-irrepro.png" class="quarto-figure quarto-figure-center" alt="Baker, M. 1,500 scientists lift the lid on reproducibility. Nature 533, 452–454 (2016). DOI: &nbsp;10.1038/533452a."></a></p>
+</figure>
+</div>
+<figcaption>Baker, M. 1,500 scientists lift the lid on reproducibility. Nature 533, 452–454 (2016). DOI: &nbsp;<a href="https://doi.org/10.1038/533452a">10.1038/533452a</a>.</figcaption>
+</figure>
+</div>
+</div></div>
+</section>
+<section id="example-a-drawing-protocol" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Example: a drawing protocol</h2>
+<div class="fragment">
+<p><strong>You really want to draw something but don’t know how. You’ve found this protocol in a very prestigious journal and want to reproduce it. Grab your pens and papers <span class="emoji" data-emoji="pencil">📝</span> !</strong></p>
+</div>
+<div class="fragment">
+<div>
+<button class="switch-btn" onclick="toggleLanguage()">
+<p>Switch Language</p>
+</button>
+<div id="english" class="language no-margin-top green-border">
+<ol type="1">
+<li>Draw a large circle in the center of your page.</li>
+<li>Inside the circle, slightly above the middle, draw two medium-sized ovals next to each other. Inside each oval, draw a smaller filled-in oval.</li>
+<li>Below the ovals, in the center of the circle, draw a small upside-down triangle.</li>
+<li>On top of the circle, draw two small triangles with the base of each triangle touching the edge of the circle and the points facing outward.</li>
+<li>From the bottom point of the triangle, draw two curved lines that extend outward, one curving to the left and one to the right, forming a “W” shape.</li>
+<li>On each side of the curved lines, draw three short straight lines extending outward.</li>
+</ol>
+</div>
+<div id="french" class="language no-margin-top green-border" style="display:none;">
+<ol type="1">
+<li>Dessinez un grand cercle au centre de votre page.</li>
+<li>À l’intérieur du cercle, légèrement au-dessus du milieu, dessinez deux ovales de taille moyenne côte à côte. À l’intérieur de chaque ovale, dessinez un petit ovale rempli.</li>
+<li>Sous les ovales, au centre du cercle, dessinez un petit triangle inversé.</li>
+<li>Au-dessus du cercle, dessinez deux petits triangles avec la base de chaque triangle touchant le bord du cercle et les pointes dirigées vers l’extérieur.</li>
+<li>À partir de la pointe inférieure du triangle, dessinez deux lignes courbées qui s’étendent vers l’extérieur, l’une courbant vers la gauche et l’autre vers la droite, formant une forme en “W”.</li>
+<li>De chaque côté des lignes courbées, dessinez trois petites lignes droites qui s’étendent vers l’extérieur.</li>
+</ol>
+</div>
+</div>
+<script>
+function toggleLanguage() {
+  var english = document.getElementById("english");
+  var french = document.getElementById("french");
+  if (english.style.display === "none") {
+    english.style.display = "block";
+    french.style.display = "none";
+  } else {
+    english.style.display = "none";
+    french.style.display = "block";
+  }
+}
+</script>
+</div>
+
+<aside><div>
+<p>Inspired by <a href="https://www.repro4everyone.org/resources/intro-reproducibility">Repro4Everyone. (n.d.). Introduction to Reproducibility. Repro4Everyone. Retrieved January 30, 2025.</a></p>
+</div></aside></section>
+<section id="example-a-drawing-protocol-1" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Example: a drawing protocol</h2>
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout="[10, -2, 10]">
+<div class="quarto-layout-row quarto-layout-valign-bottom">
+<div class="fragment quarto-layout-cell" style="flex-basis: 45.5%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/cat-ellis-drawing.jpg" style="width:75.0%"></p>
+<figcaption>My attempt</figcaption>
 </figure>
 </div>
 </div>
-</div></div>
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 9.1%;justify-content: flex-start;">
+<p>&nbsp;</p>
+</div>
+<div class="fragment quarto-layout-cell" style="flex-basis: 45.5%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/cat-good-drawing.png" style="width:70.0%"></p>
+<figcaption>The result in the study</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<p><span style="text-align: center; display: block;">How did you do?</span></p>
 </section>
-<section id="inline-code" class="slide level2">
-<h2>Inline code</h2>
+<section id="example-a-drawing-protocol-2" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Example: a drawing protocol</h2>
 <p><br></p>
-<p>You can include executable expressions inside the markdown (text) by enclosing the expression in <code>`r `</code>:</p>
-<p><br></p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb13-1"><a aria-hidden="true" tabindex="-1"></a>The penguins dataset is composed of 344 observations. </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>gives:</p>
-<p>The penguins dataset is composed of 344 observations.</p>
-<p><br></p>
-<p>This is very useful for automating reports!</p>
-</section>
-<section id="there-is-much-more-1" class="slide level2">
-<h2>There is much more…</h2>
-<p><br></p>
-<p>For more on each part of this sections:</p>
-<ul>
-<li><p><a href="https://quarto.org/docs/computations/execution-options.html">Executions Options - Quarto</a> for more on code chunk options</p></li>
-<li><p><a href="https://quarto.org/docs/authoring/cross-references.html">Cross References – Quarto</a> for more on labels and cross-referencing</p></li>
-<li><p><a href="https://quarto.org/docs/authoring/tables.html">Tables - Quarto</a> for more on tables</p></li>
-<li><p><a href="https://quarto.org/docs/visual-editor/technical.html">Technical Writing - Quarto</a> for more on equations and technical writing</p></li>
-<li><p><a href="https://quarto.org/docs/computations/inline-code.html">Inline Code – Quarto</a> for more on inline codes</p></li>
-</ul>
-<p>For more advanced notions on coding aspects in Quarto, visit <a href="https://quarto.org/docs/output-formats/html-code.html">HTML Code Blocks – Quarto</a></p>
-</section>
-<section id="exercise-3" class="slide level2">
-<h2>Exercise 3</h2>
-<p><br> <br></p>
-<div class="r-stack">
-<p>Go to the <a href="./03-exercises.html">Exercise section</a> <span class="emoji" data-emoji="pencil2">✏️</span></p>
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout="[10,-1,10,-1,10]">
+<div class="quarto-layout-row quarto-layout-valign-center">
+<div class="fragment quarto-layout-cell" style="flex-basis: 31.3%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="images/tpoisot-protocol-ambiguous-drawing.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Timothée Poisot (Sep 8 2015) ‘Step 2 — do the rest of the fucking analysis’ [Medium], Page 1, accessed 10 Jan 2025."><img data-src="images/tpoisot-protocol-ambiguous-drawing.png" style="width:85.0%" alt="Timothée Poisot (Sep 8 2015) ‘Step 2 — do the rest of the fucking analysis’ [Medium], Page 1, accessed 10 Jan 2025."></a></p>
+<figcaption>Timothée Poisot (Sep 8 2015) ‘Step 2 — do the rest of the fucking analysis’ [Medium], Page 1, accessed 10 Jan 2025.</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 3.1%;justify-content: flex-start;">
+<p>&nbsp;</p>
+</div>
+<div class="fragment quarto-layout-cell" style="flex-basis: 31.3%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="images/protocol-unavailability-post.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="“Unavailable protocol”"><img data-src="images/protocol-unavailability-post.png" style="width:90.0%" alt="“Unavailable protocol”"></a></p>
+<figcaption>“Unavailable protocol”</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 3.1%;justify-content: flex-start;">
+<p>&nbsp;</p>
+</div>
+<div class="fragment quarto-layout-cell" style="flex-basis: 31.3%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="images/protocol-ambiguous-post.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="“Ambiguous protocol”"><img data-src="images/protocol-ambiguous-post.png" style="width:90.0%" alt="“Ambiguous protocol”"></a></p>
+<figcaption>“Ambiguous protocol”</figcaption>
+</figure>
+</div>
+</div>
+</div>
 </div>
 </section>
-<section id="is-that-all-nope" class="slide level2">
-<h2>Is that all? Nope</h2>
+<section id="how-can-we-be-bit-more-reproducible" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">How can we be bit more reproducible?</h2>
 <p><br></p>
 <ul>
-<li>Citations</li>
-<li>Projects</li>
-<li>Other useful formats:
+<li>Document practices (e.g., lab notebooks, ELNs with <a href="https://scienceouverte.univ-lorraine.fr/en/research-data-ul/electronic-laboratory-notebook-elabftw-solution/">eLabFTW</a>)</li>
+</ul>
+</section>
+<section id="how-can-we-be-bit-more-reproducible-1" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">How can we be bit more reproducible?</h2>
+<p><br></p>
 <ul>
-<li>Presentations (like this one today)</li>
-<li>Manuscripts</li>
+<li>Document practices (e.g., lab notebooks, ELNs with <a href="https://scienceouverte.univ-lorraine.fr/en/research-data-ul/electronic-laboratory-notebook-elabftw-solution/">eLabFTW</a>)</li>
+<li>Organise code, data and files (e.g., separate folders for different data, clear filenames, tidy principles)</li>
+</ul>
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout="[-1,6,-2,6,-1]">
+<div class="quarto-layout-row">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 6.3%;justify-content: flex-start;">
+<p>&nbsp;</p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 37.5%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="images/phdcomic-finaldoc.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img data-src="images/phdcomic-finaldoc.png" class="quarto-figure quarto-figure-center"></a></p>
+</figure>
+</div>
+</div>
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 12.5%;justify-content: flex-start;">
+<p>&nbsp;</p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 37.5%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="images/jlowndes-ahorst-tidydata.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img data-src="images/jlowndes-ahorst-tidydata.jpg" class="quarto-figure quarto-figure-center"></a></p>
+</figure>
+</div>
+</div>
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 6.3%;justify-content: flex-start;">
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
+</section>
+<section id="how-can-we-be-bit-more-reproducible-2" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">How can we be bit more reproducible?</h2>
+<p><br></p>
+<ul>
+<li>Document practices (e.g., lab notebooks, ELNs with <a href="https://scienceouverte.univ-lorraine.fr/en/research-data-ul/electronic-laboratory-notebook-elabftw-solution/">eLabFTW</a>)</li>
+<li>Organise code, data and files (e.g., separate folders for different data, clear filenames, tidy principles)</li>
+<li>Share data and outputs</li>
+</ul>
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout="[10,-3,10,-3,10]">
+<div class="quarto-layout-row quarto-layout-valign-center">
+<div class="quarto-layout-cell" style="flex-basis: 27.8%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/logo-zenodo.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div>
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 8.3%;justify-content: flex-start;">
+<p>&nbsp;</p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 27.8%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/logo-figshare.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div>
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 8.3%;justify-content: flex-start;">
+<p>&nbsp;</p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 27.8%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/logo-dorel.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="how-can-we-be-bit-more-reproducible-3" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">How can we be bit more reproducible?</h2>
+<p><br></p>
+<ul>
+<li>Document practices (e.g., lab notebooks, ELNs with <a href="https://scienceouverte.univ-lorraine.fr/en/research-data-ul/electronic-laboratory-notebook-elabftw-solution/">eLabFTW</a>)</li>
+<li>Organise code, data and files (e.g., separate folders for different data, clear filenames, tidy principles)</li>
+<li>Share data and outputs</li>
+<li>Track changes (= versionning)</li>
+</ul>
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout="[10,-3,10,-3,10]">
+<div class="quarto-layout-row quarto-layout-valign-center">
+<div class="quarto-layout-cell" style="flex-basis: 27.8%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/logo-git.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div>
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 8.3%;justify-content: flex-start;">
+<p>&nbsp;</p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 27.8%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/logo-github.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div>
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 8.3%;justify-content: flex-start;">
+<p>&nbsp;</p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 27.8%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/logo-gitlab.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="how-can-we-be-bit-more-reproducible-4" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">How can we be bit more reproducible?</h2>
+<p><br></p>
+<ul>
+<li>Document practices (e.g., lab notebooks, ELNs with <a href="https://scienceouverte.univ-lorraine.fr/en/research-data-ul/electronic-laboratory-notebook-elabftw-solution/">eLabFTW</a>)</li>
+<li>Organise code, data and files (e.g., separate folders for different data, clear filenames, tidy principles)</li>
+<li>Share data and outputs</li>
+<li>Track changes (= versionning)</li>
+<li>Learn to code (even a little)</li>
+</ul>
+<div class="quarto-figure quarto-figure-center" style="bottom: 15px; right: 15px; width: 40%; ">
+<figure>
+<p><img data-src="images/ahorst-rabbit-mouse-comp.jpg" class="absolute"></p>
+<figcaption>Artwork by Allison Horst</figcaption>
+</figure>
+</div>
+</section></section>
+<section>
+<section id="lp-quarto" class="title-slide slide level1 center">
+<h1>Every little helps:<br>Literate Programming with Quarto</h1>
+
+</section>
+<section id="what-is-literate-programming" class="slide level2">
+<h2>What is Literate programming?</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<ul>
+<li class="fragment"><p>Introduced by <em>Donald Knuth</em> in 1984</p></li>
+<li class="fragment"><p>Idea of combining <strong>source code</strong> and <strong>text</strong></p></li>
+<li class="fragment"><p>Method for writing computer programs as <strong>literary essays</strong></p></li>
+<li class="fragment"><p>Many tools exist for various languages:</p>
+<ul>
+<li class="fragment"><p><code>RMarkdown</code> (R)</p></li>
+<li class="fragment"><p><code>Jupyter</code> (Python)</p></li>
+<li class="fragment"><p><code>Quarto</code> (multi-language)</p></li>
 </ul></li>
-<li>There is so much more!</li>
 </ul>
-<p>You’ll find everything at the official <a href="https://quarto.org/docs/authoring/markdown-basics.html">Quarto - Documentation</a>.</p>
+</div><div class="column" style="width:40%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/dknuth-lp.jpg" style="width:50.0%"></p>
+<figcaption>Knuth, Donald Ervin. “Literate Programming.” Computer/law journal (1984).</figcaption>
+</figure>
+</div>
+</div></div>
+<div class="fragment">
+<blockquote>
+<p>“The best way to communicate from one human being to another is through story”<br><em>Donald Knuth</em></p>
+</blockquote>
+</div>
 </section>
-<section id="closing-shop" class="slide level2">
-<h2>Closing shop</h2>
+<section id="what-is-quarto" class="slide level2">
+<h2>What is <code>Quarto</code>?</h2>
+<p><br></p>
+<ul>
+<li><code>Quarto</code> is an open-source, scientific and technical publishing system</li>
+<li>It implements the concept of literate programming</li>
+<li>It provides a unified authoring framework for data science, combining your code, its results, and your prose (text)</li>
+</ul>
+<p><br></p>
+
+<img data-src="images/ahill-ahorst-hedgehog-text-code.png" style="width:15.0%" class="r-stretch quarto-figure-center"><p class="caption">Illustration by Alison Hill and Allison Horst, for RStudio</p></section>
+<section id="advantages-of-quarto" class="slide level2">
+<h2>Advantages of Quarto</h2>
+<p><br></p>
+<div>
+<ul>
+<li class="fragment"><code>Quarto</code> documents are fully <strong>reproducible</strong> and <strong>dynamic</strong></li>
+<li class="fragment">They automate the inclusion of the last versions of the results of an analysis</li>
+<li class="fragment">Allows you to avoid <code>copy + paste</code>, avoid accidental errors and save time</li>
+<li class="fragment">Literally dozens of output formats are available: <span class="fragment greenish">Web pages</span><span class="fragment mossygreenish">, PDFs</span><span class="fragment blueish">, Word files</span><span class="fragment tealish">, websites</span><span class="fragment purplish">, books</span><span class="fragment pinkish">, and more.</span></li>
+<li class="fragment">Open source so anyone can use it</li>
+</ul>
+</div>
+
+<img data-src="images/ahill-ahorst-hedgehog-outputs.png" style="width:40.0%" class="r-stretch quarto-figure-center"><p class="caption">Illustration by Alison Hill and Allison Horst, for RStudio</p></section>
+<section id="main-use-cases" class="slide level2">
+<h2>Main use cases</h2>
+<p><br></p>
+<p>There can be three relevant use cases:</p>
+<p><br></p>
+<div>
+<ol type="1">
+<li class="fragment">For <span class="nicegreen"><strong>communicating</strong></span> to decision-makers or to a more general audience, who want to focus on the conclusions, not the code behind the analysis</li>
+<li class="fragment">For <span class="nicegreen"><strong>collaborating</strong></span> with other data scientists (including <span class="nicegreen"><strong>future you!</strong></span>), who are interested in both your conclusions, and how you reached them (i.e.&nbsp;the code)</li>
+<li class="fragment">As an environment in which to <span class="nicegreen"><em>do</em></span> data science, as a modern-day lab notebook where you can capture not only what you did, but also what you were thinking</li>
+</ol>
+</div>
+</section>
+<section id="to-advance-we-must-code-a-little" class="slide level2" style="text-align: center;">
+<h2>To advance, we must code a little…</h2>
+<div class="fragment">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/ahorst-rsadtohappy.png" style="width:40.0%"></p>
+<figcaption>Artwork by Allison Horst</figcaption>
+</figure>
+</div>
+</div>
+<!-- # References {#refs} -->
 
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
@@ -1368,6 +1432,38 @@ Figure&nbsp;1: Distribution of bill depth sizes
       }
     });
     </script>
+    <script>var lightboxQuarto = GLightbox({"openEffect":"zoom","loop":false,"descPosition":"bottom","closeEffect":"zoom","selector":".lightbox"});
+    (function() {
+      let previousOnload = window.onload;
+      window.onload = () => {
+        if (previousOnload) {
+          previousOnload();
+        }
+        lightboxQuarto.on('slide_before_load', (data) => {
+          const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+          const href = trigger.getAttribute('href');
+          if (href !== null) {
+            const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+            if (imgEl !== null) {
+              const srcAttr = imgEl.getAttribute("src");
+              if (srcAttr && srcAttr.startsWith("data:")) {
+                slideConfig.href = srcAttr;
+              }
+            }
+          } 
+        });
+      
+        lightboxQuarto.on('slide_after_load', (data) => {
+          const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(slideNode);
+          }
+        });
+      
+      };
+      
+    })();
+              </script>
     
 
 </body></html>
