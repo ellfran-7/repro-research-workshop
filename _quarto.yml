@@ -18,14 +18,12 @@ website:
     left: 
       - text: Pre-work
         href: index.qmd
-      - text: Repro Research
-        href: 01-reprores-slides.qmd
-      # - text: Quarto
-      #   href: 02-quarto-slides.qmd
-      - text: Quarto
-        href: 03-quarto-page.qmd
-      # - text: Exercises
-      #   href: 04-exercises-page.qmd 
+      - text: Content
+        menu: 
+          - text: Repro Research
+            href: 01-reprores-slides.qmd
+          - text: Quarto
+            href: 03-quarto-page.qmd
       - text: Resources
         href: 04-further-reads.qmd
     tools:
