@@ -12,6 +12,8 @@ format: html
 bibliography: references.bib
 ---
 
+<br/> 
+
 ## Some resources for learning more about Quarto
 
 -   Casajus N, Bonnici I, Dray S, Gimenez O, Guéry L, Guilhaumon F, Schiettekatte NMD & Siberchicot A (2024) FRB-CESAB & GdR EcoStat training course: Reproducible Research in Computational Ecology. Zenodo. URL: <http://doi.org/10.5281/zenodo.4262978> ([link to workshop](https://rdatatoolbox.github.io/chapters/ex-compendium.html))

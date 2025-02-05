@@ -12,6 +12,10 @@ from: markdown+emoji
 format: html
 ---
 
+<a id="page-top"></a>
+
+<br/>
+
 ## Introduction {.unnumbered}
 
 In brief, `Quarto` allows you to combine various types of content in a document (text, code, equations, images, graphics, etc.) and then compile it all into a single document, such as HTML, PDF, etc. The term used in the `Quarto` environment for this compilation is very poetically called **knitting**.
@@ -472,4 +476,11 @@ There is much more that is possible with Quarto, such as:
     -   Books ([example](https://r4ds.hadley.nz/))
     -   Interactive docs ([example](https://quarto.org/docs/interactive/ojs/examples/penguins.html))
 
-And so much more... Go see the full [Quarto documentation](https://quarto.org/docs/guide/).
+And so much more... Go see the full [Quarto documentation](https://quarto.org/docs/guide/) and the [resources](04-further-reads.qmd) found on this site.
+
+
+<p align="right">
+
+(<a href="#page-top">back to top</a>)
+
+</p>
