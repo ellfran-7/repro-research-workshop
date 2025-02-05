@@ -84,6 +84,34 @@
     "text": "Footnotes\n\n\nPandoc is a tool that converts documents to different formats. Quarto leverages it to convert markdown to a variety of output formats.↩︎\nIntegrated Development Environment↩︎"
   },
   {
+    "objectID": "04-further-reads.html",
+    "href": "04-further-reads.html",
+    "title": "Further reading",
+    "section": "",
+    "text": "Casajus N, Bonnici I, Dray S, Gimenez O, Guéry L, Guilhaumon F, Schiettekatte NMD & Siberchicot A (2024) FRB-CESAB & GdR EcoStat training course: Reproducible Research in Computational Ecology. Zenodo. URL: http://doi.org/10.5281/zenodo.4262978 (link to workshop)\n“Introduction to Quarto” by Andrew Bray at posit::conf(2024) (link)\n“With Quarto Coming, is R Markdwon Going Away? No” blog post by Yihui Xie (link)\n“Introduction to Quarto” by Eric Delmelle (link)"
+  },
+  {
+    "objectID": "04-further-reads.html#some-resources-for-learning-more-about-quarto",
+    "href": "04-further-reads.html#some-resources-for-learning-more-about-quarto",
+    "title": "Further reading",
+    "section": "",
+    "text": "Casajus N, Bonnici I, Dray S, Gimenez O, Guéry L, Guilhaumon F, Schiettekatte NMD & Siberchicot A (2024) FRB-CESAB & GdR EcoStat training course: Reproducible Research in Computational Ecology. Zenodo. URL: http://doi.org/10.5281/zenodo.4262978 (link to workshop)\n“Introduction to Quarto” by Andrew Bray at posit::conf(2024) (link)\n“With Quarto Coming, is R Markdwon Going Away? No” blog post by Yihui Xie (link)\n“Introduction to Quarto” by Eric Delmelle (link)"
+  },
+  {
+    "objectID": "04-further-reads.html#some-resources-for-understanding-reproducible-research",
+    "href": "04-further-reads.html#some-resources-for-understanding-reproducible-research",
+    "title": "Further reading",
+    "section": "2 Some resources for understanding Reproducible Research",
+    "text": "2 Some resources for understanding Reproducible Research\n\nCasajus N, Bonnici I, Dray S, Gimenez O, Guéry L, Guilhaumon F, Schiettekatte NMD & Siberchicot A (2024) FRB-CESAB & GdR EcoStat training course: Reproducible Research in Computational Ecology. Zenodo. (http://doi.org/10.5281/zenodo.4262978) (link to workshop)\nRepro4Everyone. (n.d.). Introduction to Reproducibility. Repro4Everyone. (link)\n“Guide for Reproducible Research” by The Turing Way Community. DOI: 10.5281/zenodo.3332807 (link to the guide)\n“A conside guide to reproducible research using secondary data” by Katharina Blankart, Maryna Ivets, Eva Goetjes and Kai Miele (link)"
+  },
+  {
+    "objectID": "04-further-reads.html#literature-on-reproducible-research",
+    "href": "04-further-reads.html#literature-on-reproducible-research",
+    "title": "Further reading",
+    "section": "3 Literature on Reproducible Research",
+    "text": "3 Literature on Reproducible Research\n\nClaerbout and Karrenbach (1992)\nLoscalzo (2012)\nFreedman, Cockburn, and Simcoe (2015)\nBaker (2016)\nThis (2017)\nPlesser (2018)\nMarwick, Boettiger, and Mullen (2018)\nPlesser (2018)\nSchloss (2018)\nReproducibility and Replicability in Science (2019)\nDesquilbet et al. (2019)\nGundersen (2021)\nAlston and Rick (2021)\nZiemann, Poulain, and Bora (2023)\nCalnan et al. (2024)\nCasajus et al. (2024)\n“Reproducibility: Why It Matters and How It Can Be Nurtured | Elsevier” (n.d.)\n“Six Factors Affecting Reproducibility in Life Science Research and How to Handle Them” (n.d.)"
+  },
+  {
     "objectID": "01-reprores-slides.html#have-you-ever-encountered-challenges-when-trying-to-reproduce-data-analyses",
     "href": "01-reprores-slides.html#have-you-ever-encountered-challenges-when-trying-to-reproduce-data-analyses",
     "title": "Reproducible Research",
@@ -116,14 +144,7 @@
     "href": "01-reprores-slides.html#what-does-reproducibility-mean-actually-2",
     "title": "Reproducible Research",
     "section": "What does reproducibility mean actually?",
-    "text": "What does reproducibility mean actually?\n\n\n\nDirect reproducibility (commonly ‘replication’ or ‘experimental reproducibility’)\n\n\n\n\nAnalytical reproducibility (commonly ‘computational reproducibility’)\n\n\n\n\nSystemic reproducibility (commonly ‘robustness’)\n\n\n\n\nConceptual reproducibility (commonly ‘generalisation’)\n\n\n\n\n\n\nSchloss, 2018. DOI: 10.1128/mbio.00525-18\n\n\nNational Academies of Sciences, Engineering, and Medicine. 2019. Reproducibility and Replicability in Science. Washington, DC: The National Academies Press. DOI: 10.17226/25303"
-  },
-  {
-    "objectID": "01-reprores-slides.html#what-does-reproducibility-mean-actually-3",
-    "href": "01-reprores-slides.html#what-does-reproducibility-mean-actually-3",
-    "title": "Reproducible Research",
-    "section": "What does reproducibility mean actually?",
-    "text": "What does reproducibility mean actually?\n\n\n\nDirect reproducibility (commonly ‘replication’ or ‘experimental reproducibility’)\n\n\n\n\nAnalytical reproducibility (commonly ‘computational reproducibility’)\n\n\n\n\nSystemic reproducibility (commonly ‘robustness’)\n\n\n\n\nConceptual reproducibility (commonly ‘generalisation’)\n\n\n\n\n\n\n\n\n\nSchloss, 2018. DOI: 10.1128/mbio.00525-18\n\n\nNational Academies of Sciences, Engineering, and Medicine. 2019. Reproducibility and Replicability in Science. Washington, DC: The National Academies Press. DOI: 10.17226/25303"
+    "text": "What does reproducibility mean actually?\n\n\n\nDirect reproducibility (also called experimental reproducibility)\n\n\n\n\nAnalytical reproducibility (also called computational reproducibility)\n\n\n\n\nOther related terms to distinguish:\n\n\n\nReplicability: Different data | Same analysis methods\nRobustness: Same data | Different analysis methods\nGeneralisability: Different data | Different analysis methods\n\n\n\n\n\n\nSchloss, 2018. DOI: 10.1128/mbio.00525-18\n\n\nThe Turing Way Community, Becky Arnold, Louise Bowler, Sarah Gibson, Patricia Herterich, Rosie Higman, … Kirstie Whitaker. (2019, March 25). The Turing Way: A Handbook for Reproducible Data Science (Version v0.0.4). Zenodo. 10.5281/zenodo.3233986"
   },
   {
     "objectID": "01-reprores-slides.html#in-other-words",
@@ -179,7 +200,7 @@
     "href": "01-reprores-slides.html#example-a-drawing-protocol",
     "title": "Reproducible Research",
     "section": "Example: a drawing protocol",
-    "text": "Example: a drawing protocol\n\nYou really want to draw something but don’t know how. You’ve found this protocol in a very prestigious journal and want to reproduce it. Grab your pens and papers 📝 !\n\n\n\n\nSwitch Language\n\n\n\nDraw a large circle in the center of your page.\nInside the circle, slightly above the middle, draw two medium-sized ovals next to each other. Inside each oval, draw a smaller filled-in oval.\nBelow the ovals, in the center of the circle, draw a small upside-down triangle.\nOn top of the circle, draw two small triangles with the base of each triangle touching the edge of the circle and the points facing outward.\nFrom the bottom point of the triangle, draw two curved lines that extend outward, one curving to the left and one to the right, forming a “W” shape.\nOn each side of the curved lines, draw three short straight lines extending outward.\n\n\n\n\nDessinez un grand cercle au centre de votre page.\nÀ l’intérieur du cercle, légèrement au-dessus du milieu, dessinez deux ovales de taille moyenne côte à côte. À l’intérieur de chaque ovale, dessinez un petit ovale rempli.\nSous les ovales, au centre du cercle, dessinez un petit triangle inversé.\nAu-dessus du cercle, dessinez deux petits triangles avec la base de chaque triangle touchant le bord du cercle et les pointes dirigées vers l’extérieur.\nÀ partir de la pointe inférieure du triangle, dessinez deux lignes courbées qui s’étendent vers l’extérieur, l’une courbant vers la gauche et l’autre vers la droite, formant une forme en “W”.\nDe chaque côté des lignes courbées, dessinez trois petites lignes droites qui s’étendent vers l’extérieur.\n\n\n\n\n\n\n\nInspired by Repro4Everyone. (n.d.). Introduction to Reproducibility. Repro4Everyone. Retrieved January 30, 2025."
+    "text": "Example: a drawing protocol\n\nYou really want to draw something but don’t know how. You’ve found this protocol in a very prestigious journal and want to reproduce it. Grab your pens and papers 📝 !\n\n\n\n\nSwitch Language\n\n\n\nDraw a large circle in the center of your page.\nInside the circle, slightly above the middle, draw two medium-sized ovals next to each other. Inside each oval, draw a smaller filled-in oval.\nBelow the ovals, in the center of the circle, draw a small upside-down triangle.\nOn top of the circle, draw two small triangles with the base of each triangle touching the edge of the circle and the points facing outward.\nFrom the bottom point of the triangle, draw two curved lines that extend outward, one curving to the left and one to the right, forming a “W” shape.\nOn each side of the curved lines, draw three short straight lines extending outward.\n\n\n\n\nDessinez un grand cercle au centre de votre page.\nÀ l’intérieur du cercle, légèrement au-dessus du milieu, dessinez deux ovales de taille moyenne côte à côte. À l’intérieur de chaque ovale, dessinez un petit ovale rempli.\nSous les ovales, au centre du cercle, dessinez un petit triangle inversé.\nAu-dessus du cercle, dessinez deux petits triangles avec la base de chaque triangle touchant le bord du cercle et les pointes dirigées vers l’extérieur.\nÀ partir de la pointe inférieure du triangle, dessinez deux lignes courbées qui s’étendent vers l’extérieur, l’une courbant vers la gauche et l’autre vers la droite, formant une forme en “W”.\nDe chaque côté des lignes courbées, dessinez trois petites lignes droites qui s’étendent vers l’extérieur.\n\n\n\n\n\n\n\n\nInspired by Repro4Everyone. (n.d.). Introduction to Reproducibility. Repro4Everyone. Retrieved January 30, 2025."
   },
   {
     "objectID": "01-reprores-slides.html#example-a-drawing-protocol-1",

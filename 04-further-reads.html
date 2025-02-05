@@ -6,9 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2025-02-02">
+<meta name="author" content="Ellis Franklin">
+<meta name="dcterms.date" content="2025-02-06">
 
-<title>Pre-workshop Instructions – Reproducible Research Workshop</title>
+<title>Further reading – Reproducible Research Workshop</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,41 +22,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
 }
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
 }
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
 }
-</style>
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -123,7 +110,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Pre-work</span></a>
   </li>  
   <li class="nav-item">
@@ -135,7 +122,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">Quarto</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./04-further-reads.html"> 
+    <a class="nav-link active" href="./04-further-reads.html" aria-current="page"> 
 <span class="menu-text">Resources</span></a>
   </li>  
 </ul>
@@ -155,16 +142,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#brief-workshop-overview" id="toc-brief-workshop-overview" class="nav-link active" data-scroll-target="#brief-workshop-overview"><span class="header-section-number">1</span> Brief Workshop Overview</a></li>
-  <li><a href="#general-requirements" id="toc-general-requirements" class="nav-link" data-scroll-target="#general-requirements"><span class="header-section-number">2</span> General requirements</a></li>
-  <li><a href="#software-requirements" id="toc-software-requirements" class="nav-link" data-scroll-target="#software-requirements"><span class="header-section-number">3</span> Software requirements</a>
-  <ul class="collapse">
-  <li><a href="#the-scientific-and-technical-publishing-system-quarto" id="toc-the-scientific-and-technical-publishing-system-quarto" class="nav-link" data-scroll-target="#the-scientific-and-technical-publishing-system-quarto"><span class="header-section-number">3.1</span> The scientific and technical publishing system: Quarto</a></li>
-  <li><a href="#the-programming-language-r" id="toc-the-programming-language-r" class="nav-link" data-scroll-target="#the-programming-language-r"><span class="header-section-number">3.2</span> The programming language: R</a></li>
-  <li><a href="#the-ide1-rstudio" id="toc-the-ide1-rstudio" class="nav-link" data-scroll-target="#the-ide1-rstudio"><span class="header-section-number">3.3</span> The IDE: Rstudio</a></li>
-  <li><a href="#the-toolset-r-packages" id="toc-the-toolset-r-packages" class="nav-link" data-scroll-target="#the-toolset-r-packages"><span class="header-section-number">3.4</span> The toolset: R packages</a></li>
-  <li><a href="#finish-line" id="toc-finish-line" class="nav-link" data-scroll-target="#finish-line"><span class="header-section-number">3.5</span> Finish line</a></li>
-  </ul></li>
+  <li><a href="#some-resources-for-learning-more-about-quarto" id="toc-some-resources-for-learning-more-about-quarto" class="nav-link active" data-scroll-target="#some-resources-for-learning-more-about-quarto"><span class="header-section-number">1</span> Some resources for learning more about Quarto</a></li>
+  <li><a href="#some-resources-for-understanding-reproducible-research" id="toc-some-resources-for-understanding-reproducible-research" class="nav-link" data-scroll-target="#some-resources-for-understanding-reproducible-research"><span class="header-section-number">2</span> Some resources for understanding Reproducible Research</a></li>
+  <li><a href="#literature-on-reproducible-research" id="toc-literature-on-reproducible-research" class="nav-link" data-scroll-target="#literature-on-reproducible-research"><span class="header-section-number">3</span> Literature on Reproducible Research</a></li>
   </ul>
 </nav>
     </div>
@@ -173,19 +153,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Pre-workshop Instructions</h1>
-<p class="subtitle lead">LIEC - CS WORKSHOP</p>
+<h1 class="title">Further reading</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Ellis Franklin </p>
+          </div>
+  </div>
     
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">February 2, 2025</p>
+      <p class="date">February 6, 2025</p>
     </div>
   </div>
   
@@ -197,149 +182,106 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p><a id="page-top"></a></p>
-<div class="grid">
-<div class="g-col-10">
-<p>Welcome and thank you for you interest in participating in the following <strong>LIEC - CS WORKSHOP</strong> on <em>February 6th 2025</em> entitled <strong><em>A step towards Reproducible Research: Literate Programming</em></strong>.</p>
-</div>
-<div class="g-col-2">
-<div class="quarto-figure quarto-figure-right">
-<figure class="figure">
-<p><img src="images/liec-logo.png" class="img-fluid quarto-figure quarto-figure-right figure-img" alt="LIEC logo"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>To ensure everything runs smoothly on the day of the workshop, we’ll need to set up a few things beforehand.</p>
-<section id="brief-workshop-overview" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="brief-workshop-overview"><span class="header-section-number">1</span> Brief Workshop Overview</h2>
-<p>The workshop will be divided into two parts:</p>
-<ol type="1">
-<li>Reproducible Research: An Open Discussion</li>
-<li>Literate Programming with Quarto: A Small but Impactful Step</li>
-</ol>
-<p><strong>Part 1</strong> will be discussion-based, focusing on the concept of reproducibility, its importance, and the factors contributing to non-reproducibility. There will be practical work also. No prior coding or bioinformatics knowledge is needed here.</p>
-<p><strong>Part 2</strong> is hands-on and involves practical work using specific informatic tools. To participate fully, you’ll need to download or update these tools in advance. Don’t worry—they’re free and easy to set up! Let’s go!</p>
-</section>
-<section id="general-requirements" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="general-requirements"><span class="header-section-number">2</span> General requirements</h2>
-<p>Please bring the following:</p>
+<section id="some-resources-for-learning-more-about-quarto" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="some-resources-for-learning-more-about-quarto"><span class="header-section-number">1</span> Some resources for learning more about Quarto</h2>
 <ul>
-<li><span class="emoji" data-emoji="computer">💻</span> a laptop/computer</li>
-<li><span class="emoji" data-emoji="pencil2">✏️</span> a pencil/pen</li>
-<li><span class="emoji" data-emoji="page_facing_up">📄</span> paper</li>
-<li><span class="emoji" data-emoji="coffee">☕</span> a mug (for coffee of course)</li>
+<li><p>Casajus N, Bonnici I, Dray S, Gimenez O, Guéry L, Guilhaumon F, Schiettekatte NMD &amp; Siberchicot A (2024) FRB-CESAB &amp; GdR EcoStat training course: Reproducible Research in Computational Ecology. Zenodo. URL:&nbsp;<a href="http://doi.org/10.5281/zenodo.4262978" class="uri">http://doi.org/10.5281/zenodo.4262978</a> (<a href="https://rdatatoolbox.github.io/chapters/ex-compendium.html">link to workshop</a>)</p></li>
+<li><p>“<em>Introduction to Quarto</em>” by Andrew Bray at posit::conf(2024) (<a href="https://posit-conf-2024.github.io/quarto-intro/">link</a>)</p></li>
+<li><p>“<em>With Quarto Coming, is R Markdwon Going Away? No</em>” blog post by Yihui Xie (<a href="https://yihui.org/en/2022/04/quarto-r-markdown/">link</a>)</p></li>
+<li><p>“<em>Introduction to Quarto</em>” by Eric Delmelle (<a href="https://ericdelmelle.github.io/introToQuarto/#/title-slide">link</a>)</p></li>
 </ul>
-<p>If needed, we can provide pencils, paper and even mugs!</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-No computer? Not a problem
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>If you are unable to bring your own computer, feel free to do the practical work with or following another participant <span class="emoji" data-emoji="dancers">👯</span>. In this case, please send me an email saying so!</p>
-</div>
-</div>
-</section>
-<section id="software-requirements" class="level2" data-number="3">
-<h2 data-number="3" class="anchored" data-anchor-id="software-requirements"><span class="header-section-number">3</span> Software requirements</h2>
-<p>The majority of the practical aspect of the workshop involves a computer, and therefor using specific tools. If you intend on participating fully, you’ll need to download (or update) these tools in advance. Don’t worry, they’re free and easy to set up! Let’s go!</p>
-<p><br></p>
-<section id="the-scientific-and-technical-publishing-system-quarto" class="level3" data-number="3.1">
-<h3 data-number="3.1" class="anchored" data-anchor-id="the-scientific-and-technical-publishing-system-quarto"><span class="header-section-number">3.1</span> The scientific and technical publishing system: Quarto</h3>
-<p>Quarto is an open-source system for scientific and technical publishing, built on Pandoc<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. It allows you to create reproducible documents by integrating code, results, and narrative. Outputs can include HTML, PDF, Word, and more.</p>
-<p>To use Quarto, you’ll need to install the Quarto CLI, which handles rendering Quarto documents. Download the latest version from the <a href="https://quarto.org/docs/download/index.html">Quarto website</a> and follow the installation instructions.</p>
 <p><br></p>
 </section>
-<section id="the-programming-language-r" class="level3" data-number="3.2">
-<h3 data-number="3.2" class="anchored" data-anchor-id="the-programming-language-r"><span class="header-section-number">3.2</span> The programming language: R</h3>
-<p>R is a powerful programming language for data science. You can download it for free from <a href="http://cran.r-project.org/">The Comprehensive R Archive Network (CRAN)</a>. At the top of the CRAN homepage, you’ll find links for different operating systems: Windows, Mac, or Linux.</p>
-<p>If you’re having trouble in orientating the sites, don’t worry! Below I provide detailed instructions for each operating system:</p>
-<details>
-<summary>
-Download for Windows
-</summary>
-<p>To install R on Windows, click the “<strong>Download R for Windows</strong>” link. Then click the “<strong>base</strong>” link. Next, click the first link at the top of the new page. This link should say something like “<strong>Download R-4.4.2 for Windows</strong>”, except the 4.4.2 will be replaced by the most current version of R. The link downloads an installer program, which installs the most up-to-date version of R for Windows. Run this program and step through the installation wizard that appears. The wizard will install R into your program files folders and place a shortcut in your Start menu. Note that you’ll need to have all of the appropriate administration privileges to install new software on your machine.</p>
-</details>
-<details>
-<summary>
-Download for MacOS
-</summary>
-<p>To install R on a Mac, click the “<strong>Download R for Mac</strong>” link. Next, click on the R-4.4.2 package link (or the package link for the most current release of R). An installer will download to guide you through the installation process, which is very easy. The installer lets you customize your installation, but the defaults will be suitable for most users. I’ve never found a reason to change them. If your computer requires a password before installing new progams, you’ll need it here.</p>
-</details>
-<details>
-<summary>
-Download for Linux
-</summary>
-<p>R comes preinstalled on many Linux systems, but you’ll want the newest version of R if yours is out of date. The CRAN website provides files to build R from source on Debian, Redhat, SUSE, and Ubuntu systems under the link “<strong>Download R for Linux</strong>.” Click the link and then follow the directory trail to the version of Linux you wish to install on. The exact installation procedure will vary depending on the Linux system you use. CRAN guides the process by grouping each set of source files with documentation or README files that explain how to install on your system.</p>
-</details>
-<p><br></p>
-</section>
-<section id="the-ide1-rstudio" class="level3" data-number="3.3">
-<h3 data-number="3.3" class="anchored" data-anchor-id="the-ide1-rstudio"><span class="header-section-number">3.3</span> The IDE<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>: Rstudio</h3>
-<p>RStudio is an application like Microsoft Word—except that instead of helping you write in English or French, RStudio helps you write in R.</p>
-<p>You can <a href="https://posit.co/download/rstudio-desktop/">download RStudio</a> for free. Just click the “<strong>Download RStudio Desktop For [Your OS]</strong>” button and follow the installation steps. Once installed, open RStudio like any other application—usually by clicking its desktop icon.</p>
-<p>When you open RStudio, you’ll see a window with three panes, as shown below: (<a href="#fig-rstudio-ide" class="quarto-xref">Figure&nbsp;1</a>):</p>
-<div id="fig-rstudio-ide" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-rstudio-ide-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/rstudio-ide-begin.png" class="img-fluid figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-rstudio-ide-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: The Rstudio IDE for R
-</figcaption>
-</figure>
-</div>
-<p><br></p>
-</section>
-<section id="the-toolset-r-packages" class="level3" data-number="3.4">
-<h3 data-number="3.4" class="anchored" data-anchor-id="the-toolset-r-packages"><span class="header-section-number">3.4</span> The toolset: R packages</h3>
-<p>R packages are collections of functions, data, and documentation that expand R’s capabilities. To work with Quarto in R, ensure the following packages are installed:</p>
+<section id="some-resources-for-understanding-reproducible-research" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="some-resources-for-understanding-reproducible-research"><span class="header-section-number">2</span> Some resources for understanding Reproducible Research</h2>
 <ul>
-<li><code>ggplot2</code></li>
-<li><code>quarto</code></li>
-<li><code>knitr</code></li>
-<li><code>rmarkdown</code></li>
+<li><p>Casajus N, Bonnici I, Dray S, Gimenez O, Guéry L, Guilhaumon F, Schiettekatte NMD &amp; Siberchicot A (2024) FRB-CESAB &amp; GdR EcoStat training course: Reproducible Research in Computational Ecology. Zenodo. (<a href="http://doi.org/10.5281/zenodo.4262978" class="uri">http://doi.org/10.5281/zenodo.4262978</a>) (<a href="https://rdatatoolbox.github.io/chapters/ex-compendium.html">link to workshop</a>)</p></li>
+<li><p>Repro4Everyone. (n.d.). <em>Introduction to Reproducibility</em>. Repro4Everyone. (<a href="https://www.repro4everyone.org/resources/intro-reproducibility">link</a>)</p></li>
+<li><p>“<em>Guide for Reproducible Research</em>” by The Turing Way Community. DOI:&nbsp;<a href="https://doi.org/10.5281/zenodo.3332807">10.5281/zenodo.3332807</a> (<a href="https://book.the-turing-way.org/reproducible-research/reproducible-research.html">link to the guide</a>)</p></li>
+<li><p>“<em>A conside guide to reproducible research using secondary data</em>” by Katharina Blankart, Maryna Ivets, Eva Goetjes and Kai Miele (<a href="https://katblankart.github.io/DataLiteracy/intro.html">link</a>)</p></li>
 </ul>
-<p>To check and install these packages, run the following code in RStudio (in the console pane, shown on the left of <a href="#fig-rstudio-ide" class="quarto-xref">Figure&nbsp;1</a>):</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>packages <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"ggplot2"</span>, <span class="st">"quarto"</span>, <span class="st">"knitr"</span>, <span class="st">"rmarkdown"</span>)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>installed <span class="ot">&lt;-</span> packages <span class="sc">%in%</span> <span class="fu">rownames</span>(<span class="fu">installed.packages</span>())</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="fu">any</span>(<span class="sc">!</span>installed)) {</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">message</span>(<span class="st">"Missing some packages..."</span>)</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">install.packages</span>(packages[<span class="sc">!</span>installed])</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> {</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">message</span>(<span class="st">"Everything is good to go!"</span>)</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
 <p><br></p>
 </section>
-<section id="finish-line" class="level3" data-number="3.5">
-<h3 data-number="3.5" class="anchored" data-anchor-id="finish-line"><span class="header-section-number">3.5</span> Finish line</h3>
-<p>If you encounter any issues with downloads or installations, feel free to email me at <strong>ellis.franklin@univ-lorraine.fr</strong> or visit me directly at the Metz site in the P7 building, office M3.</p>
-<p>If you’ve successfully set everything up, you’re ready for the workshop! Congratulations! <span class="emoji" data-emoji="tada">🎉</span></p>
-<p>See you on the 6th of Feb! <span class="emoji" data-emoji="penguin">🐧</span></p>
-<p align="right">
-</p><p>(<a href="#page-top">back to top</a>)</p>
-<p></p>
+<section id="literature-on-reproducible-research" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="literature-on-reproducible-research"><span class="header-section-number">3</span> Literature on Reproducible Research</h2>
+<ul>
+<li><span class="citation" data-cites="claerbout1992">Claerbout and Karrenbach (<a href="#ref-claerbout1992" role="doc-biblioref">1992</a>)</span></li>
+<li><span class="citation" data-cites="loscalzo2012">Loscalzo (<a href="#ref-loscalzo2012" role="doc-biblioref">2012</a>)</span></li>
+<li><span class="citation" data-cites="freedman2015a">Freedman, Cockburn, and Simcoe (<a href="#ref-freedman2015a" role="doc-biblioref">2015</a>)</span></li>
+<li><span class="citation" data-cites="baker2016">Baker (<a href="#ref-baker2016" role="doc-biblioref">2016</a>)</span></li>
+<li><span class="citation" data-cites="this2017">This (<a href="#ref-this2017" role="doc-biblioref">2017</a>)</span></li>
+<li><span class="citation" data-cites="plesser2018">Plesser (<a href="#ref-plesser2018" role="doc-biblioref">2018</a>)</span></li>
+<li><span class="citation" data-cites="marwick2018">Marwick, Boettiger, and Mullen (<a href="#ref-marwick2018" role="doc-biblioref">2018</a>)</span></li>
+<li><span class="citation" data-cites="plesser2018">Plesser (<a href="#ref-plesser2018" role="doc-biblioref">2018</a>)</span></li>
+<li><span class="citation" data-cites="schloss2018b">Schloss (<a href="#ref-schloss2018b" role="doc-biblioref">2018</a>)</span></li>
+<li><span class="citation" data-cites="reproduc2019"><em>Reproducibility and Replicability in Science</em> (<a href="#ref-reproduc2019" role="doc-biblioref">2019</a>)</span></li>
+<li><span class="citation" data-cites="desquilbet2019a">Desquilbet et al. (<a href="#ref-desquilbet2019a" role="doc-biblioref">2019</a>)</span></li>
+<li><span class="citation" data-cites="gundersen2021a">Gundersen (<a href="#ref-gundersen2021a" role="doc-biblioref">2021</a>)</span></li>
+<li><span class="citation" data-cites="alston2021">Alston and Rick (<a href="#ref-alston2021" role="doc-biblioref">2021</a>)</span></li>
+<li><span class="citation" data-cites="ziemann2023">Ziemann, Poulain, and Bora (<a href="#ref-ziemann2023" role="doc-biblioref">2023</a>)</span></li>
+<li><span class="citation" data-cites="calnan2024">Calnan et al. (<a href="#ref-calnan2024" role="doc-biblioref">2024</a>)</span></li>
+<li><span class="citation" data-cites="casajus2024">Casajus et al. (<a href="#ref-casajus2024" role="doc-biblioref">2024</a>)</span></li>
+<li><span class="citation" data-cites="reproduc"><span>“Reproducibility: Why It Matters and How It Can Be Nurtured | Elsevier”</span> (<a href="#ref-reproduc" role="doc-biblioref">n.d.</a>)</span></li>
+<li><span class="citation" data-cites="sixfact"><span>“Six Factors Affecting Reproducibility in Life Science Research and How to Handle Them”</span> (<a href="#ref-sixfact" role="doc-biblioref">n.d.</a>)</span></li>
+</ul>
+
 
 
 </section>
-</section>
 
-
-<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
-
-<ol>
-<li id="fn1"><p>Pandoc is a tool that converts documents to different formats. Quarto leverages it to convert markdown to a variety of output formats.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p>Integrated Development Environment<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section></div></main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-alston2021" class="csl-entry" role="listitem">
+Alston, Jesse M., and Jessica A. Rick. 2021. <span>“A Beginner’s Guide to Conducting Reproducible Research.”</span> <em>The Bulletin of the Ecological Society of America</em> 102 (2): e01801. <a href="https://doi.org/10.1002/bes2.1801">https://doi.org/10.1002/bes2.1801</a>.
+</div>
+<div id="ref-baker2016" class="csl-entry" role="listitem">
+Baker, Monya. 2016. <span>“1,500 Scientists Lift the Lid on Reproducibility.”</span> <em>Nature</em> 533 (7604): 452–54. <a href="https://doi.org/10.1038/533452a">https://doi.org/10.1038/533452a</a>.
+</div>
+<div id="ref-calnan2024" class="csl-entry" role="listitem">
+Calnan, Michael, Simon Kirchin, David L. Roberts, Mark N. Wass, and Martin Michaelis. 2024. <span>“Understanding and Tackling the Reproducibility Crisis <span></span> Why We Need to Study Scientists<span>’</span> Trust in Data.”</span> <em>Pharmacological Research</em> 199 (January): 107043. <a href="https://doi.org/10.1016/j.phrs.2023.107043">https://doi.org/10.1016/j.phrs.2023.107043</a>.
+</div>
+<div id="ref-casajus2024" class="csl-entry" role="listitem">
+Casajus, Nicolas, Iago Bonnici, Stéphane Dray, Olivier Gimenez, Loreleï Guéry, François Guilhaumon, Nina Schiettekatte, and Aurélie Siberchicot. 2024. <span>“Reproducible Research in Computational Ecology.”</span> <a href="https://rdatatoolbox.github.io/">https://rdatatoolbox.github.io/</a>.
+</div>
+<div id="ref-claerbout1992" class="csl-entry" role="listitem">
+Claerbout, Jon F., and Martin Karrenbach. 1992. <span>“Electronic Documents Give Reproducible Research a New Meaning.”</span> In, 601–4. SEG Technical Program Expanded Abstracts. Society of Exploration Geophysicists. <a href="https://doi.org/10.1190/1.1822162">https://doi.org/10.1190/1.1822162</a>.
+</div>
+<div id="ref-desquilbet2019a" class="csl-entry" role="listitem">
+Desquilbet, Loic, Sabrina Granger, Boris Hejblum, Arnaud Legrand, Pascal Pernot, Nicolas P. Rougier, Elisa de Castro Guerra, et al. 2019. <em>Vers Une Recherche Reproductible</em>. Edited by Unité régionale de formation à l’information scientifique et technique de Bordeaux. Unité régionale de formation à l’information scientifique et technique de Bordeaux. <a href="https://hal.science/hal-02144142">https://hal.science/hal-02144142</a>.
+</div>
+<div id="ref-freedman2015a" class="csl-entry" role="listitem">
+Freedman, Leonard P., Iain M. Cockburn, and Timothy S. Simcoe. 2015. <span>“The Economics of Reproducibility in Preclinical Research.”</span> <em>PLOS Biology</em> 13 (6): e1002165. <a href="https://doi.org/10.1371/journal.pbio.1002165">https://doi.org/10.1371/journal.pbio.1002165</a>.
+</div>
+<div id="ref-gundersen2021a" class="csl-entry" role="listitem">
+Gundersen, Odd Erik. 2021. <span>“The Fundamental Principles of Reproducibility.”</span> <em>Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences</em> 379 (2197): 20200210. <a href="https://doi.org/10.1098/rsta.2020.0210">https://doi.org/10.1098/rsta.2020.0210</a>.
+</div>
+<div id="ref-loscalzo2012" class="csl-entry" role="listitem">
+Loscalzo, Joseph. 2012. <span>“Experimental Irreproducibility: Causes, (Mis)interpretations, and Consequences.”</span> <em>Circulation</em> 125 (10): 1211–14. <a href="https://doi.org/10.1161/CIRCULATIONAHA.112.098244">https://doi.org/10.1161/CIRCULATIONAHA.112.098244</a>.
+</div>
+<div id="ref-marwick2018" class="csl-entry" role="listitem">
+Marwick, Ben, Carl Boettiger, and Lincoln Mullen. 2018. <span>“Packaging Data Analytical Work Reproducibly Using r (and Friends).”</span> <em>The American Statistician</em> 72 (1): 80–88. <a href="https://doi.org/10.1080/00031305.2017.1375986">https://doi.org/10.1080/00031305.2017.1375986</a>.
+</div>
+<div id="ref-plesser2018" class="csl-entry" role="listitem">
+Plesser, Hans E. 2018. <span>“Reproducibility Vs. Replicability: A Brief History of a Confused Terminology.”</span> <em>Frontiers in Neuroinformatics</em> 11 (January). <a href="https://doi.org/10.3389/fninf.2017.00076">https://doi.org/10.3389/fninf.2017.00076</a>.
+</div>
+<div id="ref-reproduc2019" class="csl-entry" role="listitem">
+<em>Reproducibility and Replicability in Science</em>. 2019. Washington, D.C.: National Academies Press. <a href="https://doi.org/10.17226/25303">https://doi.org/10.17226/25303</a>.
+</div>
+<div id="ref-reproduc" class="csl-entry" role="listitem">
+<span>“Reproducibility: Why It Matters and How It Can Be Nurtured | Elsevier.”</span> n.d. <a href="https://www.elsevier.com/connect/reproducibility-why-it-matters-and-how-it-can-be-nurtured">https://www.elsevier.com/connect/reproducibility-why-it-matters-and-how-it-can-be-nurtured</a>.
+</div>
+<div id="ref-schloss2018b" class="csl-entry" role="listitem">
+Schloss, Patrick D. 2018. <span>“Identifying and Overcoming Threats to Reproducibility, Replicability, Robustness, and Generalizability in Microbiome Research.”</span> <em>mBio</em> 9 (3): 10.1128/mbio.00525–18. <a href="https://doi.org/10.1128/mbio.00525-18">https://doi.org/10.1128/mbio.00525-18</a>.
+</div>
+<div id="ref-sixfact" class="csl-entry" role="listitem">
+<span>“Six Factors Affecting Reproducibility in Life Science Research and How to Handle Them.”</span> n.d. <a href="https://www.nature.com/articles/d42473-019-00004-y">https://www.nature.com/articles/d42473-019-00004-y</a>.
+</div>
+<div id="ref-this2017" class="csl-entry" role="listitem">
+This, Hervé. 2017. <span>“La Question de La Reproductibilité Des Expériences Scientifiques.”</span> <em>Notes Académiques de l’Académie d’agriculture de France</em>, no. 2: 1–8. <a href="https://hal.science/hal-01466964">https://hal.science/hal-01466964</a>.
+</div>
+<div id="ref-ziemann2023" class="csl-entry" role="listitem">
+Ziemann, Mark, Pierre Poulain, and Anusuiya Bora. 2023. <span>“The Five Pillars of Computational Reproducibility: Bioinformatics and Beyond.”</span> <em>Briefings in Bioinformatics</em> 24 (6): bbad375. <a href="https://doi.org/10.1093/bib/bbad375">https://doi.org/10.1093/bib/bbad375</a>.
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

@@ -424,69 +424,33 @@ Elise Billoir
 <p><br></p>
 <div class="fragment">
 <ul>
-<li><strong>Direct reproducibility</strong> <span class="smaller">(commonly ‘<em>replication</em>’ or ‘<em>experimental reproducibility</em>’)</span></li>
+<li><span class="nice-green"><strong>Direct reproducibility</strong></span> (also called <em>experimental reproducibility</em>)</li>
 </ul>
 </div>
 <div class="fragment">
 <ul>
-<li><strong>Analytical reproducibility</strong> <span class="smaller">(commonly ‘<em>computational reproducibility</em>’)</span></li>
+<li><span class="nice-green"><strong>Analytical reproducibility</strong></span> (also called <em>computational reproducibility</em>)</li>
 </ul>
 </div>
-<div class="fragment">
-<ul>
-<li><strong>Systemic reproducibility</strong> <span class="smaller">(commonly ‘<em>robustness</em>’)</span></li>
-</ul>
-</div>
-<div class="fragment">
-<ul>
-<li><strong>Conceptual reproducibility</strong> <span class="smaller">(commonly ‘<em>generalisation</em>’)</span></li>
-</ul>
-</div>
-
-<aside><div>
-<ul style="list-style: none;">
-<li>
-Schloss, 2018. DOI: <a href="https://doi.org/10.1128/mbio.00525-18">10.1128/mbio.00525-18</a>
-</li>
-<li>
-National Academies of Sciences, Engineering, and Medicine. 2019. Reproducibility and Replicability in Science. Washington, DC: The National Academies Press. DOI: <a href="https://doi.org/10.17226/25303">10.17226/25303</a>
-</li>
-</ul>
-</div></aside></section>
-<section id="what-does-reproducibility-mean-actually-3" class="slide level2" data-auto-animate="true">
-<h2 data-id="quarto-animate-title">What does reproducibility mean actually?</h2>
 <p><br></p>
-<div style="color: #588157;" data-auto-animate-delay="0.2">
-<ul>
-<li><strong>Direct reproducibility</strong> (commonly ‘<em>replication</em>’ or ‘<em>experimental reproducibility</em>’)</li>
-</ul>
+<div class="fragment">
+<p>Other related terms to distinguish:</p>
 </div>
-<div style="color: #588157;" data-auto-animate-delay="0.2">
+<div class="fragment">
 <ul>
-<li><strong>Analytical reproducibility</strong> (commonly ‘<em>computational reproducibility</em>’)</li>
-</ul>
-</div>
-<div style="opacity: .5;" data-auto-animate-delay="0.2">
-<ul>
-<li><strong>Systemic reproducibility</strong> (commonly ‘<em>robustness</em>’)</li>
-</ul>
-</div>
-<div style="opacity: .5;" data-auto-animate-delay="0.2">
-<ul>
-<li><strong>Conceptual reproducibility</strong> (commonly ‘<em>generalisation</em>’)</li>
+<li><strong>Replicability</strong>: <em>Different data</em> | Same analysis methods</li>
+<li><strong>Robustness</strong>: Same data | <em>Different analysis methods</em></li>
+<li><strong>Generalisability</strong>: Different data | <em>Different analysis methods</em></li>
 </ul>
 </div>
 
-<!-- ## What does reproducibility mean actually? {auto-animate="true"} -->
-<!-- <br/> -->
-<!-- ![The Turing Way project illustration by Scriberia. Used under a CC-BY 4.0 licence. DOI: [10.5281/zenodo.3332807](https://doi.org/10.5281/zenodo.3332807)](images/turingway-definition.svg){.lightbox fig-align="center"} -->
 <aside><div>
-<ul style="list-style: none;">
+<ul style="list-style: none; font-size: 75%">
 <li>
 Schloss, 2018. DOI: <a href="https://doi.org/10.1128/mbio.00525-18">10.1128/mbio.00525-18</a>
 </li>
 <li>
-National Academies of Sciences, Engineering, and Medicine. 2019. Reproducibility and Replicability in Science. Washington, DC: The National Academies Press. DOI: <a href="https://doi.org/10.17226/25303">10.17226/25303</a>
+The Turing Way Community, Becky Arnold, Louise Bowler, Sarah Gibson, Patricia Herterich, Rosie Higman, … Kirstie Whitaker. (2019, March 25). The Turing Way: A Handbook for Reproducible Data Science (Version v0.0.4). Zenodo. <a href="http://doi.org/10.5281/zenodo.3233986">10.5281/zenodo.3233986</a>
 </li>
 </ul>
 </div></aside></section>
@@ -648,7 +612,9 @@ function toggleLanguage() {
 </div>
 
 <aside><div>
+<div style="font-size: 75%">
 <p>Inspired by <a href="https://www.repro4everyone.org/resources/intro-reproducibility">Repro4Everyone. (n.d.). Introduction to Reproducibility. Repro4Everyone. Retrieved January 30, 2025.</a></p>
+</div>
 </div></aside></section>
 <section id="example-a-drawing-protocol-1" class="slide level2" data-auto-animate="true">
 <h2 data-id="quarto-animate-title">Example: a drawing protocol</h2>
@@ -1438,7 +1404,7 @@ function toggleLanguage() {
       }
     });
     </script>
-    <script>var lightboxQuarto = GLightbox({"openEffect":"zoom","loop":false,"selector":".lightbox","closeEffect":"zoom","descPosition":"bottom"});
+    <script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","openEffect":"zoom","selector":".lightbox","loop":false,"descPosition":"bottom"});
     (function() {
       let previousOnload = window.onload;
       window.onload = () => {
