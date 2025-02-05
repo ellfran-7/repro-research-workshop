@@ -1,17 +1,10 @@
 [
   {
-    "objectID": "03-quarto-page.html",
-    "href": "03-quarto-page.html",
-    "title": "Enter Quarto",
-    "section": "",
-    "text": "In brief, Quarto allows you to combine various types of content in a document (text, code, equations, images, graphics, etc.) and then compile it all into a single document, such as HTML, PDF, etc. The term used in the Quarto environment for this compilation is very poetically called knitting."
-  },
-  {
     "objectID": "03-quarto-page.html#introduction",
     "href": "03-quarto-page.html#introduction",
     "title": "Enter Quarto",
-    "section": "",
-    "text": "In brief, Quarto allows you to combine various types of content in a document (text, code, equations, images, graphics, etc.) and then compile it all into a single document, such as HTML, PDF, etc. The term used in the Quarto environment for this compilation is very poetically called knitting."
+    "section": "Introduction",
+    "text": "Introduction\nIn brief, Quarto allows you to combine various types of content in a document (text, code, equations, images, graphics, etc.) and then compile it all into a single document, such as HTML, PDF, etc. The term used in the Quarto environment for this compilation is very poetically called knitting."
   },
   {
     "objectID": "03-quarto-page.html#objectives",
@@ -39,7 +32,7 @@
     "href": "03-quarto-page.html#only-scratching-the-surface",
     "title": "Enter Quarto",
     "section": "3 Only scratching the surface",
-    "text": "3 Only scratching the surface\nThere is much more that is possible with Quarto, such as:\n\nFootnotes\nCitations (import .bib or insert directly from Zotero)\nOther useful formats:\n\nPresentations (like the one presented today)\nManuscripts (example)\nDashboards (example)\nWebsites (like this one)\nBooks (example)\nInteractive docs (example)\n\n\nAnd so much more… Go see the full Quarto documentation."
+    "text": "3 Only scratching the surface\nThere is much more that is possible with Quarto, such as:\n\nFootnotes\nCitations (import .bib or insert directly from Zotero)\nOther useful formats:\n\nPresentations (like the one presented today)\nManuscripts (example)\nDashboards (example)\nWebsites (like this one)\nBooks (example)\nInteractive docs (example)\n\n\nAnd so much more… Go see the full Quarto documentation and the resources found on this site.\n\n(back to top)"
   },
   {
     "objectID": "03-quarto-page.html#footnotes",
@@ -84,18 +77,11 @@
     "text": "Footnotes\n\n\nPandoc is a tool that converts documents to different formats. Quarto leverages it to convert markdown to a variety of output formats.↩︎\nIntegrated Development Environment↩︎"
   },
   {
-    "objectID": "04-further-reads.html",
-    "href": "04-further-reads.html",
-    "title": "Further reading",
-    "section": "",
-    "text": "Casajus N, Bonnici I, Dray S, Gimenez O, Guéry L, Guilhaumon F, Schiettekatte NMD & Siberchicot A (2024) FRB-CESAB & GdR EcoStat training course: Reproducible Research in Computational Ecology. Zenodo. URL: http://doi.org/10.5281/zenodo.4262978 (link to workshop)\n“Introduction to Quarto” by Andrew Bray at posit::conf(2024) (link)\n“With Quarto Coming, is R Markdwon Going Away? No” blog post by Yihui Xie (link)\n“Introduction to Quarto” by Eric Delmelle (link)"
-  },
-  {
     "objectID": "04-further-reads.html#some-resources-for-learning-more-about-quarto",
     "href": "04-further-reads.html#some-resources-for-learning-more-about-quarto",
     "title": "Further reading",
-    "section": "",
-    "text": "Casajus N, Bonnici I, Dray S, Gimenez O, Guéry L, Guilhaumon F, Schiettekatte NMD & Siberchicot A (2024) FRB-CESAB & GdR EcoStat training course: Reproducible Research in Computational Ecology. Zenodo. URL: http://doi.org/10.5281/zenodo.4262978 (link to workshop)\n“Introduction to Quarto” by Andrew Bray at posit::conf(2024) (link)\n“With Quarto Coming, is R Markdwon Going Away? No” blog post by Yihui Xie (link)\n“Introduction to Quarto” by Eric Delmelle (link)"
+    "section": "1 Some resources for learning more about Quarto",
+    "text": "1 Some resources for learning more about Quarto\n\nCasajus N, Bonnici I, Dray S, Gimenez O, Guéry L, Guilhaumon F, Schiettekatte NMD & Siberchicot A (2024) FRB-CESAB & GdR EcoStat training course: Reproducible Research in Computational Ecology. Zenodo. URL: http://doi.org/10.5281/zenodo.4262978 (link to workshop)\n“Introduction to Quarto” by Andrew Bray at posit::conf(2024) (link)\n“With Quarto Coming, is R Markdwon Going Away? No” blog post by Yihui Xie (link)\n“Introduction to Quarto” by Eric Delmelle (link)"
   },
   {
     "objectID": "04-further-reads.html#some-resources-for-understanding-reproducible-research",
