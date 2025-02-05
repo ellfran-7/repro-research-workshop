@@ -4,6 +4,7 @@ project:
     - "index.qmd"
     - "01-reprores-slides.qmd"
     - "03-quarto-page.qmd"
+    - "04-further-reads.qmd"
     - "!04-exercises-page.qmd"
     - "!02-quarto-slides.qmd"
     - "!templates/"
@@ -25,6 +26,8 @@ website:
         href: 03-quarto-page.qmd
       # - text: Exercises
       #   href: 04-exercises-page.qmd 
+      - text: Resources
+        href: 04-further-reads.qmd
     tools:
       - icon: github
         text: Source Code
