@@ -505,5 +505,3 @@ There can be three relevant use cases:
 ![Artwork by Allison Horst](images/ahorst-rsadtohappy.png){fig-align="center" width="40%"}
 :::
 
-
-<!-- # References {#refs} -->
