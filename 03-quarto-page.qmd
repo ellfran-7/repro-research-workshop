@@ -25,8 +25,10 @@ In brief, `Quarto` allows you to combine various types of content in a document 
 Today, we will explore the data from the [**Palmerpenguins**](https://allisonhorst.github.io/palmerpenguins "palmerpenguins R package") package to answer the following questions:
 
 ::: {style="text-align: center;"}
-***What is the relationship between flipper length and body mass?***<br />Does this relationship vary between species?
+***What is the relationship between flipper length and body mass?***<br />***Does this relationship vary between species?***
 :::
+
+To ensure **transparency** and **reproducibility**, we will create a Quarto report.
 
 But first, let's get a grasp of the basics and create our first Quarto document!
 
@@ -35,13 +37,13 @@ But first, let's get a grasp of the basics and create our first Quarto document!
 ::: {.callout-note collapse="false"}
 ## Exercise 1 - Quarto basics {.unnumbered}
 
-1.  Create a new Quarto document (`.qmd`) by clicking on *`File > New File > Quarto Document`*
-2.  Add a title and author and press *`Create`*
-3.  Save this new `.qmd` on you computer (preferably in an appropriate folder)
-4.  Click `Render` to render/knit your document. Observe the result. What type of document is this?
+1.  Create a new Quarto document (`.qmd`) by navigating to *`File > New File > Quarto Document`*
+2.  Add a title and author, then untick the "`Use visual markdown editor`" option. Finally, click *`Create`*
+3.  Save this new `.qmd` file on you computer (preferably in an appropriate folder)
+4.  Click `Render` to render/knit your document. Observe the result. *What type of document is this?*
 5.  Modify the YAML[^1] header to change the output format to docs (`docx`)
 6.  Re-render your document
-7.  What about PDF (`pdf`)?
+7.  *What about PDF* (`pdf`)*?*
 :::
 
 [^1]: Yet Another Markup Language, corresponding the the metadata of a Quarto document
