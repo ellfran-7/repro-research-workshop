@@ -11,6 +11,7 @@ The aim of this analysis is to explore the relationship between flipper length a
 ## Load data and packages
 
 ```{r}
+#| warning: false
 
 # Load packages
 library(knitr)
