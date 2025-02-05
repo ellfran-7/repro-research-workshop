@@ -3,7 +3,6 @@ title: "Enter Quarto"
 subtitle: "Hands on"
 author:
   - name: "Ellis Franklin"
-  - name: "Elise Billoir"
 date: "2025-02-06"
 date-format: long
 number-sections: true

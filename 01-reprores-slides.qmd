@@ -148,66 +148,35 @@ ggplot(tidy_surv_data, aes(x = answer, fill = answer)) +
 <br/>
 
 ::: fragment
--   **Direct reproducibility** [(commonly '*replication*' or '*experimental reproducibility*')]{.smaller}
+-   [**Direct reproducibility**]{.nice-green} (also called *experimental reproducibility*)
 :::
 
 ::: fragment
--   **Analytical reproducibility** [(commonly '*computational reproducibility*')]{.smaller}
+-   [**Analytical reproducibility**]{.nice-green} (also called *computational reproducibility*)
+:::
+
+<br/> 
+
+::: fragment
+Other related terms to distinguish:
 :::
 
 ::: fragment
--   **Systemic reproducibility** [(commonly '*robustness*')]{.smaller}
-:::
-
-::: fragment
--   **Conceptual reproducibility** [(commonly '*generalisation*')]{.smaller}
+- **Replicability**: *Different data* | Same analysis methods
+- **Robustness**: Same data | *Different analysis methods*
+- **Generalisability**: Different data | *Different analysis methods*
 :::
 
 ::: aside
-<ul style="list-style: none;">
+<ul style="list-style: none; font-size: 75%">
 
 <li>Schloss, 2018. DOI: [10.1128/mbio.00525-18](https://doi.org/10.1128/mbio.00525-18)</li>
 
-<li>National Academies of Sciences, Engineering, and Medicine. 2019. Reproducibility and Replicability in Science. Washington, DC: The National Academies Press. DOI: [10.17226/25303](https://doi.org/10.17226/25303)</li>
+<li>The Turing Way Community, Becky Arnold, Louise Bowler, Sarah Gibson, Patricia Herterich, Rosie Higman, … Kirstie Whitaker. (2019, March 25). The Turing Way: A Handbook for Reproducible Data Science (Version v0.0.4). Zenodo. [10.5281/zenodo.3233986](http://doi.org/10.5281/zenodo.3233986)</li>
 
 </ul>
 :::
 
-## What does reproducibility mean actually? {auto-animate="true"}
-
-<br/>
-
-::: {style="color: #588157;" auto-animate-delay="0.2"}
--   **Direct reproducibility** (commonly '*replication*' or '*experimental reproducibility*')
-:::
-
-::: {style="color: #588157;" auto-animate-delay="0.2"}
--   **Analytical reproducibility** (commonly '*computational reproducibility*')
-:::
-
-::: {style="opacity: .5;" auto-animate-delay="0.2"}
--   **Systemic reproducibility** (commonly '*robustness*')
-:::
-
-::: {style="opacity: .5;" auto-animate-delay="0.2"}
--   **Conceptual reproducibility** (commonly '*generalisation*')
-:::
-
-::: aside
-<ul style="list-style: none;">
-
-<li>Schloss, 2018. DOI: [10.1128/mbio.00525-18](https://doi.org/10.1128/mbio.00525-18)</li>
-
-<li>National Academies of Sciences, Engineering, and Medicine. 2019. Reproducibility and Replicability in Science. Washington, DC: The National Academies Press. DOI: [10.17226/25303](https://doi.org/10.17226/25303)</li>
-
-</ul>
-:::
-
-<!-- ## What does reproducibility mean actually? {auto-animate="true"} -->
-
-<!-- <br/> -->
-
-<!-- ![The Turing Way project illustration by Scriberia. Used under a CC-BY 4.0 licence. DOI: [10.5281/zenodo.3332807](https://doi.org/10.5281/zenodo.3332807)](images/turingway-definition.svg){.lightbox fig-align="center"} -->
 
 ## In other words... {auto-animate="true"}
 
@@ -358,7 +327,9 @@ function toggleLanguage() {
 ::::::
 
 ::: aside
+<div style="font-size: 75%">
 Inspired by [Repro4Everyone. (n.d.). Introduction to Reproducibility. Repro4Everyone. Retrieved January 30, 2025.](https://www.repro4everyone.org/resources/intro-reproducibility)
+</div>
 :::
 
 ## Example: a drawing protocol {auto-animate="true"}
