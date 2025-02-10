@@ -3,7 +3,8 @@ project:
   render: 
     - "index.qmd"
     - "01-reprores-slides.qmd"
-    - "03-quarto-page.qmd"
+    - "02-quarto-page.qmd"
+    - "03-post-work.qmd"
     - "04-further-reads.qmd"
     - "!04-exercises-page.qmd"
     - "!02-quarto-slides.qmd"
@@ -24,6 +25,8 @@ website:
             href: 01-reprores-slides.qmd
           - text: Quarto
             href: 03-quarto-page.qmd
+      - text: Post-work
+        href: 03-post-work.qmd
       - text: Resources
         href: 04-further-reads.qmd
     tools:
