@@ -24,7 +24,7 @@ website:
           - text: Repro Research
             href: 01-reprores-slides.qmd
           - text: Quarto
-            href: 03-quarto-page.qmd
+            href: 02-quarto-page.qmd
       - text: Post-work
         href: 03-post-work.qmd
       - text: Resources
