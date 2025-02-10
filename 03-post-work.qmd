@@ -52,4 +52,4 @@ In the end, we got many cool and funky cats! But not just cats... :smiley_cat:
 
 Afterwards, we compared our results to the original drawing from the hypothetical study:
 
-![](images/cat-good-drawing.png){fig-width="50%"}
+![](images/cat-good-drawing.png){fig-align="center" width="25%"}
