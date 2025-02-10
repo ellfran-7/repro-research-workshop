@@ -16,7 +16,7 @@ format: html
 
 Here are some of the creative drawings from the "**Protocol Drawing**" exercise. You can find the detailed protocol [here](https://ellfran-7.github.io/repro-research-workshop/01-reprores-slides.html#/example-a-drawing-protocol).
 
-The goal was to follow a fictive drawing protocol and see if we all ended up with the same result as the original study.
+The goal was to follow a fictive drawing protocol and see if we all ended up with the same exact result, and if that matched the original study.
 
 In the end, we got many cool and funky cats! But not just cats... :smiley_cat:
 
@@ -50,6 +50,6 @@ In the end, we got many cool and funky cats! But not just cats... :smiley_cat:
 
 <br/>
 
-Afterwards, we compared our results to the original drawing from the hypothetical study:
+If we look at the result of the original study, we can see that they might have missed out a few steps...
 
-![](images/cat-good-drawing.png){fig-align="center" width="25%"}
+![The result form the study](images/cat-good-drawing.png){fig-align="center" width="25%"}
