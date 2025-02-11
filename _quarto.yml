@@ -1,7 +1,8 @@
 project:
   type: website
   render: 
-    - "index.qmd"
+    - "00-welcome-page.qmd"
+    - "01-pre-work.qmd"
     - "01-reprores-slides.qmd"
     - "02-quarto-page.qmd"
     - "03-post-work.qmd"
@@ -17,18 +18,20 @@ website:
   title: "Reproducible Research Workshop"
   navbar: 
     left: 
+      - text: Welcome
+        href: 00-welcome-page.qmd
       - text: Pre-work
-        href: index.qmd
+        href: 01-pre-work.qmd
       - text: Content
         menu: 
           - text: Repro Research
-            href: 01-reprores-slides.qmd
+            href: 02-reprores-slides.qmd
           - text: Quarto
-            href: 02-quarto-page.qmd
+            href: 03-quarto-page.qmd
       - text: Post-work
-        href: 03-post-work.qmd
+        href: 04-post-work.qmd
       - text: Resources
-        href: 04-further-reads.qmd
+        href: 05-further-reads.qmd
     tools:
       - icon: github
         text: Source Code
