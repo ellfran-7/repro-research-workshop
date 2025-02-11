@@ -26,8 +26,6 @@ Welcome and thank you for you interest in participating in the following **LIEC 
 
 :::
 
-To ensure everything runs smoothly on the day of the workshop, we’ll need to set up a few things beforehand.
-
 
 ## Brief Workshop Overview
 
@@ -40,3 +38,4 @@ The workshop will be divided into two parts:
 
 **Part 2** is hands-on and involves practical work using specific informatic tools. To participate fully, you’ll need to download or update these tools in advance. Don’t worry—they’re free and easy to set up! Let's go!
 
+To ensure everything runs smoothly on the day of the workshop, we’ll need to set up a few things beforehand. Visit the [Pre-workshop instructions](https://ellfran-7.github.io/repro-research-workshop/01-pre-work.html) to set everything up for the day! 🧙
