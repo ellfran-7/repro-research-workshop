@@ -3,9 +3,7 @@ title: "Welcome"
 subtitle: "LIEC - CS WORKSHOP"
 date: last-modified
 date-format: long
-number-sections: true
-number-depth: 3
-toc: true
+number-sections: false
 from: markdown+emoji
 format: html
 ---

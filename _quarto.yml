@@ -13,7 +13,7 @@ project:
 
 execute:
   freeze: auto # computational documents re-render only when source changes
-  
+
 website: 
   title: "Reproducible Research Workshop"
   navbar: 
@@ -39,7 +39,6 @@ website:
   page-footer: 
     left: "© Ellis Franklin, 2025."
     right: "Made with 💚 and Quarto"
-  
 
 format:
   html:
