@@ -499,7 +499,7 @@ There is so much more you can do with `Quarto`, such as:
 
 And so much more... 
 
-Check out the full [Quarto documentation](https://quarto.org/docs/guide/) and the [resources](../04-further-reads.qmd) available on this site.
+Check out the full [Quarto documentation](https://quarto.org/docs/guide/) and the [resources](../05-further-reads.qmd) available on this site.
 
 <p align="right">
 

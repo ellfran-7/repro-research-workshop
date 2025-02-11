@@ -12,37 +12,6 @@ format: html
 
 <a id="page-top"></a>
 
-::: {.grid}
-
-::: {.g-col-10}
-
-Welcome and thank you for you interest in participating in the following **LIEC - CS WORKSHOP** on *February 6th 2025* entitled ***A step towards Reproducible Research: Literate Programming***.
-
-:::
-
-::: {.g-col-2}
-
-![](images/liec-logo.png){fig-alt="LIEC logo" fig-align="right"}
-
-:::
-
-:::
-
-To ensure everything runs smoothly on the day of the workshop, we’ll need to set up a few things beforehand.
-
-
-## Brief Workshop Overview
-
-The workshop will be divided into two parts:
-
-1.  Reproducible Research: An Open Discussion
-2.  Literate Programming with Quarto: A Small but Impactful Step
-
-**Part 1** will be discussion-based, focusing on the concept of reproducibility, its importance, and the factors contributing to non-reproducibility. There will be practical work also. No prior coding or bioinformatics knowledge is needed here.
-
-**Part 2** is hands-on and involves practical work using specific informatic tools. To participate fully, you’ll need to download or update these tools in advance. Don’t worry—they’re free and easy to set up! Let's go!
-
-
 ## General requirements
 
 Please bring the following:
@@ -75,7 +44,7 @@ Quarto is an open-source system for scientific and technical publishing, built o
 
 [^2]: Pandoc is a tool that converts documents to different formats. Quarto leverages it to convert markdown to a variety of output formats.
 
-To use Quarto, you’ll need to install the Quarto CLI, which handles rendering Quarto documents. Download the latest version from the  [Quarto website](https://quarto.org/docs/download/index.html) and follow the installation instructions.
+To use Quarto, you’ll need to install the Quarto CLI, which handles rendering Quarto documents. Download the latest version from the [Quarto website](https://quarto.org/docs/download/index.html) and follow the installation instructions.
 
 <br>
 
