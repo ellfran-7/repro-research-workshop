@@ -1,23 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://ellfran-7.github.io/repro-research-workshop/02-quarto-page.html</loc>
-    <lastmod>2025-02-07T13:20:03.338Z</lastmod>
+    <loc>https://ellfran-7.github.io/repro-research-workshop/01-pre-work.html</loc>
+    <lastmod>2025-02-11T10:08:35.049Z</lastmod>
   </url>
   <url>
-    <loc>https://ellfran-7.github.io/repro-research-workshop/index.html</loc>
-    <lastmod>2025-02-02T15:12:46.535Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ellfran-7.github.io/repro-research-workshop/03-post-work.html</loc>
-    <lastmod>2025-02-10T09:51:30.015Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ellfran-7.github.io/repro-research-workshop/04-further-reads.html</loc>
-    <lastmod>2025-02-07T15:17:12.449Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ellfran-7.github.io/repro-research-workshop/01-reprores-slides.html</loc>
-    <lastmod>2025-02-05T15:07:40.747Z</lastmod>
+    <loc>https://ellfran-7.github.io/repro-research-workshop/00-welcome-page.html</loc>
+    <lastmod>2025-02-11T10:07:10.788Z</lastmod>
   </url>
 </urlset>

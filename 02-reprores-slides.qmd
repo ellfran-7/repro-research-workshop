@@ -1,0 +1,507 @@
+---
+title: "Reproducible Research"
+subtitle: "Open-Discussion"
+author:
+  - name: "Ellis Franklin"
+  - name: "Elise Billoir"
+date: "2025-02-06"
+date-format: long
+format:
+  revealjs:
+    theme: [default, slide-styles.scss]
+    code-block-height: 700px
+    code-copy: true
+    width: 1600
+    height: 900
+    footer: "CS-WORKSHOP Feb 2025 | [Home page](https://ellfran-7.github.io/repro-research-workshop)"
+    transition: slide
+    background-transition: fade
+    auto-animate-easing: ease-in-out
+    auto-animate-unmatched: false
+    auto-animate-duration: 0.8
+execute:
+  cache: true
+echo: false
+slide-number: true
+code-line-numbers: false
+from: markdown+emoji
+---
+
+```{r}
+#| include: false
+
+knitr::opts_chunk$set(
+    out.width = "70%", # enough room to breath
+    fig.width = 6,     # reasonable size
+    fig.asp = 0.618,   # golden ratio
+    fig.align = "center" 
+)
+
+```
+
+# Table of Contents
+
+-   [Introduction to RR](#intro-to-rr)
+-   [Sources of irreproducibility](#sources-of-nr)
+-   [Every little helps: Literate Programming with Quarto](#lp-quarto)
+
+# Introduction to RR {#intro-to-rr}
+
+## Have you ever encountered challenges when trying to reproduce data analyses? {style="text-align: center;"}
+
+<br/>
+
+::: fragment
+```{r, dev="png", dev.args=list(bg="transparent")}
+#| fig-align: 'center'
+#| echo: false
+#| warning: false
+#| error: false
+ 
+library(ggplot2)
+library(dplyr)
+library(showtext)
+
+# add Google Fonts (Nunito and Roboto)
+font_add_google("Nunito", "nunito")
+font_add_google("Roboto", "roboto")
+
+# automatically use showtext for plotting
+showtext_auto()
+
+surv_data <- read.csv2(file = here::here("data", "evento-survey-data.csv"))
+
+tidy_surv_data <- surv_data |> 
+  dplyr::select(8) |> # select the eight col
+  dplyr::slice(-n()) |> # remove the last col
+  dplyr::rename(answer = 1) |> # rename the selected col
+  dplyr::mutate(answer = factor(answer, levels = c(0, 1), labels = c("no", "yes"))) # associate binary to yes and no
+
+total_count <- nrow(tidy_surv_data)
+
+# Create the barplot
+ggplot(tidy_surv_data, aes(x = answer, fill = answer)) +
+  geom_bar() +
+  scale_fill_manual(values = c("yes" = "lightgreen", "no" = "lightcoral")) +
+  labs(
+    x = "Answer",
+    y = "Count"
+  ) +
+  theme_bw() +
+  coord_flip() +
+  theme(
+    text = element_text(size = 40),
+    plot.title = element_text(hjust = 0.5, family = "roboto"),
+    plot.subtitle = element_text(hjust = 0.5, family = "nunito"),
+    axis.title = element_text(family = "roboto"), 
+    plot.background = element_rect(fill = "transparent", color = NA), # Make plot background transparent
+    panel.background = element_rect(fill = "transparent", color = NA), # Make panel background transparent
+    legend.background = element_rect(fill = "transparent", color = NA), # Make legend background transparent
+  )
+
+```
+:::
+
+## What should be kept the same<br />when reproducing a study? :thinking: {style="text-align: center;"}
+
+<br/>
+
+![](images/wooclap-connect.png)
+
+
+## What does reproducibility mean actually? {auto-animate="true"}
+
+:::::: columns
+:::: {.column width="50%"}
+<br/> <br/>
+
+::: incremental
+-   Difficult question to answer...
+-   "Lack of reproducibility"<br /> :arrow_right: understood but broad expression
+-   No clear definition<br /> :arrow_right: varies between the disciplines
+:::
+::::
+
+::: {.column width="50%"}
+:::
+::::::
+
+## What does reproducibility mean actually? {auto-animate="true"}
+
+::::: columns
+::: {.column width="50%"}
+<br/> <br/>
+
+-   Difficult question to answer...
+-   "Lack of reproducibility"<br /> :arrow_right: understood but broad expression
+-   No clear definition<br /> :arrow_right: varies between the disciplines
+:::
+
+::: {.column width="50%"}
+![Gundersen Odd Erik 2021 The fundamental principles of reproducibility Phil. Trans. R. Soc. A.37920200210 DOI: [10.1098/rsta.2020.0210](http://doi.org/10.1098/rsta.2020.0210).](images/gundersen-2021-survey-def-repro.jpg)
+:::
+:::::
+
+## What does reproducibility mean actually? {auto-animate="true"}
+
+<br/>
+
+::: fragment
+-   [**Direct reproducibility**]{.nice-green} (also called *experimental reproducibility*)
+:::
+
+::: fragment
+-   [**Analytical reproducibility**]{.nice-green} (also called *computational reproducibility*)
+:::
+
+<br/> 
+
+::: fragment
+Other related terms to distinguish:
+:::
+
+::: fragment
+- **Replicability**: *Different data* | Same analysis methods
+- **Robustness**: Same data | *Different analysis methods*
+- **Generalisability**: Different data | *Different analysis methods*
+:::
+
+::: aside
+<ul style="list-style: none; font-size: 75%">
+
+<li>Schloss, 2018. DOI: [10.1128/mbio.00525-18](https://doi.org/10.1128/mbio.00525-18)</li>
+
+<li>The Turing Way Community, Becky Arnold, Louise Bowler, Sarah Gibson, Patricia Herterich, Rosie Higman, … Kirstie Whitaker. (2019, March 25). The Turing Way: A Handbook for Reproducible Data Science (Version v0.0.4). Zenodo. [10.5281/zenodo.3233986](http://doi.org/10.5281/zenodo.3233986)</li>
+
+</ul>
+:::
+
+
+## In other words... {auto-animate="true"}
+
+<br/> <br/>
+
+:::::: r-hstack
+::: {.fragment data-id="box1" auto-animate-delay="0" style="background: #A8DADC; width: 300px; height: 200px; margin: 10px; display: flex; justify-content: center; align-items: center;"}
+Data
+:::
+
+::: {.fragment data-id="box2" auto-animate-delay="0.1" style="background: #AECBFA; width: 300px; height: 200px; margin: 10px; display: flex; justify-content: center; align-items: center;"}
+Code
+:::
+
+::: {.fragment data-id="box3" auto-animate-delay="0.2" style="background: #D4A5E6; width: 300px; height: 200px; margin: 10px; display: flex; justify-content: center; align-items: center;"}
+Documentation
+:::
+::::::
+
+## In other words... {auto-animate="true"}
+
+<br/> <br/>
+
+:::::: r-stack
+::: {data-id="box1" style="background: #A8DADC; width: 700px; height: 400px; border-radius: 50px;"}
+:::
+
+::: {data-id="box2" style="background: #AECBFA; width: 600px; height: 300px; border-radius: 50px;"}
+:::
+
+::: {data-id="box3" style="background: #D4A5E6; width: 500px; height: 200px; border-radius: 50px; display: flex; justify-content: center; align-items: center;"}
+Reproducible Research
+:::
+::::::
+
+## Why are we talking about this now?
+
+<!-- We need to have confidence that our research is good quality and we are doing good science. -->
+
+:::::: columns
+::: {.column width="50%"}
+![Baker, M. 1,500 scientists lift the lid on reproducibility. Nature 533, 452–454 (2016). DOI: [10.1038/533452a](https://doi.org/10.1038/533452a).](images/nature-reproducibility-crisis.png){.lightbox width="700" fig-align="center"}
+:::
+
+:::: {.column width="50%"}
+<br/>
+
+::: incremental
+-   70% of researchers can't reproduce others' findings
+
+-   60% can't reproduce **their own findings**
+
+-   Non-reproducible biomedical research costs \$28 billion/year ([Freedman et al. 2015](https://doi.org/10.1371/journal.pbio.1002165))
+:::
+::::
+::::::
+
+## How important is it? [Well, quite important]{.fragment}
+
+</br> </br>
+
+::: incremental
+-   Anyone (with a similar level of skills) should be able to do reproduce your research and benefit from it
+-   Funders (e.g., ANR) and journals now require data and code accessibility, which aligns with the growing open-science movement
+-   ~~If I keep my data and code, I have a competitive advantage~~
+-   If I share my data and code, my work will gain more visibility (and citations :sunglasses:)
+:::
+
+## Advantages
+
+</br> </br>
+
+::: incremental
+-   It obliges you to verify your work (by sharing both docs, data and code)
+-   [**Your future self**]{.nice-green} will thank you (you'll be much more productive)
+-   Your collaborators too
+-   By ensuring reproducibility, you reinforce your credibility and reputation
+-   Reproducibility fosters [**trust**]{.nice-green} in scientific progress and [**accelerates**]{.nice-green} it
+:::
+
+# Sources of irreproducibility {#sources-of-nr}
+
+## What sources of irreproducibility<br />can you think of? :thinking: {style="text-align: center;"}
+
+## Factors decreasing reproducibility {auto-animate="\"true"}
+
+::::: columns
+::: {.column width="50%"}
+<br/> <br/> <br/>
+
+-   Failures of reproducibility cannot be traced to a single cause
+-   Nearly every aspect of a study needs to be considered
+:::
+
+::: {.column width="50%"}
+![Baker, M. 1,500 scientists lift the lid on reproducibility. Nature 533, 452–454 (2016). DOI:  [10.1038/533452a](https://doi.org/10.1038/533452a).](images/nature-factors-irrepro.png){.lightbox fig-align="center"}
+:::
+:::::
+
+## Example: a drawing protocol {auto-animate="true"}
+
+::: fragment
+**You really want to draw something but don't know how. You've found this protocol in a very prestigious journal and want to reproduce it. Grab your pens and papers :pencil: !**
+:::
+
+:::::: fragment
+<div>
+
+<button class="switch-btn" onclick="toggleLanguage()">
+
+Switch Language
+
+</button>
+
+::: {#english .language .no-margin-top .green-border}
+1.  Draw a large circle in the center of your page.
+2.  Inside the circle, slightly above the middle, draw two medium-sized ovals next to each other. Inside each oval, draw a smaller filled-in oval.
+3.  Below the ovals, in the center of the circle, draw a small upside-down triangle.
+4.  On top of the circle, draw two small triangles with the base of each triangle touching the edge of the circle and the points facing outward.
+5.  From the bottom point of the triangle, draw two curved lines that extend outward, one curving to the left and one to the right, forming a “W” shape.
+6.  On each side of the curved lines, draw three short straight lines extending outward.
+:::
+
+::: {#french .language .no-margin-top .green-border style="display:none;"}
+1.  Dessinez un grand cercle au centre de votre page.
+2.  À l'intérieur du cercle, légèrement au-dessus du milieu, dessinez deux ovales de taille moyenne côte à côte. À l'intérieur de chaque ovale, dessinez un petit ovale rempli.
+3.  Sous les ovales, au centre du cercle, dessinez un petit triangle inversé.
+4.  Au-dessus du cercle, dessinez deux petits triangles avec la base de chaque triangle touchant le bord du cercle et les pointes dirigées vers l'extérieur.
+5.  À partir de la pointe inférieure du triangle, dessinez deux lignes courbées qui s'étendent vers l'extérieur, l'une courbant vers la gauche et l'autre vers la droite, formant une forme en "W".
+6.  De chaque côté des lignes courbées, dessinez trois petites lignes droites qui s'étendent vers l'extérieur.
+:::
+
+</div>
+
+<script>
+function toggleLanguage() {
+  var english = document.getElementById("english");
+  var french = document.getElementById("french");
+  if (english.style.display === "none") {
+    english.style.display = "block";
+    french.style.display = "none";
+  } else {
+    english.style.display = "none";
+    french.style.display = "block";
+  }
+}
+</script>
+::::::
+
+::: aside
+<div style="font-size: 75%">
+Inspired by [Repro4Everyone. (n.d.). Introduction to Reproducibility. Repro4Everyone. Retrieved January 30, 2025.](https://www.repro4everyone.org/resources/intro-reproducibility)
+</div>
+:::
+
+## Example: a drawing protocol {auto-animate="true"}
+
+::::: {layout="[10, -2, 10]" layout-valign="bottom"}
+::: fragment
+![My attempt](images/cat-ellis-drawing.jpg){width="75%"}
+:::
+
+::: fragment
+![The result in the study](images/cat-good-drawing.png){width="70%"}
+:::
+:::::
+
+[How did you do?]{style="text-align: center; display: block;"}
+
+## Example: a drawing protocol {auto-animate="true"}
+
+<br/>
+
+:::::: {layout="[10,-1,10,-1,10]" layout-valign="center"}
+::: fragment
+![Timothée Poisot (Sep 8 2015) ‘Step 2 — do the rest of the fucking analysis’ \[Medium\], Page 1, accessed 10 Jan 2025.](images/tpoisot-protocol-ambiguous-drawing.png){.lightbox width="85%"}
+:::
+
+::: fragment
+!["Unavailable protocol"](images/protocol-unavailability-post.png){.lightbox width="90%"}
+:::
+
+::: fragment
+!["Ambiguous protocol"](images/protocol-ambiguous-post.png){.lightbox width="90%"}
+:::
+::::::
+
+## How can we be bit more reproducible? {auto-animate="true"}
+
+<br/>
+
+-   Document practices (e.g., lab notebooks, ELNs with [eLabFTW](https://scienceouverte.univ-lorraine.fr/en/research-data-ul/electronic-laboratory-notebook-elabftw-solution/))
+
+## How can we be bit more reproducible? {auto-animate="true"}
+
+<br/>
+
+-   Document practices (e.g., lab notebooks, ELNs with [eLabFTW](https://scienceouverte.univ-lorraine.fr/en/research-data-ul/electronic-laboratory-notebook-elabftw-solution/))
+-   Organise code, data and files (e.g., separate folders for different data, clear filenames, tidy principles)
+
+::: {layout="[-3,3,-2,6,-2]"}
+!["Piled Higher and Deeper" by Jorge Cham (www.phdcomics.com)](images/phdcomic-finaldoc.png){.lightbox fig-align="center"}
+
+![Illustrations from the Openscapes blog Tidy Data for reproducibility, efficiency, and collaboration by Julia Lowndes and Allison Horst](images/jlowndes-ahorst-tidydata.jpg){.lightbox fig-align="center"}
+:::
+
+
+## How can we be bit more reproducible? {auto-animate="true"}
+
+<br/>
+
+-   Document practices (e.g., lab notebooks, ELNs with [eLabFTW](https://scienceouverte.univ-lorraine.fr/en/research-data-ul/electronic-laboratory-notebook-elabftw-solution/))
+-   Organise code, data and files (e.g., separate folders for different data, clear filenames, tidy principles)
+-   Share data and outputs
+
+::: {layout="[10,-3,10,-3,10]" layout-valign="center"}
+![](images/logo-zenodo.png){fig-align="center" width="30%"}
+
+![](images/logo-figshare.png){fig-align="center" width="30%"}
+
+![](images/logo-dorel.png){fig-align="center" width="30%"}
+:::
+
+## How can we be bit more reproducible? {auto-animate="true"}
+
+<br/>
+
+-   Document practices (e.g., lab notebooks, ELNs with [eLabFTW](https://scienceouverte.univ-lorraine.fr/en/research-data-ul/electronic-laboratory-notebook-elabftw-solution/))
+-   Organise code, data and files (e.g., separate folders for different data, clear filenames, tidy principles)
+-   Share data and outputs
+-   Track changes (= versionning)
+
+::: {layout="[10,-3,10,-3,10]" layout-valign="center"}
+![](images/logo-git.png){fig-align="center" width="35%"}
+
+![](images/logo-github.png){fig-align="center" width="35%"}
+
+![](images/logo-gitlab.png){fig-align="center" width="35%"}
+:::
+
+## How can we be bit more reproducible? {auto-animate="true"}
+
+<br/>
+
+-   Document practices (e.g., lab notebooks, ELNs with [eLabFTW](https://scienceouverte.univ-lorraine.fr/en/research-data-ul/electronic-laboratory-notebook-elabftw-solution/))
+-   Organise code, data and files (e.g., separate folders for different data, clear filenames, tidy principles)
+-   Share data and outputs
+-   Track changes (= versionning)
+-   Learn to code (even a little)
+
+![Artwork by Allison Horst](images/ahorst-rabbit-mouse-comp.jpg)
+
+# Every little helps:<br />Literate Programming with Quarto {#lp-quarto}
+
+## What is Literate programming?
+
+::::: columns
+::: {.column .incremental width="60%"}
+-   Introduced by *Donald Knuth* in 1984
+
+-   Idea of combining **source code** and **text**
+
+-   Method for writing computer programs as **literary essays**
+
+-   Many tools exist for various languages:
+
+    -   `RMarkdown` (R)
+
+    -   `Jupyter` (Python)
+
+    -   `Quarto` (multi-language)
+:::
+
+::: {.column width="40%"}
+![Knuth, Donald Ervin. “Literate Programming.” Computer/law journal (1984).](images/dknuth-lp.jpg){width="50%"}
+:::
+:::::
+
+::: fragment
+> "The best way to communicate from one human being to another is through story"<br />*Donald Knuth*
+:::
+
+## What is `Quarto`?
+
+<br/>
+
+-   `Quarto` is an open-source, scientific and technical publishing system
+-   It implements the concept of literate programming
+-   It provides a unified authoring framework for data science, combining your code, its results, and your prose (text)
+
+<br/>
+
+![Illustration by Alison Hill and Allison Horst, for RStudio](images/ahill-ahorst-hedgehog-text-code.png){fig-align="center" width="15%"}
+
+## Advantages of Quarto
+
+<br/>
+
+::: incremental
+-   `Quarto` documents are fully **reproducible** and **dynamic**
+-   They automate the inclusion of the last versions of the results of an analysis
+-   Allows you to avoid `copy + paste`, avoid accidental errors and save time
+-   Literally dozens of output formats are available: [Web pages]{.fragment .greenish}[, PDFs]{.fragment .mossygreenish}[, Word files]{.fragment .blueish}[, websites]{.fragment .tealish}[, books]{.fragment .purplish}[, and more.]{.fragment .pinkish}
+-   Open source so anyone can use it
+:::
+
+![Illustration by Alison Hill and Allison Horst, for RStudio](images/ahill-ahorst-hedgehog-outputs.png){fig-align="center" width="40%"}
+
+## Main use cases
+
+<br/>
+
+There can be three relevant use cases:
+
+
+<br/>
+
+::: incremental
+1.  For [**communicating**]{.nice-green} to decision-makers, your supervisors or to a more general audience, who want to [*focus on the conclusions, not the code behind the analysis*]{.nice-green}
+2.  For [**collaborating**]{.nice-green} with other data scientists (including [**future you!**]{.nice-green}), who are [*interested in both your conclusions, and how you reached them*]{.nice-green} (i.e. the code)
+3.  As an environment in which to [*do*]{.nice-green} data science, as a modern-day lab notebook where you can capture not only what you did, but also what you were thinking
+:::
+
+## To advance, we must code a little... {style="text-align: center;"}
+
+::: fragment
+![Artwork by Allison Horst](images/ahorst-rsadtohappy.png){fig-align="center" width="40%"}
+:::
+

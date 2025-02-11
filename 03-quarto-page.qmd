@@ -1,0 +1,508 @@
+---
+title: "Enter Quarto"
+subtitle: "Hands on"
+author:
+  - name: "Ellis Franklin"
+date: "2025-02-06"
+date-format: long
+number-sections: true
+number-depth: 3
+toc: true
+from: markdown+emoji
+format: html
+---
+
+<a id="page-top"></a>
+
+<br/>
+
+## Introduction {.unnumbered}
+
+In brief, `Quarto` allows you to combine various types of content in a document (text, code, equations, images, graphics, etc.) and then compile it all into a single document, such as HTML, PDF, etc. The term used in the `Quarto` environment for this compilation is very poetically called **knitting**.
+
+## Objectives {.unnumbered}
+
+Today, we will explore the data from the [**Palmerpenguins**](https://allisonhorst.github.io/palmerpenguins "palmerpenguins R package") package to answer the following questions:
+
+::: {style="text-align: center;"}
+***What is the relationship between flipper length and body mass?***<br />***Does this relationship vary between species?***
+:::
+
+To ensure **transparency** and **reproducibility**, we will create a Quarto report.
+
+But first, let's get a grasp of the basics and create our first Quarto document!
+
+<br/>
+
+::: {.callout-note collapse="false"}
+## Exercise 1 - Quarto basics {.unnumbered}
+
+1.  Create a new Quarto document (`.qmd`) by navigating to *`File > New File > Quarto Document`*
+2.  Add a title and author, then untick the "`Use visual markdown editor`" option. Finally, click *`Create`*
+3.  Save this new `.qmd` file on you computer (preferably in an appropriate folder)
+4.  Click `Render` to render/knit your document. Observe the result. *What type of document is this?*
+5.  Modify the YAML[^1] header to change the output format to docs (`docx`)
+6.  Re-render your document
+7.  *What about PDF* (`pdf`)*?*
+:::
+
+[^1]: Yet Another Markup Language, corresponding the the metadata of a Quarto document
+
+<br/>
+
+## Including common content {#include-content}
+
+The most common thing you are likely to do in your Quarto document is text formatting. The language used for this is called **Markdown**. It is a fairly basic language but allows you to intuitively perform most basic formatting tasks.
+
+> Markdown-formatted document should be publishable as-is, as plain text, without looking like it’s been marked up with tags or formatting instructions. - [John Gruber](https://daringfireball.net/projects/markdown/syntax#philosophy)
+
+<br/>
+
+### Text formats {#txt-formats}
+
+Formatting text is easy and often follows a common structure by surrounding the text you want to format with special characters:
+
+``` markdown
+*italic* **bold** ~~strikeout~~ `code`
+
+superscript^2^ subscript~2~
+
+[underline]{.underline} [small caps]{.smallcaps}
+```
+
+> *italic* **bold** ~~strikeout~~ `code`
+>
+> superscript^2^ subscript~2~
+>
+> [underline]{.underline} [small caps]{.smallcaps}
+
+<br/>
+
+### Sections {#sections}
+
+Sections are added to a document using different numbers of `#`:
+
+``` markdown
+# 1st Level Header
+
+## 2nd Level Header
+
+### 3rd Level Header
+```
+
+<br/>
+
+### Lists {#lists}
+
+``` markdown
+-   Bulleted list item 1
+
+-   Item 2
+
+    -   Item 2a
+
+    -   Item 2b
+
+1.  Numbered list item 1
+
+2.  Item 2
+
+    i)  Sub-item 1
+    
+        A.  Sub-sub-item 1
+```
+
+> -   Bulleted list item 1
+>
+> -   Item 2
+>
+>     -   Item 2a
+>
+>     -   Item 2b
+>
+> 1.  Numbered list item 1
+>
+> 2.  Item 2
+>
+>     i)  sub-item 1
+>
+>         A. sub-sub-item 1
+
+::: callout-caution
+Markdown is case-sensitive in some cases, meaning you need to format the text correctly for it to recognise a sub-item, for example. For lists, you often need to add a space before and after.
+:::
+
+<br/>
+
+### Links {#links}
+
+Add a link with angle brackets for displaying the raw URL, or use a combination of square and round brackets to define the link text and URL:
+
+-   the text to appear in square brackets
+-   followed by the URL in round brackets
+
+``` markdown
+<https://quarto.org/>
+
+A link to the [Quarto documentation](https://quarto.org/).
+```
+
+> <https://quarto.org/>
+>
+> A link to the [Quarto documentation](https://quarto.org/).
+
+<br/>
+
+### Images {#images}
+
+Add an image using `![](path/image.png)`.
+
+You can add a caption easily within the brackets as such: `![Cool image](path/image.png)`
+
+``` markdown
+![Artwork by Allison Horst](images/ahorst-aardvark.png)
+```
+
+![Artwork by Allison Horst](images/ahorst-aardvark.png)
+
+::: {.callout-tip collapse="true"}
+## Tip for local files
+
+-   Use relative file paths rather than absolute file paths - other people won’t share the same absolute file path as you!
+
+-   File paths are relative to where the Quarto document is!
+:::
+
+<br/> <br/>
+
+::: callout-important
+## Before the exercise
+
+1.  Download the [penguins-template.qmd](https://downgit.github.io/#/home?url=https://github.com/ellfran-7/repro-research-workshop/blob/main/templates/penguins-template.qmd) zip
+
+2.  Unzip the downloaded folder and, if you want, rename the unzipped folder on your computer (something like "`cs-workshop-2025`")
+
+3.  Now, open the `penguins-template.qmd` file in Rstudio
+
+4.  Once Rstudio is up and running, copy and paste `install.packages("palmerpenguins")` into the **Console** and run it once
+:::
+
+::: {.callout-note collapse="false"}
+## Exercise 2 - Markdown basics {.unnumbered}
+
+1.  **Add a Level 2 header** titled "**Data description**" after the existing content in the `penguins-template.qmd` file. **Render** and observe.
+
+2.  **Copy and paste** the following text into the file:
+
+    ``` markdown
+    The penguins dataframe contains 344 observations of penguins.
+    It includes several qualitative variables, including the following:
+
+    Sex of the penguins
+    Island where they are found
+    Species to which they belong
+
+    The represented species are: Chinstrap, Gentoo, and Adelie.
+    ```
+
+3.  **Format the text** so that the final rendering looks like this:
+
+    > The `penguins` dataframe contains 344 observations of penguins. It includes several qualitative variables, including the following:
+    >
+    > -   *Sex* of the penguins
+    > -   **Island** where they are found
+    > -   ***Species*** to which they belong
+    >
+    > The represented species are : **Chinstrap**, **Gentoo** et **Adelie**.
+    
+    **Render** and observe.
+
+4.  **Add the online image** found at this [link](https://allisonhorst.github.io/palmerpenguins/reference/figures/lter_penguins.png) to your document. *What does this image represent?* 
+
+5.  **Add a caption** to this image.
+
+6.  **Render** your document for the last time. Observe the changes.
+:::
+
+<br/>
+
+## R Code in a "Chunk" {#code-chunks}
+
+Code chunks are the main way of including executable code in a document. In our case, we'll be using R.
+
+A code chunk usually starts with ```` ```{r} ```` and ends with ```` ``` ````. You can write any number of lines of code in it.
+
+To insert a code chunk, click `Code > Insert Chunk`.
+
+```{r}
+#| echo: fenced
+2 + 2
+```
+
+The result is outputted after the chunk, as you can see.
+
+A more coherent example:
+
+```{r}
+#| echo: fenced
+
+library(ggplot2)
+library(palmerpenguins)
+data(penguins)
+```
+
+```{r}
+#| echo: fenced
+
+ggplot(data = penguins,
+       mapping = aes(x = bill_depth_mm)) +
+  geom_density() +
+  theme_bw()
+```
+
+<br/>
+
+### Code chunk options {#code-chunk-opt}
+
+We can change the chunk execution options so that the code *messages do not show*, by adding `#| warning: false`.
+
+```{r}
+#| echo: fenced
+#| warning: false
+
+ggplot(data = penguins,
+       mapping = aes(x = bill_depth_mm)) +
+  geom_density() +
+  theme_bw()
+```
+
+Most common execution options:
+
+| Option | Description if `____: true` |
+|-------------------------|------------------------------------------------|
+| `eval` | Evaluate the code chunk |
+| `echo` | Include the source code in output |
+| `output` | Include the results of executing the code |
+| `warning` | Include warnings/messages in the output |
+| `error` | Include errors in the output (errors won't halt document processing) |
+| `include` | Prevent any output (code or results) from being included |
+
+<br/>
+
+### Code chunk options: `code-fold` {#code-fold}
+
+Instead of simply removing the code, we can choose to *include code but have it hidden* by default.
+
+```{r}
+#| echo: fenced
+#| warning: false
+#| code-fold: true
+
+
+ggplot(data = penguins,
+       mapping = aes(x = bill_depth_mm)) +
+  geom_density() +
+  theme_bw()
+```
+
+<br/>
+
+### Figure options: `fig-` {#fig-option}
+
+```{r}
+#| echo: fenced
+#| warning: false
+#| fig-align: center 
+#| fig-width: 4
+#| fig-asp: 0.9
+#| fig-cap: "Distribution of bill depth sizes"
+
+ggplot(data = penguins,
+       mapping = aes(x = bill_depth_mm)) +
+  geom_density() +
+  theme_bw()
+```
+
+<br/>
+
+### Cross-referencing: `label` {#label}
+
+We can add internal links for cross-referencing using `label`.
+
+```{r}
+#| echo: fenced
+#| warning: false
+#| fig-align: center 
+#| fig-width: 4
+#| fig-asp: 0.9
+#| fig-cap: "Distribution of bill depth sizes"
+#| label: fig-billdepth
+
+ggplot(data = penguins,
+       mapping = aes(x = bill_depth_mm)) +
+  geom_density() +
+  theme_bw()
+```
+
+``` markdown
+Many penguins in the dataset seem to have a bill depth between 18 and 19mm ([@fig-billdepth]).
+```
+
+> Many penguins seem to have bill depths between 18 and 19mm ([@fig-billdepth]).
+
+<br/>
+
+### Tables (`tbl-`) and equations (`eq-`)
+
+Table options are similar to those of figures, but instead of `fig-` for some options, it is `tbl-`:
+
+```{r}
+#| echo: fenced
+#| tbl-align: center 
+#| tbl-cap: "First 5 rows and columns of the penguins dataset"
+#| label: tbl-pengdata
+
+knitr::kable(head(penguins[,1:5]))
+```
+
+For equations, it is slightly different for cross-referencing.
+
+``` markdown
+$$
+E = mc^2
+$$ {#eq-linear}
+```
+
+$$
+E = mc^2
+$$ {#eq-linear}
+
+``` markdown
+According to the @eq-linear, the relationship between energy and mass is directly proportional.
+```
+
+> According to the @eq-linear, the relationship between energy and mass is directly proportional.
+
+<br/>
+
+### Inline code {#inline-code}
+
+You can include executable expressions inside the markdown (text) by enclosing the expression in `` `r ` ``
+
+```{r}
+#| echo: false
+#| results: asis
+cat("Example: The penguins dataset is composed of `` `r nrow(penguins)` `` observations.")
+```
+
+> The penguins dataset is composed of `r nrow(penguins)` observations.
+
+<br/> <br/>
+
+::::: {.callout-note collapse="false"}
+## Exercise 3 - Code chunks and outputs {.unnumbered}
+
+1.  **Add a code chunk** to generate a table showing the first 5 rows of the `penguins` dataframe using the `knitr::kable()` function. **Render** and observe.
+
+    ::: {.callout-tip collapse="true" appearance="simple"}
+    ## Hint
+
+    For those not familiar with R, unfold the following, copy and paste inside the code chunk, and render:
+
+    ```{r}
+    #| code-fold: true
+    #| eval: false
+    knitr::kable(head(penguins))
+    ```
+    :::
+
+2.  **Add another Level 2 header**, this time titled "**Data visualisation**"
+
+3.  **Add a second code chunk to generate a figure** (using R base or `ggplot2`) to explore the relationship between the body mass of penguins and the length of their flippers, as well as the differences between species. **Render** and observe.
+
+    ::: {.callout-tip collapse="true" appearance="simple"}
+    ## Hint
+
+    For those not familiar with R, unfold the following, copy and paste inside the code chunk, and render:
+
+    ```{r}
+    #| code-fold: true
+    #| eval: false
+    g <- ggplot(penguins, aes(x = flipper_length_mm, 
+                                  y = body_mass_g)) +
+          geom_point(aes(color = species, shape = species), 
+                     size = 2, 
+                     alpha = 0.7) + 
+          scale_color_manual(values = c("darkorange","purple","cyan4")) + 
+          labs(x = "Flipper length (mm)", 
+               y = "Body mass (g)", 
+               color = "Penguin species", 
+               shape = "Penguin species") + 
+          theme_minimal()
+
+    g
+    ```
+    :::
+
+4.  **Add the following options to the code chunk**, one by one. **Render** the document after each modification and observe the changes:
+
+    a.  `echo: false`
+
+    b.  `warning: false`
+
+5.  Just below the figure, **provide a description** of the relationship between the two variables, both overall and for each species.
+
+6.  **Modify the size of the figure** using the following options, one by one. **Render** the document after each modification and observe how the figure changes:
+
+    a.  `fig-width: 10`
+
+    b.  `fig-height: 3`
+
+    c.  `out-width: "100%"`
+
+    d.  `out-width: "20%"`
+
+7.  **Add a label** to the figure with the prefix `fig-`.
+
+8.  **Add a caption** to the figure using the `fig-cap` chunk option. In the description written in at **4.**, **add the cross-reference** to this figure. **Render** and observe.
+
+::: {.callout-caution collapse="true" appearance="simple" icon=false}
+## :star:**BONUS** 
+
+Instead of writing "*The penguins dataframe contains 344 observations of penguins.*" in the "**Data overview**" section, replace the 344 with an **inline code**, automatically computing the number of observations of penguins.
+:::
+
+:::::
+
+<br/> <br/>
+
+Well done! You've just created your first Quarto report :tada:
+
+![Artwork from "Hello, Quarto" keynote by Julia Lowndes and Mine Çetinkaya-Rundel, presented at RStudio Conference 2022. Illustrated by Allison Horst.](images/ahorst-twopenguins-qsunset.png){width="80%"}
+
+<br/>
+
+## Only scratching the surface
+
+There is so much more you can do with `Quarto`, such as:
+
+-   [Footnotes](https://quarto.org/docs/authoring/markdown-basics.html#footnotes)
+-   [Tabsets](https://quarto.org/docs/output-formats/html-basics.html#tabsets)
+-   [Citations](https://quarto.org/docs/authoring/citations.html) (import `.bib` or insert directly from Zotero)
+-   Other useful formats:
+    -   Presentations (like the one presented today)
+    -   Manuscripts ([example](https://quarto-ext.github.io/manuscript-template-jupyter/))
+    -   Dashboards ([example](https://pub.demo.posit.team/public/nz-quakes/))
+    -   Websites (like this one)
+    -   Books ([example](https://r4ds.hadley.nz/))
+    -   Interactive docs ([example](https://quarto.org/docs/interactive/ojs/examples/penguins.html))
+
+And so much more... 
+
+Check out the full [Quarto documentation](https://quarto.org/docs/guide/) and the [resources](../04-further-reads.qmd) available on this site.
+
+<p align="right">
+
+(<a href="#page-top">back to top</a>)
+
+</p>
