@@ -1,5 +1,26 @@
 [
   {
+    "objectID": "05-further-reads.html#some-resources-for-learning-more-about-quarto",
+    "href": "05-further-reads.html#some-resources-for-learning-more-about-quarto",
+    "title": "Further reading",
+    "section": "1 Some resources for learning more about Quarto",
+    "text": "1 Some resources for learning more about Quarto\n\nCasajus N, Bonnici I, Dray S, Gimenez O, Guéry L, Guilhaumon F, Schiettekatte NMD & Siberchicot A (2024) FRB-CESAB & GdR EcoStat training course: Reproducible Research in Computational Ecology. Zenodo. URL: http://doi.org/10.5281/zenodo.4262978 (link to workshop)\n“Introduction to Quarto” by Andrew Bray at posit::conf(2024) (link)\n“With Quarto Coming, is R Markdwon Going Away? No” blog post by Yihui Xie (link)\n“Introduction to Quarto” by Eric Delmelle (link)"
+  },
+  {
+    "objectID": "05-further-reads.html#some-resources-for-understanding-reproducible-research",
+    "href": "05-further-reads.html#some-resources-for-understanding-reproducible-research",
+    "title": "Further reading",
+    "section": "2 Some resources for understanding Reproducible Research",
+    "text": "2 Some resources for understanding Reproducible Research\n\nCasajus N, Bonnici I, Dray S, Gimenez O, Guéry L, Guilhaumon F, Schiettekatte NMD & Siberchicot A (2024) FRB-CESAB & GdR EcoStat training course: Reproducible Research in Computational Ecology. Zenodo. (http://doi.org/10.5281/zenodo.4262978) (link to workshop)\nRepro4Everyone. (n.d.). Introduction to Reproducibility. Repro4Everyone. (link)\n“Guide for Reproducible Research” by The Turing Way Community. DOI: 10.5281/zenodo.3332807 (link to the guide)\n“A conside guide to reproducible research using secondary data” by Katharina Blankart, Maryna Ivets, Eva Goetjes and Kai Miele (link)"
+  },
+  {
+    "objectID": "05-further-reads.html#literature-on-reproducible-research",
+    "href": "05-further-reads.html#literature-on-reproducible-research",
+    "title": "Further reading",
+    "section": "3 Literature on Reproducible Research",
+    "text": "3 Literature on Reproducible Research\n\nClaerbout and Karrenbach (1992)\nLoscalzo (2012)\nFreedman, Cockburn, and Simcoe (2015)\nBaker (2016)\nThis (2017)\nPlesser (2018)\nMarwick, Boettiger, and Mullen (2018)\nPlesser (2018)\nSchloss (2018)\nReproducibility and Replicability in Science (2019)\nDesquilbet et al. (2019)\nGundersen (2021)\nAlston and Rick (2021)\nZiemann, Poulain, and Bora (2023)\nCalnan et al. (2024)\nCasajus et al. (2024)\n“Reproducibility: Why It Matters and How It Can Be Nurtured | Elsevier” (n.d.)\n“Six Factors Affecting Reproducibility in Life Science Research and How to Handle Them” (n.d.)"
+  },
+  {
     "objectID": "03-quarto-page.html#introduction",
     "href": "03-quarto-page.html#introduction",
     "title": "Enter Quarto",
@@ -63,13 +84,6 @@
     "text": "Footnotes\n\n\nPandoc is a tool that converts documents to different formats. Quarto leverages it to convert markdown to a variety of output formats.↩︎\nIntegrated Development Environment↩︎"
   },
   {
-    "objectID": "04-post-work.html#thank-you-all-for-participating-in-this-workshop",
-    "href": "04-post-work.html#thank-you-all-for-participating-in-this-workshop",
-    "title": "Post-workshop",
-    "section": "Thank you all for participating in this workshop 🎉",
-    "text": "Thank you all for participating in this workshop 🎉\nHere are some of the creative drawings from the “Protocol Drawing” exercise. You can find the detailed protocol here.\nThe goal was to follow a fictive drawing protocol and see if we all ended up with the same exact result, and if that matched the original study.\nIn the end, we got many cool and funky cats! But not just cats… 😺\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\nAlso a cute penguin\n\n\n\n\n \n\n\n\n\nIf we look at the result of the original study, we can see that they might have missed out a few steps…\n\n\n\nThe result form the study"
-  },
-  {
     "objectID": "00-welcome-page.html",
     "href": "00-welcome-page.html",
     "title": "Welcome",
@@ -82,27 +96,6 @@
     "title": "Welcome",
     "section": "Brief Workshop Overview",
     "text": "Brief Workshop Overview\nThe workshop will be divided into two parts:\n\nReproducible Research: An Open Discussion\nLiterate Programming with Quarto: A Small but Impactful Step\n\nPart 1 will be discussion-based, focusing on the concept of reproducibility, its importance, and the factors contributing to non-reproducibility. There will be practical work also. No prior coding or bioinformatics knowledge is needed here.\nPart 2 is hands-on and involves practical work using specific informatic tools. To participate fully, you’ll need to download or update these tools in advance. Don’t worry—they’re free and easy to set up! Let’s go!\nTo ensure everything runs smoothly on the day of the workshop, we’ll need to set up a few things beforehand. Visit the Pre-workshop instructions to set everything up for the day! 🧙"
-  },
-  {
-    "objectID": "05-further-reads.html#some-resources-for-learning-more-about-quarto",
-    "href": "05-further-reads.html#some-resources-for-learning-more-about-quarto",
-    "title": "Further reading",
-    "section": "1 Some resources for learning more about Quarto",
-    "text": "1 Some resources for learning more about Quarto\n\nCasajus N, Bonnici I, Dray S, Gimenez O, Guéry L, Guilhaumon F, Schiettekatte NMD & Siberchicot A (2024) FRB-CESAB & GdR EcoStat training course: Reproducible Research in Computational Ecology. Zenodo. URL: http://doi.org/10.5281/zenodo.4262978 (link to workshop)\n“Introduction to Quarto” by Andrew Bray at posit::conf(2024) (link)\n“With Quarto Coming, is R Markdwon Going Away? No” blog post by Yihui Xie (link)\n“Introduction to Quarto” by Eric Delmelle (link)"
-  },
-  {
-    "objectID": "05-further-reads.html#some-resources-for-understanding-reproducible-research",
-    "href": "05-further-reads.html#some-resources-for-understanding-reproducible-research",
-    "title": "Further reading",
-    "section": "2 Some resources for understanding Reproducible Research",
-    "text": "2 Some resources for understanding Reproducible Research\n\nCasajus N, Bonnici I, Dray S, Gimenez O, Guéry L, Guilhaumon F, Schiettekatte NMD & Siberchicot A (2024) FRB-CESAB & GdR EcoStat training course: Reproducible Research in Computational Ecology. Zenodo. (http://doi.org/10.5281/zenodo.4262978) (link to workshop)\nRepro4Everyone. (n.d.). Introduction to Reproducibility. Repro4Everyone. (link)\n“Guide for Reproducible Research” by The Turing Way Community. DOI: 10.5281/zenodo.3332807 (link to the guide)\n“A conside guide to reproducible research using secondary data” by Katharina Blankart, Maryna Ivets, Eva Goetjes and Kai Miele (link)"
-  },
-  {
-    "objectID": "05-further-reads.html#literature-on-reproducible-research",
-    "href": "05-further-reads.html#literature-on-reproducible-research",
-    "title": "Further reading",
-    "section": "3 Literature on Reproducible Research",
-    "text": "3 Literature on Reproducible Research\n\nClaerbout and Karrenbach (1992)\nLoscalzo (2012)\nFreedman, Cockburn, and Simcoe (2015)\nBaker (2016)\nThis (2017)\nPlesser (2018)\nMarwick, Boettiger, and Mullen (2018)\nPlesser (2018)\nSchloss (2018)\nReproducibility and Replicability in Science (2019)\nDesquilbet et al. (2019)\nGundersen (2021)\nAlston and Rick (2021)\nZiemann, Poulain, and Bora (2023)\nCalnan et al. (2024)\nCasajus et al. (2024)\n“Reproducibility: Why It Matters and How It Can Be Nurtured | Elsevier” (n.d.)\n“Six Factors Affecting Reproducibility in Life Science Research and How to Handle Them” (n.d.)"
   },
   {
     "objectID": "02-reprores-slides.html#have-you-ever-encountered-challenges-when-trying-to-reproduce-data-analyses",
@@ -277,6 +270,13 @@
     "href": "02-reprores-slides.html#to-advance-we-must-code-a-little",
     "title": "Reproducible Research",
     "section": "To advance, we must code a little…",
-    "text": "To advance, we must code a little…\n\n\n\n\nArtwork by Allison Horst\n\n\n\n\n\n\nCS-WORKSHOP Feb 2025 | Home page"
+    "text": "To advance, we must code a little…\n\n\n\n\nArtwork by Allison Horst"
+  },
+  {
+    "objectID": "04-post-work.html#thank-you-all-for-participating-in-this-workshop",
+    "href": "04-post-work.html#thank-you-all-for-participating-in-this-workshop",
+    "title": "Post-workshop",
+    "section": "Thank you all for participating in this workshop 🎉",
+    "text": "Thank you all for participating in this workshop 🎉\nHere are some of the creative drawings from the “Protocol Drawing” exercise. You can find the detailed protocol here.\nThe goal was to follow a fictive drawing protocol and see if we all ended up with the same exact result, and if that matched the original study.\nIn the end, we got many cool and funky cats! But not just cats… 😺\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\nAlso a cute penguin\n\n\n\n\n \n\n\n\n\nIf we look at the result of the original study, we can see that they might have missed out a few steps…\n\n\n\nThe result form the study"
   }
 ]
