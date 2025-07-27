@@ -14,7 +14,7 @@ format: html
 
 ## Thank you all for participating in this workshop :tada:
 
-Here are some of the creative drawings from the "**Protocol Drawing**" exercise. You can find the detailed protocol [here](https://ellfran-7.github.io/repro-research-workshop/01-reprores-slides.html#/example-a-drawing-protocol).
+Here are some of the creative drawings from the "**Protocol Drawing**" exercise. You can find the detailed protocol [here](https://ellfran-7.github.io/repro-research-workshop/02-reprores-slides.html#/example-a-drawing-protocol).
 
 The goal was to follow a fictive drawing protocol and see if we all ended up with the same exact result, and if that matched the original study.
 
